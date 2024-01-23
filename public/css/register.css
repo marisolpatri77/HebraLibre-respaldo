@@ -18,6 +18,8 @@ body {
     border-radius: 4px;
     font-family: 'calibri';
     color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .form-register h4 {
