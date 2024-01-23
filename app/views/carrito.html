@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../public/css/carrito.css">
+
+    <link href="../public/css/header-footer.css" rel="stylesheet"> <!--PUSE ESTO PARA QUE EL HEADER TOME EL ESTILO DEL HOME-->
+  </head>
+
+  <body>
+    <header>
+      <!--div class="redes">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div-->
+      <div class="nav-bar">
+              <img src="../public/img/logo-sin-fondo-prueba.png" alt="Logo" class="logo">
+      </div>
+      <div class="nav-bar">
+          <ul class="enlaces">
+              <li><a href=  "/"   >Home</a></li>
+              <li><a href= '/catalogo' >Productos</a></li>
+              <li><a href='/carrito'  >Carrito de Compras</a></li>
+              <li><a href='/registro'  >Registrarse</a></li>
+              <li><a href='/contacto'  >Contacto</a></li>
+              <li><a href='/sobre-nosotros'  >Sobre Mi</a></li>
+          </ul>
+      </div>       
+    </header>
+
+    <h1>Carrito de Compras</h1>
+    <div class="container-principal"> 
+      <div class="container">
+        <section class="cart-section">
+          <!-- Contenido del carrito -->
+          <div class="product">
+            <div class="product-details">
+            <img class="product-img" src="../public/img/img_sec1.webp" alt="Producto 1">
+            <div class="product-info">
+              <h2>Producto 1</h2>
+              <p>Descripción breve del producto 1.</p>
+              <p>Precio unitario: $20.00</p>
+              <label for="quantity">Cantidad:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <!-- Agrega más opciones según tus necesidades -->
+              </select>
+              <button>Eliminar</button>
+            </div>
+            </div>
+              <div class="product-details">
+            <img class="product-img" src="../public/img/img_sec2.webp" alt="Producto 2">
+            <div class="product-info">
+              <h2>Producto 2</h2>
+              <p>Descripción breve del producto 2.</p>
+              <p>Precio unitario: $20.00</p>
+              <label for="quantity">Cantidad:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <!-- Agrega más opciones según tus necesidades -->
+              </select>
+              <button>Eliminar</button>
+            </div>
+            </div>
+          </div>
+          <!-- Repite la sección anterior para cada producto en el carrito -->
+        </section>
+
+      </div>
+
+      <div class="sidebar">
+        <section class="subtotal">
+          <h2>Resumen del Pedido</h2>
+          <!-- Contenido del resumen del pedido -->
+          <p>Cantidad de ítems: 2</p>
+          <p>Subtotal: $40.00</p>
+          <p>Costo de envío: $5.00</p>
+          <p>Total a pagar: $45.00</p>
+          <button class="checkout">Comprar Ahora</button>
+        </section>
+
+        <section class="recommendation">
+        <h2>Quizá También Te Interese</h2>
+        <div>
+          <img class="recommendation-img" src="../public/img/img_sec3.webp"  alt="Producto 3">
+        </div>
+        <!-- Contenido de productos recomendados -->
+        <!-- ... -->
+        </section>
+      </div>
+    </div>
+    <footer>
+      <!--img src="./img/Hebra_Libre_footer.jpg" id="footer"-->
+      <h5>© Copyright todos los derechos reservados</h6>
+    </footer>
+  </body>
+</html>
