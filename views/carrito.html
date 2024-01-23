@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="/css/carrito.css">
-
-    <link href="/css/header-footer.css" rel="stylesheet"> <!--PUSE ESTO PARA QUE EL HEADER TOME EL ESTILO DEL HOME-->
+    <link href="/css/header-footer.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -28,73 +31,76 @@
               <li><a href='/registro'  >Registrarse</a></li>
               <li><a href='/contacto'  >Contacto</a></li>
               <li><a href='/sobre-nosotros'  >Sobre Mi</a></li>
-          </ul>
+           </ul>
       </div>       
-    </header>
+ </header>
 
-    <h1>Carrito de Compras</h1>
-    <div class="container-principal"> 
-      <div class="container">
-        <section class="cart-section">
-          <!-- Contenido del carrito -->
-          <div class="product">
-            <div class="product-details">
-            <img class="product-img" src="/img/img_sec1.webp" alt="Producto 1">
-            <div class="product-info">
-              <h2>Producto 1</h2>
-              <p>Descripción breve del producto 1.</p>
-              <p>Precio unitario: $20.00</p>
-              <label for="quantity">Cantidad:</label>
-              <select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <!-- Agrega más opciones según tus necesidades -->
-              </select>
-              <button>Eliminar</button>
-            </div>
-            </div>
-              <div class="product-details">
-            <img class="product-img" src="/img/img_sec2.webp" alt="Producto 2">
-            <div class="product-info">
-              <h2>Producto 2</h2>
-              <p>Descripción breve del producto 2.</p>
-              <p>Precio unitario: $20.00</p>
-              <label for="quantity">Cantidad:</label>
-              <select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <!-- Agrega más opciones según tus necesidades -->
-              </select>
-              <button>Eliminar</button>
-            </div>
-            </div>
-          </div>
-          <!-- Repite la sección anterior para cada producto en el carrito -->
-        </section>
-
-      </div>
-
-      <div class="sidebar">
-        <section class="subtotal">
-          <h2>Resumen del Pedido</h2>
-          <!-- Contenido del resumen del pedido -->
-          <p>Cantidad de ítems: 2</p>
-          <p>Subtotal: $40.00</p>
-          <p>Costo de envío: $5.00</p>
-          <p>Total a pagar: $45.00</p>
-          <button class="checkout">Comprar Ahora</button>
-        </section>
-
-        <section class="recommendation">
-        <h2>Quizá También Te Interese</h2>
-        <div>
-          <img class="recommendation-img" src="/img/img_sec3.webp"  alt="Producto 3">
+ <div class="container-principal"> 
+  <div class="container">
+    <section class="cart-section">
+      <!-- Contenido del carrito -->
+      <div class="product">
+        <div class="product-details">
+        <img class="product-img" src="/img/img_sec1.webp" alt="Producto 1">
+        <div class="product-info">
+          <h2>Producto 1</h2>
+          <p>Descripción breve del producto 1.</p>
+          <p>Precio unitario: $20.00</p>
+          <label for="quantity">Cantidad:</label>
+          <select id="quantity" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <!-- Agrega más opciones según tus necesidades -->
+          </select>
+          <button>Eliminar</button>
         </div>
-        <!-- Contenido de productos recomendados -->
-        <!-- ... -->
-        </section>
+        </div>
+          <div class="product-details">
+        <img class="product-img" src="/img/img_sec2.webp" alt="Producto 2">
+        <div class="product-info">
+          <h2>Producto 2</h2>
+          <p>Descripción breve del producto 2.</p>
+          <p>Precio unitario: $20.00</p>
+          <label for="quantity">Cantidad:</label>
+          <select id="quantity" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <!-- Agrega más opciones según tus necesidades -->
+          </select>
+          <button>Eliminar</button>
+        </div>
+        </div>
       </div>
+      <!-- Repite la sección anterior para cada producto en el carrito -->
+    </section>
+
+  </div>
+
+  <div class="sidebar">
+    <section class="subtotal">
+      <h2>Resumen del Pedido</h2>
+      <!-- Contenido del resumen del pedido -->
+      <p>Cantidad de ítems: 2</p>
+      <p>Subtotal: $40.00</p>
+      <p>Costo de envío: $5.00</p>
+      <p>Total a pagar: $45.00</p>
+      <div class="checkout-content">
+        <button class="checkout">Comprar Ahora</button>
+      </div>
+      
+    </section>
+
+    <section class="recommendation">
+    <h2>Quizá también te interese</h2>
+    <!-- Contenido de productos recomendados -->
+    <div class="recommendation-content">
+      <img class="recommendation-img" src="/img/img_sec3.webp"  alt="Producto 3">
     </div>
+    
+    <!-- ... -->
+    </section>
+  </div>
+</div>
     <footer>
       <!--img src="./img/Hebra_Libre_footer.jpg" id="footer"-->
       <h5>© Copyright todos los derechos reservados</h6>
