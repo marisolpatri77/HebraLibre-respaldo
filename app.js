@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('node:path');
 
-
+app.use(express.static('public'))
 
 app.listen( 3002, () => console.log(`Server up on port: http://localhost:3002`) )
 
