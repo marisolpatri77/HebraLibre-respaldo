@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar contraseña</title>
+    <link rel="stylesheet"  href ="/css/recuperarContrasena.css">
+    <link href="/css/header-footer.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+</head>
+<body>
+  
+    <header>
+      <!--div class="redes">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div-->
+      <div class="nav-bar">
+              <img src="/img/logo-sin-fondo-prueba.png" alt="Logo" class="logo">
+      </div>
+      <div class="nav-bar">
+          <ul class="enlaces">
+              <li><a href=  "/"   >Home</a></li>
+              <li><a href= '/catalogo' >Productos</a></li>
+              <li><a href='/carrito'  >Carrito de Compras</a></li>
+              <li><a href='/registro'  >Registrarse</a></li>
+              <li><a href='/contacto'  >Contacto</a></li>
+                <!--li><a href='/sobre-nosotros'  >Sobre Mi</a></li-->
+           </ul>
+      </div>       
+    </header>
+  
+    <div class="col-sm-6 col-sm-offset-3">
+      <!--div id="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+      </div-->
+        <form class="form-recuperar" id="recuperar" action="/recuperar" method="GET">
+            <h5>Recuperar tu contraseña</h5>
+            <div class="form-group" > <!--class="contenedor"-->
+                <input class="input-text" type="email" name="email" placeholder="Ingresa tu email de registro"  id="email" required>
+            </div>
+
+            <div class="form-group"> <!--class="contenedor"-->
+                <input class="input-text" type="email" name="email" placeholder="Confirma tu email"  id="email" required>
+            </div>
+          <button class="button" type="submit">Enviar</button>
+          <button class="button" type="submit">Volver al login</button>
+        </form>
+    </div>
+    <footer>
+      <!--img src="../public/img/Hebra_Libre_footer.jpg" id="footer"-->
+      <h5>© Copyright todos los derechos reservados</h6>
+     </footer>
+</body>
+</html>

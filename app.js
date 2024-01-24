@@ -41,4 +41,13 @@ app.get('/producto', (req, res) =>{
     res.sendFile(pathHome);
 } )
 
+app.get('/iniciar-sesion', (req, res) =>{
+    const pathHome = path.join(__dirname, 'views/login.html')
+    res.sendFile(pathHome);
+} )
+
+app.get('/recuperar-contrasenia', (req, res) =>{
+    const pathHome = path.join(__dirname, 'views/recuperarContrasena.html')
+    res.sendFile(pathHome);
+} )
 

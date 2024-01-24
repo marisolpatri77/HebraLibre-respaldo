@@ -4,7 +4,7 @@
     padding: 0px;    
     box-sizing: border-box;
 }
-/*header*/
+/*header
 
 header{
     background-color: #f5c597;
@@ -46,7 +46,7 @@ header{
     width: 190px;
     height: 190px;
     text-align: center;
-  }
+  }*/
 
 /*body*/
 
@@ -178,7 +178,10 @@ body {
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 2;
-    background-color: #d0b6b7;
+    /*background-color: #d0b6b7;*/
+    background-image: url(../img/HebraLibreFondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .productos {

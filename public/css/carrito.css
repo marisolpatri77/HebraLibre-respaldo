@@ -5,6 +5,8 @@ body {
   display: flex;
   flex-direction: column;
   background-image: url(/img/HebraLibreFondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*----------Header-----------
@@ -53,6 +55,8 @@ li{
 
 .container-principal{
   display: flex;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .container {

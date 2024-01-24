@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
+
 body {
-    background-image: url(../img/logo-hebralibre.png);
+    background-image: url(../img/HebraLibreFondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -16,7 +19,7 @@ body {
     margin: auto;
     margin-top: 100px;
     border-radius: 4px;
-    font-family: 'calibri';
+    font-family: 'Roboto', sans-serif;
     color: white;
     margin-top: 60px;
     margin-bottom: 60px;
@@ -47,13 +50,15 @@ body {
 }
 
 .form-register a {
-    color: #569ef5;
+    color: #0e74f1;
+    font-weight: bold;
+    font-size: 16px;
     text-decoration: underline;
 }
 
 .form-register .botom {
     width: 100%;
-    background: #9bc6f9;
+    background: #569ef5;
     border: none;
     padding: 12px;
     color: white;

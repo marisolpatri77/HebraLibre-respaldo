@@ -47,8 +47,14 @@ header{
     height: 190px;
     text-align: center;
   }
+
+
+  /*---------fuente de los links del menu----------*/
+  a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+  }
   
-  /*---------Foter----------*/
   
   footer{
     background-color:white;

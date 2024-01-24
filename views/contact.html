@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-
     <link href="/css/header-footer.css" rel="stylesheet">
+    <link rel="stylesheet"  href="/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <script src="https:kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -25,23 +31,39 @@
             <li><a href='/carrito'  >Carrito de Compras</a></li>
             <li><a href='/registro'  >Registrarse</a></li>
             <li><a href='/contacto'  >Contacto</a></li>
-            <li><a href='/sobre-nosotros'  >Sobre Mi</a></li>
+            <!--li><a href='/sobre-nosotros'  >Sobre Mi</a></li-->
          </ul>
     </div>       
 </header>
-    <h1>Contacto</h1>
-  <form action="#" method="post">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <div class="container-form">
 
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" required></textarea>
+    <div class="info-form">
+      <h2>Contáctanos</h2>
+      <p>Gracias por ponerse en contacto con nosotros. Apreciamos su interés y nos esforzamos por responder
+         a todas las consultas lo más rápido posible. Su satisfacción es nuestra prioridad, y nos pondremos en
+          contacto con usted en breve. ¡Gracias por elegirnos y confiar en nuestros servicios!</p>
+      <a href="#"><i class="fa fa-phone"></i>3884175520</a>
+      <a href="#"><i class="fa fa-envelope"></i>hebralibre@gmail.com</a>
+      <a href="#"><i class="fa fa-map-marked"></i>Jujuy, Argentina</a>
+    </div>
 
-    <input type="submit" value="Enviar">
-  </form>
+    <form action="#" autocomplete="off">
+      <input type="text" name="name" placeholder="Nombre" class="campo">
+      <input type="email" name="mail" placeholder="Email" class="campo">
+      <textarea name="mensaje" placeholder="Ingresa tu mensaje..."></textarea>
+      <input type="submit" name="enviar" value="Enviar" class="btn-enviar">
+    </form>
+
+  </div>
+ 
+
+
+
+
+
+
+  
   <footer>
     <!--img src="./img/Hebra_Libre_footer.jpg" id="footer"-->
     <h5>© Copyright todos los derechos reservados</h6>
