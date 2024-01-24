@@ -10,7 +10,6 @@ De la pagina https://www.universodani.com.ar/ me gusto el menu de opciones despl
 Pagina https://bordadospraiaia.com.br/, el producto ofrecido son bordados. Apunta al público que aprecia el arte, la cultura que quieren aprender o perfeccionar sus técnicas de bordado y aquarela. La pagina presenta una estética moderna y femenina. Proporciona información de sus productos y cursos. Permite a los usuarios añadir los productos que quieran al carrito de compras y realizar el pedido online. Facilita el contacto a través de un formulario, un correo electrónico o un teléfono.
 Pagina https://linktr.ee/laruta_delfotobordado ofrece productos donde se combinan fotos y bordados, cursos, tutoriales relacionadas con el foto bordado. Su publico son personas interesadas en el arte, el bordado, la fotografía y la identidad latinoamericana. Muestra el catálogo de productos que se pueden comprar a través de la plataforma Mercado Libre. Permite acceder a las diferentes plataformas y redes sociales.
 
-Enlace al tablero de trabajo de Trello: https://trello.com/invite/b/BA7uCaUg/ATTI1d2ba9db37d23726843a9f6d99c5595433F4B2EC/espacio-de-trabajo-hebra-libre
 
 Integrantes del grupo 4
 
@@ -26,3 +25,6 @@ Emilce Soto (Emilce Mercedes Soto Bejarano) estudiante de programacion, emprende
 Agustin Castellón (Agustin Miqueas Castellón), soy estudiante de la carrera "Analista y Programador Universitario" en la facultad de ingeniería, hace no mucho tiempo descubri el mundo de la programación, pero desde que la conocí paso todos los días queriendo aprender algo nuevo. En mi tiempo libre me gusta jugar videojuegos y leer. 
 
 Marisol Castillo (Marisol Patricia Castillo), soy estudiante de la carrera Analista Programador Universitario en la facultad de Ingeniería de la Universidad de Jujuy, en el 2019 tuve mi primer contacto con la programación a través de un "meet and code" de solo mujeres, quedé fascinada con mi primer "Hola mundo", es por eso que en el 2021 decidí dejar la carrera que venía estudiando y estudiar la carrera que me gusta. En mi tiempo libre me gusta pasar lindos momentos con mis afectos y estudiar inglés.
+
+
+Enlace al tablero de trabajo de Trello: https://trello.com/b/BA7uCaUg/espacio-de-trabajo-hebra-libre

@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="/css/catalogoProducto.css">
     <script src="/javascript/producto.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudﬂare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
+    <link href="https://cdnjs.cloudﬂare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -35,33 +34,34 @@ rel="stylesheet" />
              </ul>
         </div> 
     </header>
+    <main>
         <section class="productos" > <!--class="last-visit"-->
-            <h3>Productos principales</h3>
-            
+            <h3>Productos principales</h3>           
             <div class="products_principal">
-                      
+                <div class="imgPrinc-carrito">                       
                     <img id="imagenPrincipal" src='/img/img_sec1.webp' alt="imagenPrincipal" onclick="cambiarImagen('/img/img_principal.webp')">
-
-                    <div class="contenido_producto">                       
-                        <h4 class="titulo">Bordado Gatuno</h4>
-                        <p class="descrpcion_producto" >
-                            "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato. 
-                                Cada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza
-                                 artesanal. Este pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier
-                                  rincón de tu hogar. Perfecto como regalo único o para deleitar a los amantes de los gatos, esta 
-                                  obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la
-                                   belleza felina."
-                        </p>
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                    </div>       
+                     <a href="/carrito" class="icono-truck"> <i class="fas fa-truck"></i> </a>
+                </div>                                   
+                <div class="contenido_producto">                       
+                     <h4 class="titulo">Bordado Gatuno</h4>
+                     <p class="descrpcion_producto" >                           
+                         "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato. 
+                          Cada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza
+                          artesanal. Este pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier 
+                          rincón de tu hogar. Perfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de
+                         arte hecha a mano es más
+                         que un adorno, es una expresión de amor por la artesanía y la belleza felina."
+                     </p>
+                 </div>       
             </div>
-            <div class="imagenes-adicionales">
+            <div class="imagenes-adicionales">            
                 <img src="/img/img_sec1.webp" alt="Imagen Adicional 1" onclick="cambiarImagen('/img/img_sec1.webp')">
                 <img src="/img/img_sec2.webp" alt="Imagen Adicional 2" onclick="cambiarImagen('/img/img_sec2.webp')">
                 <img src="/img/img_sec3.webp" alt="Imagen Adicional 3" onclick="cambiarImagen('/img/img_sec3.webp')">
                 <img src="/img/logo-hebralibre.png" alt="imagen principal" onclick="cambiarImagen('/img/logo-hebralibre.png')">
             </div>
-        </section>            
+        </section>  
+    </main>            
     <footer>      
         <!--img src="./img/Hebra_Libre_footer.jpg" id="footer"-->
         <h5>© Copyright todos los derechos reservados</h6>
