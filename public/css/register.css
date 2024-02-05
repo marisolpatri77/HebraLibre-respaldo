@@ -66,3 +66,30 @@ body {
     font-size: 16px;
 
 }
+
+
+/* Media Queries*/
+
+@media ( max-width: 767px ) {
+    .form-register{
+        max-width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .form-register h4 {
+        font-size: 18px;
+    }
+    .form-register p{
+        font-size: 14px;
+    }
+    .form-register .botom{
+        font-size: 14px;
+    }
+
+}
+
+@media ( min-width: 768px ) {
+    .form-register{
+        max-width: 60%;
+    }
+}
