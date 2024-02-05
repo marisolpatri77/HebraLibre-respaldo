@@ -1,37 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-        <title>Catalogo de productos</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">      
-        <link rel="stylesheet" href="/css/catalogoProducto.css">
-
-        <link href="/css/header-footer.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+            <title>Catalogo de productos</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">      
+            <link rel="stylesheet" href="/css/catalogoProducto.css">
+    
+            <link href="/css/header-footer.css" rel="stylesheet">
+    </head>
 <body>
-    <header>
-        <!--div class="redes">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-pinterest"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div-->
-        <div class="nav-bar">
-                <img src="/img/logo-sin-fondo-prueba.png" alt="Logo" class="logo">
-        </div>
-        <div class="nav-bar">
-            <ul class="enlaces">
-                <li><a href=  "/"   >Home</a></li>
-                <li><a href='/productos/catalogo' >Productos</a></li>
-                <li><a href='/productos/carrito'  >Carrito de Compras</a></li>
-                <li><a href='/usuarios/register'  >Registrarse</a></li>
-                <li><a href='/contact'  >Contacto</a></li>
-                <!--li><a href='/sobre-nosotros'  >Sobre Mi</a></li-->
-             </ul>
-        </div> 
-    </header>
+    <%- include('./partials/header.ejs')%>
     <main>
         <section class="catalogo" > 
             <h3>Productos principales</h3>
