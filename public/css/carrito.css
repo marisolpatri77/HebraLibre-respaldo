@@ -55,6 +55,7 @@ li{
 
 .container-principal{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 60px;
   margin-bottom: 60px;
 }
@@ -164,7 +165,7 @@ footer h5{
 }*/
 
 /* Media queries para pantallas pequeñas (ej. teléfonos) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 670px) {
   .redes i {
     margin-right: 10px; /* Reduzco el espacio entre íconos de redes sociales */
   }
@@ -180,6 +181,8 @@ footer h5{
     width: 100%;
     box-sizing: border-box;
     margin-right: 0;
+    flex-wrap: wrap;
+
   }
 
   .sidebar {
@@ -187,9 +190,12 @@ footer h5{
     margin-top: 20px;
   }
 
-  .subtotal {
-    margin-left: 0;
+  .subtotal,
+  .recommendation {
+    width: 100%; 
+    margin-top: 20px;
   }
+
 
   .recommendation-img {
     max-width: 100%;

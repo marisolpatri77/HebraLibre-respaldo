@@ -2,15 +2,16 @@
   "name": "hebra_libre",
   "version": "1.0.0",
   "description": "E-commerce para el emprendimiento Hebra Libre.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "author": "grupo-4",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2"
   },
   "devDependencies": {

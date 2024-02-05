@@ -14,17 +14,17 @@ Pagina https://linktr.ee/laruta_delfotobordado ofrece productos donde se combina
 Integrantes del grupo 4
 
 
-Caty Laporta (catalina laporta perucca), principiante en este mundo de la programación y el diseño web, entusiasta aprendiz. Actualmente trabajo en la administración de APPaCe. Desde hace unos cuantos meses, me inicié en este mundo atraida por Argentina Programa, y por la difusión que se le da a la demanda laboral de este sector. Amante de la naturaleza, trato de reducir al máximo posible mi huella de carbono. Espero poder utilizar estos conocimientos para hacer aplicaciones que sean útiles para la comunidad.
+Caty Laporta usuario GitHub:(https://github.com/CatyLap), principiante en este mundo de la programación y el diseño web, entusiasta aprendiz. Actualmente trabajo en la administración de APPaCe. Desde hace unos cuantos meses, me inicié en este mundo atraida por Argentina Programa, y por la difusión que se le da a la demanda laboral de este sector. Amante de la naturaleza, trato de reducir al máximo posible mi huella de carbono. Espero poder utilizar estos conocimientos para hacer aplicaciones que sean útiles para la comunidad.
 
-Andres Siva- Entusiasta y curioso de aprender nuevas metodologias y herramientas de trabajo que me brinden posibilidad de desarrollo personal y profesional para hacerme un lugar en este mundo del desarrollo web.Me gusta correr andar en bici y jugar al futbol.
+Andres Siva usuario GitHub:(https://github.com/andresS16) Entusiasta y curioso de aprender nuevas metodologias y herramientas de trabajo que me brinden posibilidad de desarrollo personal y profesional para hacerme un lugar en este mundo del desarrollo web.Me gusta correr andar en bici y jugar al futbol.
 
-Alejandra Abachino (Cecilia Alejandra Abachino) soy estudiante de la universdidad y el profesorado, me llama mucho la atencion de la programacion. Me gusta aprender y enseñar. El mayor tiempo lo ocupa mis dos hijas que son el motor del dia a dia. me gusta que mi mente este ocupada para superar la enfermedad que tengo. Con muchas ganas de aprender tanto de los profes como de mis compañeros.
+Alejandra Abachino usuario GitHub:(https://github.com/cecyaba) soy estudiante de la universdidad y el profesorado, me llama mucho la atencion de la programacion. Me gusta aprender y enseñar. El mayor tiempo lo ocupa mis dos hijas que son el motor del dia a dia. me gusta que mi mente este ocupada para superar la enfermedad que tengo. Con muchas ganas de aprender tanto de los profes como de mis compañeros.
 
-Emilce Soto (Emilce Mercedes Soto Bejarano) estudiante de programacion, emprendedora y con ganas de dedicarme completamente al mundo IT
+Emilce Soto usuario GitHub:(https://github.com/MerSb) estudiante de programacion, emprendedora y con ganas de dedicarme completamente al mundo IT
 
-Agustin Castellón (Agustin Miqueas Castellón), soy estudiante de la carrera "Analista y Programador Universitario" en la facultad de ingeniería, hace no mucho tiempo descubri el mundo de la programación, pero desde que la conocí paso todos los días queriendo aprender algo nuevo. En mi tiempo libre me gusta jugar videojuegos y leer. 
+Agustin Castellón usuario GitHub:(https://github.com/AgustinCastellon), soy estudiante de la carrera "Analista y Programador Universitario" en la facultad de ingeniería, hace no mucho tiempo descubri el mundo de la programación, pero desde que la conocí paso todos los días queriendo aprender algo nuevo. En mi tiempo libre me gusta jugar videojuegos y leer. 
 
-Marisol Castillo (Marisol Patricia Castillo), soy estudiante de la carrera Analista Programador Universitario en la facultad de Ingeniería de la Universidad de Jujuy, en el 2019 tuve mi primer contacto con la programación a través de un "meet and code" de solo mujeres, quedé fascinada con mi primer "Hola mundo", es por eso que en el 2021 decidí dejar la carrera que venía estudiando y estudiar la carrera que me gusta. En mi tiempo libre me gusta pasar lindos momentos con mis afectos y estudiar inglés.
+Marisol Castillo usuario GitHub:(https://github.com/marisolpatri77), soy estudiante de la carrera Analista Programador Universitario en la facultad de Ingeniería de la Universidad de Jujuy, en el 2019 tuve mi primer contacto con la programación a través de un "meet and code" de solo mujeres, quedé fascinada con mi primer "Hola mundo", es por eso que en el 2021 decidí dejar la carrera que venía estudiando y estudiar la carrera que me gusta. En mi tiempo libre me gusta pasar lindos momentos con mis afectos y estudiar inglés.
 
 
 Enlace al tablero de trabajo de Trello: https://trello.com/b/BA7uCaUg/espacio-de-trabajo-hebra-libre
