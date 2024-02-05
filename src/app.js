@@ -10,9 +10,11 @@ const path = require('node:path');
 
 app.use(express.static(path.join(__dirname, '../public') ));
 
+app.set('view engine', 'ejs')
+
 app.set('views', (__dirname, 'src/views'));
 
-app.set('view engine', 'ejs')
+
 
 const PORT = process.env.PORT || 3000
 app.listen( PORT, () => console.log(`Server up on port: http://localhost:${PORT}`) )
