@@ -4,7 +4,7 @@ let rutasProductos = require('./routes/productos');
 let rutasUsuarios = require('./routes/usuarios');
 let rutasMain = require('./routes/main');
 const app = express();
-const path = require('node:path');
+const path = require('path');
 
 //app.use(express.static('../public'))
 
