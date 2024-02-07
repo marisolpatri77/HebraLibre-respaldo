@@ -20,7 +20,7 @@ Andres Siva usuario GitHub:(https://github.com/andresS16) Entusiasta y curioso d
 
 Alejandra Abachino usuario GitHub:(https://github.com/cecyaba) soy estudiante de la universdidad y el profesorado, me llama mucho la atencion de la programacion. Me gusta aprender y enseñar. El mayor tiempo lo ocupa mis dos hijas que son el motor del dia a dia. me gusta que mi mente este ocupada para superar la enfermedad que tengo. Con muchas ganas de aprender tanto de los profes como de mis compañeros.
 
-Emilce Soto usuario GitHub:(https://github.com/MerSb) estudiante de programacion, emprendedora y con ganas de dedicarme completamente al mundo IT
+Emilce Soto usuario GitHub:(https://github.com/MerSb) ¡Hola! Soy Mercedes, un estudiante apasionada de la programación con dos años de experiencia en el campo. Durante este tiempo, he adquirido habilidades sólidas en diferentes áreas, incluyendo soporte técnico y análisis de datos. Mi enfoque principal ha sido el desarrollo de habilidades de programación, donde he explorado lenguajes como html, css, javascript, java, react. Además, he trabajado en proyectos de soporte técnico, resolviendo problemas y brindando soluciones eficientes a usuarios finales.
 
 Agustin Castellón usuario GitHub:(https://github.com/AgustinCastellon), soy estudiante de la carrera "Analista y Programador Universitario" en la facultad de ingeniería, hace no mucho tiempo descubri el mundo de la programación, pero desde que la conocí paso todos los días queriendo aprender algo nuevo. En mi tiempo libre me gusta jugar videojuegos y leer. 
 
