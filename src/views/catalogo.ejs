@@ -16,100 +16,40 @@
         <section class="catalogo" > 
             <h3>Productos principales</h3>
             <div class="products">
+
+            <% data.forEach(dataProducto=>{  %>
                 <article>
-                    <a href="/productos/producto">
-                        <img src="/img/img_sec1.webp" alt="producto_1" class="product_img"/>
+                    <a href="/productos/detalle/<%= dataProducto.id %> ">
+                        <img src="../img/<%= dataProducto.img %>" alt="producto_1" class="product_img"/>
                     </a>
                     <div class="main-article">
                         <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price">$0.00</p>
-                        <p class="discount">0% off</p>
-                        <h4 class="description">producto_1</h4>
-                    </div>
-                </article>
-                <article>
-                    <a href="#">
-                        <img src="/img/img_sec2.webp" alt="producto_2" class="product_img"/>
-                    </a>
-                    <div class="main-article">
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price">$0.000</p>
-                        <p class="discount">0% off</p>
-                        <h4 class="description">producto_2</h4>
-                    </div>
-                </article>
-                <article>
-                    <a href="#">
-                         <img src="/img/img_sec3.webp" alt="producto_3" class="product_img"/>
-                    </a>
-                    <div class="main-article">
-                        <a href="/producto">
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price">$0.00</p>
-                        <p class="discount">0% off</p>
-                        <h4 class="description">producto_3</h4>
-                    </div>
-                </article>
-                <article>
-                    <a href="#">
-                         <img src="/img/logo-hebralibre.png" alt="producto_4" class="product_img"/>
-                    </a>
-                    <div class="main-article">
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price">$0.00</p>
-                        <p class="discount">0% off</p>
-                        <h4 class="description">producto_4</h4>
-                    </div>
-                </article>
-            </div>
-        </section>
+                        <p class="price"><%= dataProducto.price %> </p>
+                        <p class="discount"><%= dataProducto.discount %> </p>
+                        <h4 class="description"><%= dataProducto.title %></h4>
+                    </div>npm
+                </article>             
+            <% } ); %>
+
+        </section>   
         <section class="offers">
             <h3>Ofertas</h3>
             <div class="products">
-                <article>
-                    <a href="#">
-                         <img src="/img/HebraLibre-BordadoEnPaleta.jpeg" alt="producto_oferta_1" class="product_img"/>
-                    </a>
-                    <div class="main-article">
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price">$0.00</p>
-                        <p class="discount">0% off</p>
-                        <h4 class="description">producto_oferta_1</h4>
-                    </div>
-                </article>
-                <article>
-                    <a href="#">
-                        <img src="/img/HebraLibre-BordadoFlor.jpeg" alt="producto_oferta_2" class="product_img"/>
-                    </a>
-                    <div class="main-article">
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price">$0.000</p>
-                        <p class="discount">0% off</p>
-                        <h4 class="description">producto_oferta_2</h4>
-                    </div>
-                </article>
-                <article>
-                    <a href="#">
-                        <img src="/img/HebraLibre-collar.jpeg" alt="producto_oferta_3" class="product_img"/>
-                    </a>
-                    <div class="main-article">
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price">$0.500</p>
-                        <p class="discount">0% off</p>
-                    <h4 class="description">producto_oferta_3</h4>
-                    </div>
-                </article>
-                <article>
-                    <a href="#">
-                          <img src="/img/HebraLibre-pachamama.jpeg" alt="producto_oferta_4" class="product_img"/>
-                     </a>
-                    <div class="main-article">
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price">$0.00</p>
-                        <p class="discount">0% off</p>
-                        <h4 class="description">producto_oferta_4</h4>
-                    </div>
-                </article>
+
+                <%  data.forEach((elemento, index)=>{  %>              
+                    <article>
+                        <a href="/productos/detalle/<%= elemento.id %> ">
+                            <img src="/img/<%=elemento.img %>" alt="producto_oferta_1" class="product_img"/>
+                        </a>
+                        <div class="main-article">
+                            <a href="#"> <i class="fas fa-truck"></i> </a>
+                            <p class="price"><%= elemento.price %> </p>
+                            <p class="discount"><%= elemento.discount %></p>
+                            <h4 class="description"><%= elemento.title %></h4>
+                        </div>
+                    </article>              
+                <% } ); %>
+           
             </div>  
         </section>
     </main>

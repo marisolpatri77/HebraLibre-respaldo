@@ -13,24 +13,20 @@
 <body>
     <%- include('./partials/header.ejs')%>
     <main>
-        <section class="productos" > <!--class="last-visit"-->
+         
+        <section class="productos" > <!--src='/img/img_sec1.webp'"-->
             <h3>Productos principales</h3>           
             <div class="products_principal">
                 <div class="imgPrinc-carrito">                       
-                    <img id="imagenPrincipal" src='/img/img_sec1.webp' alt="imagenPrincipal" onclick="cambiarImagen('/img/img_principal.webp')">
+                    <img id="imagenPrincipal" src="/img/<%= idBuscado.img %>" alt="imagenPrincipal" onclick="cambiarImagen('/img/img_principal.webp')">
                      <a href='/productos/carrito' class="icono-truck"> <i class="fas fa-truck"></i> </a>
                 </div>                                   
                 <div class="contenido_producto">                       
-                     <h4 class="titulo">Bordado Gatuno</h4>
+                     <h4 class="titulo"><%= idBuscado.title %></h4>
                      <p class="descrpcion_producto" >                           
-                         "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato. 
-                          Cada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza
-                          artesanal. Este pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier 
-                          rincón de tu hogar. Perfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de
-                         arte hecha a mano es más
-                         que un adorno, es una expresión de amor por la artesanía y la belleza felina."
+                        <%= idBuscado.descripcion %>
                      </p>
-                 </div>       
+                </div>       
             </div>
             <div class="imagenes-adicionales">            
                 <img src="/img/img_sec1.webp" alt="Imagen Adicional 1" onclick="cambiarImagen('/img/img_sec1.webp')">
@@ -39,6 +35,7 @@
                 <img src="/img/logo-hebralibre.png" alt="imagen principal" onclick="cambiarImagen('/img/logo-hebralibre.png')">
             </div>
         </section>  
+        
     </main>            
     <%- include('./partials/footer.ejs')%>    
 </body>
