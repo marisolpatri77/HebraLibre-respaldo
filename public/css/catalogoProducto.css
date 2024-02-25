@@ -265,6 +265,55 @@ body {
     border: 5px;
 }
 
+/* Estilo para los botones */
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editar-eliminar {
+    display: inline-block;
+    align-items: center;
+    gap: 10px; 
+}
+
+.agregar {
+    display: inline-block;
+    align-items: left;
+}
+.botones button,
+.botones a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #f5c597;
+    color: #859bb2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 200px;
+    height: 50px;
+    }
+
+.botones button:hover,
+.botones a:hover {
+    background-color: #45a049;
+}
+
+/* Ajustes para los botones en dispositivos pequeños */
+@media screen and (max-width: 600px) {
+    .botones button,
+    .botones a {
+        width: 100%;
+    }
+}
+
+
 
 
 /*--------footer-----------
