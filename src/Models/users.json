@@ -1,0 +1,92 @@
+[
+    {
+        "id": "1",
+        "firstName": "Agustin",
+        "lastName": "Castellon",
+        "email": "agustincastellon06@gmail.com",
+        "password": "admin1",
+        "category": "Admin",
+        "image": ""  
+    },
+    {
+        "id": "2",
+        "firstName": "Juan",
+        "lastName": "Salazar",
+        "email": "JSalazar@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    },
+    {
+        "id": "3",
+        "firstName": "Carla",
+        "lastName": "Gutierres",
+        "email": "CGutierres@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    },
+    {
+        "id": "4",
+        "firstName": "Pedro",
+        "lastName": "Solano",
+        "email": "PSolano@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    },
+    {
+        "id": "5",
+        "firstName": "Maria",
+        "lastName": "Meriles",
+        "email": "MMeriles@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    },
+    {
+        "id": "6",
+        "firstName": "Marcos",
+        "lastName": "Segura",
+        "email": "MSegura@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    },
+    {
+        "id": "7",
+        "firstName": "Samuel",
+        "lastName": "Carrizo",
+        "email": "SCarrizo@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    },
+    {
+        "id": "8",
+        "firstName": "Silvio",
+        "lastName": "Roriguez",
+        "email": "SRodriguez@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    },
+    {
+        "id": "9",
+        "firstName": "Ramiro",
+        "lastName": "Fuentes",
+        "email": "RFuentes@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    },
+    {
+        "id": "10",
+        "firstName": "Santiago",
+        "lastName": "Hernandez",
+        "email": "SHernandez@gmail.com",
+        "password": "1234567",
+        "category": "Normal",
+        "image": ""  
+    }
+]
