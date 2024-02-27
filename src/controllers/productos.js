@@ -38,10 +38,12 @@ const controllerProductos = {
 
         let nuevoProducto = {
             id: nuevoId,
+            img: req.file.filename,
             price: req.body.price,
             descuont: req.body.descuont,
             title: req.body.title,
-            descripcion: req.body.descripcion
+            descripcion: req.body.descripcion,
+            img: req.file.filename
         }
 
         data.push(nuevoProducto);

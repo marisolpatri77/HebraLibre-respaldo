@@ -65,23 +65,10 @@
     },
     {
         "id": "81",
-        "price": "23",
-        "descuont": "asdasd",
-        "title": "asda",
-        "descripcion": "asdasd"
-    },
-    {
-        "id": "811",
-        "price": "2323",
-        "descuont": "asd",
-        "title": "Prueba3",
-        "descripcion": "asd"
-    },
-    {
-        "id": "8111",
-        "price": "10000",
-        "descuont": "222",
-        "title": "qqq",
-        "descripcion": "vvvv"
+        "img": "group-1709007855727.jpg",
+        "price": "1000",
+        "descuont": "12",
+        "title": "prueba1",
+        "descripcion": "imagen 1 descripcion de producto"
     }
 ]
