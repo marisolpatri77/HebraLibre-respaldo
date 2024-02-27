@@ -30,6 +30,8 @@ router.get('/catalogo', controllerProductos.catalogo)
 
 router.get('/detalle/:id', controllerProductos.detalle)
 
+
+router.delete('/delete/:id' , controllerProductos.delete);
 router.get('/create', controllerProductos.create);
 router.post('/create',fileUpload.single('img'), controllerProductos.update);
 router.get('/edit/:id', controllerProductos.edit)

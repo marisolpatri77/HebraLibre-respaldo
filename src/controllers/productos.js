@@ -1,6 +1,8 @@
 const fs = require('fs');
 const data = require('../Models/productos.json');
 const path = require('path');
+const productPath = path.join(__dirname, '../Models/productos.json');
+
 
 const controllerProductos = {
    
@@ -59,6 +61,16 @@ const controllerProductos = {
 
         )
        res.redirect('/productos/catalogo');
+    },
+
+    delete: (req, res) =>{
+        let idProduct= req.params.id
+        let indexDelete= data.findIndex(product=> product.id === idProduct);
+        data.splice(indexDelete, 1);
+
+        fs.writeFileSync(productPath, JSON.stringify(data, null, 2));
+
+        return res.redirect('/productos/catalogo');
     }
 }
 

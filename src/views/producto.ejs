@@ -21,7 +21,7 @@
                     <img id="imagenPrincipal" src="/img/<%= idBuscado.img %>" alt="imagenPrincipal" onclick="cambiarImagen('/img/img_principal.webp')">
                      <a href='/productos/carrito' class="icono-truck"> <i class="fas fa-truck"></i> </a>
                 </div>                                   
-                <div class="contenido_producto">                     
+                <div class="contenido_producto">                       
                      <h4 class="titulo"><%= idBuscado.title %></h4>
                      <p class="descrpcion_producto" >                           
                         <%= idBuscado.descripcion %>
@@ -30,7 +30,11 @@
                         <a href="/productos/carrito" class="comprar-producto">Agregar al carrito</a>
                         <div class="editar-eliminar">
                             <a href="/productos/edit/<%= idBuscado.id %>" class="editar-producto">Editar</a>
-                            <button onclick="eliminarProducto()">Eliminar</button>
+                            <div>
+                                <form action="/productos/delete/<%= idBuscado.id %>?_method=DELETE" method="post">
+                                    <button onclick="eliminarProducto()">Eliminar</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>       
