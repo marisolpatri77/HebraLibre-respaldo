@@ -48,7 +48,7 @@ const controllerProductos = {
             descripcion: req.body.descripcion
             
         }
-  console.log(nuevoProducto);
+
         data.push(nuevoProducto);
         fs.writeFileSync(
             path.join(__dirname, '../Models/productos.json'),
