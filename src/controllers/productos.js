@@ -17,7 +17,15 @@ const controllerProductos = {
     let idBuscado= data.find(indice=>indice.id === idProducto);
    
         res.render('producto',{idBuscado});
-    }
+    },
+
+    edit: (req, res) =>{
+
+        let idProducto= req.params.id;
+        let idBuscado= data.find(indice=>indice.id === idProducto);
+       
+            res.render('formEdicionProducto',{idBuscado});
+        }
 
 }
 
