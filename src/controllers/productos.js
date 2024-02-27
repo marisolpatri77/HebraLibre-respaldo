@@ -8,7 +8,9 @@ const controllerProductos = {
         res.render('carrito',{data});
     },
     catalogo: (req, res) =>{
-        res.render('catalogo',{data:data});
+        let visited = data.filter(indice=>indice.category === "visited");     
+         let inSale = data.filter(indice=>indice.category === "in-sale");
+         res.render('catalogo',{visited : visited , inSale: inSale});
     },
     
    detalle: (req, res) =>{
