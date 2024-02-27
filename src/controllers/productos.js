@@ -42,12 +42,13 @@ const controllerProductos = {
             id: nuevoId,
             img: req.file.filename,
             price: req.body.price,
+            category: req.body.category,
             descuont: req.body.descuont,
             title: req.body.title,
-            descripcion: req.body.descripcion,
-            img: req.file.filename
+            descripcion: req.body.descripcion
+            
         }
-
+  console.log(nuevoProducto);
         data.push(nuevoProducto);
         fs.writeFileSync(
             path.join(__dirname, '../Models/productos.json'),
@@ -55,6 +56,7 @@ const controllerProductos = {
             {
                 encoding: 'utf-8'
             }
+
         )
        res.redirect('/productos/catalogo');
     }
