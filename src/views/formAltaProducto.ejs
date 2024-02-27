@@ -21,15 +21,10 @@
 
         <h4>Alta de Producto</h4>
     
-        <form class="formulario">
+        <form action="/productos/create" method="POST" class="formulario">
             <div class="campo">
                 <label for="name">Nombre del Producto:</label>
-                <input type="text" id="name" name="name">
-            </div>
-    
-            <div class="campo">
-                <label for="category">Categoría:</label>
-                <input type="text" id="category" name="category">
+                <input type="text" id="name" name="title">
             </div>
     
             <div class="campo">
@@ -39,12 +34,17 @@
     
             <div class="campo">
                 <label for="description">Descripción:</label>
-                <textarea id="description" name="description" rows="4"></textarea>
+                <textarea id="description" name="descripcion" rows="4"></textarea>
             </div>
     
             <div class="campo">
                 <label for="image">Imagen:</label>
-                <input type="file" id="image" name="image" accept="image/*" class="input-img">
+                <input type="file" id="image" name="img" accept="image/*" class="input-img">
+            </div>
+
+            <div class="campo">
+                <label for="image">Descuento:</label>
+                <input type="text" id="image" name="descuont" class="input-img">
             </div>
     
             <div class="botones">

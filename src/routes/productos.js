@@ -12,4 +12,7 @@ router.get('/catalogo', controllerProductos.catalogo)
 
 router.get('/detalle/:id', controllerProductos.detalle)
 
+router.get('/create', controllerProductos.create);
+router.post('/create', controllerProductos.update);
+
 module.exports = router
