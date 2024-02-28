@@ -36,7 +36,7 @@ const controllerProductos = {
         res.render('formAltaProducto')
     }, 
 
-    update: (req, res)=>{  
+    store: (req, res)=>{  
 
         let nuevoId = data.at(-1).id+1;
 
@@ -62,6 +62,31 @@ const controllerProductos = {
         )
        res.redirect('/productos/catalogo');
     },
+
+    update: (req, res) => {
+        let id = req.params.id;
+        let {price, category, title, descripcion} = req.body;
+        data.forEach(prod =>{
+            if (prod.id == id) {
+                prod.price = price;
+                prod.category = category;
+                prod.title = title;
+                prod.descripcion = descripcion;
+            }
+        });
+        fs.writeFileSync(
+            path.join(__dirname, '../Models/productos.json'),
+            JSON.stringify(data, null, 4),
+            {
+                encoding: 'utf-8'
+            }
+        )
+
+        res.redirect('/productos/catalogo');
+
+    },
+
+    
 
     delete: (req, res) =>{
         let idProduct= req.params.id
