@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-            <title>Catalogo de productos</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">      
-            <link rel="stylesheet" href="/css/catalogoProducto.css">
-    
-            <link href="/css/header-footer.css" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogo de productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">      
+    <link rel="stylesheet" href="/css/catalogoProducto.css">
+    <link href="/css/header-footer.css" rel="stylesheet">
+</head>
 <body>
-    <%- include('./partials/header.ejs')%>
+    <% include('./partials/header.ejs') %>
     <main>
-         
-        <section class="productos" > <!--src='/img/img_sec1.webp'"-->
-            <h3>Productos principales</h3>           
+        <section class="productos">
+            <h3>Productos principales</h3>
             <div class="products_principal">
-                <div class="imgPrinc-carrito">                       
+                <div class="imgPrinc-carrito">
                     <img id="imagenPrincipal" src="/img/<%= idBuscado.img %>" alt="imagenPrincipal" onclick="cambiarImagen('/img/img_principal.webp')">
-                     <a href='/productos/carrito' class="icono-truck"> <i class="fas fa-truck"></i> </a>
-                </div>                                   
-                <div class="contenido_producto">                       
-                     <h4 class="titulo"><%= idBuscado.title %></h4>
-                     <p class="descrpcion_producto" >                           
+                    <a href='/productos/carrito' class="icono-truck"> <i class="fas fa-truck"></i> </a>
+                </div>
+                <div class="contenido_producto">
+                    <h4 class="titulo"><%= idBuscado.title %></h4>
+                    <p class="descrpcion_producto">
                         <%= idBuscado.descripcion %>
-                     </p>
-                     <div class="botones">
+                    </p>
+                    <div class="botones">
                         <a href="/productos/carrito" class="comprar-producto">Agregar al carrito</a>
                         <div class="editar-eliminar">
                             <a href="/productos/edit/<%= idBuscado.id %>" class="editar-producto">Editar</a>
-                            <div>
-                                <form action="/productos/delete/<%= idBuscado.id %>?_method=DELETE" method="post">
-                                    <button onclick="eliminarProducto()">Eliminar</button>
-                                </form>
-                            </div>
+                            <button onclick="confirmarEliminar()">Eliminar</button>
                         </div>
                     </div>
-                </div>       
+                </div>
             </div>
-            <div class="imagenes-adicionales">            
+            <div class="imagenes-adicionales">
                 <img src="/img/img_sec1.webp" alt="Imagen Adicional 1" onclick="cambiarImagen('/img/img_sec1.webp')">
                 <img src="/img/img_sec2.webp" alt="Imagen Adicional 2" onclick="cambiarImagen('/img/img_sec2.webp')">
                 <img src="/img/img_sec3.webp" alt="Imagen Adicional 3" onclick="cambiarImagen('/img/img_sec3.webp')">
                 <img src="/img/logo-hebralibre.png" alt="imagen principal" onclick="cambiarImagen('/img/logo-hebralibre.png')">
             </div>
-        </section>  
-        
-    </main>            
-    <%- include('./partials/footer.ejs')%>    
+        </section>
+    </main>
+    <% include('./partials/footer.ejs') %>
+
+    <script>
+        function confirmarEliminar() {
+            if (confirm("¿Estás seguro de que deseas eliminar este producto?")) {
+                window.location.href = "/productos/delete/<%= idBuscado.id %>?_method=DELETE";
+            } else {
+               
+            }
+        }
+    </script>
 </body>
 </html>

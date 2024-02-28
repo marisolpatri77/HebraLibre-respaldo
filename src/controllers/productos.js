@@ -72,6 +72,9 @@ const controllerProductos = {
 
         return res.redirect('/productos/catalogo');
     }
+
+    
+
 }
 
 module.exports = controllerProductos
