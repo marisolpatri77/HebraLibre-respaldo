@@ -7,7 +7,4 @@ router.get('/register', controllerUsuarios.register)
 
 router.get('/login', controllerUsuarios.login)
 
-
-
-
 module.exports = router
