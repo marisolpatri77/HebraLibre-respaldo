@@ -11,7 +11,6 @@ body {
 }
 
 .container-form{
-    /*width: 100%;*/
     max-width: 1100px;
     margin: auto;
     display: grid;
@@ -20,6 +19,7 @@ body {
     margin-top: 90px;
     margin-bottom: 90px;
     font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
 }
 
 .container-form h2{
@@ -49,7 +49,8 @@ body {
     margin-right: 10px;
 }
 
-.container-form form .campo, textarea{
+.container-form form .campo,
+.container-form form textarea{
     width: 100%;
     padding: 10px;
     font-size: 18px;
@@ -81,26 +82,39 @@ body {
 
 /* Media Queries*/
 
-@media ( max-width: 767px) {
-   .container-form{
+@media ( max-width: 1023px) {
+    .container-form{
         grid-template-columns: repeat(1,1fr);
         grid-gap: 40px;
-   }
+        padding: 0 30px;
+    }
 
-   .container-form form textarea{
-        max-width: 450px;
-        min-width: 450px;
+    .container-form form textarea {
+       
+        min-width: 100%;
+        max-width: 100%;
         min-height: 100px;
         max-height: 100px;
     }
 }
 
-@media ( max-width: 1023px) {
-    .container-form{
-         grid-template-columns: repeat(1,1fr);
-         grid-gap: 40px;
+@media ( max-width: 767px) {
+   .container-form{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 40px;
+        padding: 0 10px;
+   }
+
+   .container-form form textarea {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100px;
+        max-height: 100px;
     }
 }
+
+
+
 
 
 

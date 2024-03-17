@@ -30,6 +30,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 35px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .formulario {
@@ -49,20 +50,23 @@ body {
     font-weight: bold;
     color: white;
     font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5)
 }
 
-.campo input, .campo textarea {
+.campo input, .campo textarea, select.options, .campo .input-img {
     flex: 1;
     margin-left: 10px;
-    padding: 5px;
+    padding: 8px;
     border: solid 1px  #d0b6b7;
     border-radius: 4px;
 }
 
-.campo .input-img{
-    border: none;
-    max-width: 400px;
+.campo .input-img {
+    background-color: white;
 }
+
+
+
 
 .botones{
     display: flex;
@@ -81,13 +85,19 @@ body {
     font-size: 16px;
 }
 
-.btn-cancelar{
+.btn-cancelar, .btn-guardar{
+    background-color:  #4d4dff;
+}
+
+.btn-cancelar:hover{
     background-color: red;
 }
 
-.btn-guardar{
-    background-color: blue;
+.btn-guardar:hover{
+    background-color: green;
 }
+
+
 
 
 /*Media Queries*/

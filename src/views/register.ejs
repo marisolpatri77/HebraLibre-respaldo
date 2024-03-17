@@ -14,14 +14,40 @@
 </head>
 <body>
     <%- include('./partials/header.ejs')%>
-    <form class="form-register">
+    <form action="#" method="GET" class="form-register">
         <h4>Registrate en Hebra Libre</h4>
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
-        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
-        <input class="controls" type="email" name="email" id="email" placeholder="Email">
-        <input class="controls" type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
-        <input class="controls" type="password" name="confirmar_contrasenia" id="confirmar_contrasenia" placeholder="Confirmar contraseña"><br>
-        <input class="botom" type="submit" value="Crear Cuenta">
+        <div>
+            <label for="name">NOMBRE</label>
+            <input class="controls" type="text" name="firstName" id="name" placeholder="ej: Juan">
+        </div>
+        <div>
+            <label for="lastname">APELLIDO</label>
+            <input class="controls" type="text" name="lastName" id="lastname" placeholder="ej: Pérez">
+        </div>
+        <div>
+            <label for="category">CATEGORÍA</label>
+            <select name="category" id="category" class="controls">
+                <option value="">Elegí una opción</option>
+                <option value="admin">Administrador</option>
+                <option value="user">Usuario Normal</option>
+            </select>
+        </div>
+        <div>
+            <label for="email">EMAIL</label>
+            <input class="controls" type="email" name="email" id="email" placeholder="ej: juanperez@email.com">
+        </div>
+        <div>
+            <label for="password">CONTRASEÑA</label>
+            <input class="controls" type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="image">FOTO DE PERFIL</label>
+            <input type="file" id="image" name="image" accept="image/*" class="form-img">
+        </div>
+        <div>
+            <input class="botom" type="submit" value="Crear Cuenta">
+        </div>
+        
         <p>¿Tienes una cuenta? <a href="/usuarios/login">Iniciar sesión</a></p>
     </form>
     <%- include('./partials/footer.ejs')%>   

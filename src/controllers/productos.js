@@ -69,6 +69,7 @@ const controllerProductos = {
         let {price, category, title, descripcion} = req.body;
         data.forEach(prod =>{
             if (prod.id == id) {
+                prod.img = req.file.filename;
                 prod.price = price;
                 prod.category = category;
                 prod.title = title;
