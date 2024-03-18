@@ -46,6 +46,7 @@ const controllerProductos = {
             img: req.file.filename,
             price: req.body.price,
             category: req.body.category,
+            colors: req.body.colors,
             descuont: req.body.descuont,
             title: req.body.title,
             descripcion: req.body.descripcion

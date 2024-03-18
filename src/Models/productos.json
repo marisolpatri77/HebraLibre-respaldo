@@ -1,13 +1,13 @@
 [
     {
         "id": "1",
-        "img": "img_sec1.webp",
+        "img": "group-1710771104930.webp",
         "price": "$ 100",
         "category": "visited",
         "colors": "pink",
         "descuont": "10%",
         "title": "titulo 1",
-        "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
+        "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\r\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\r\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\r\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
     },
     {
         "id": "2",
@@ -70,13 +70,13 @@
         "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
     },
     {
-        "id": "8",
-        "img": "HebraLibre-collar.jpeg",
-        "price": "$ 100",
+        "id": "71",
+        "img": "group-1710772316184.png",
+        "price": "10000",
         "category": "in-sale",
-        "colors": "pink",
-        "descuont": "10%",
+        "colors": "green",
+        "descuont": "12",
         "title": "titulo 8",
-        "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
+        "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato. Cada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal. Este pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar. Perfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
     }
 ]

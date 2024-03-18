@@ -45,16 +45,13 @@
                         function cambiarImagen(rutaImagen) {
                             document.getElementById("imagenPrincipal").src = rutaImagen;
                         }
-                        //  function cambiarEnlace(enlace) {
-                        //      var enlaceEditar = document.getElementById("enlaceEditar");
-                        //       enlaceEditar.href = enlace;
-                        //  }
-                    </script>
+                    </script> 
                     <% for (let i=0; i < 4; i++) { %>
-                        <img id="enlaceEditar" src="/img/<%= color[i].img %>" alt="Imagen Adicional <%= i + 1 %>"
-                            onclick="cambiarImagen('/img/<%= color[i].img %>')">
+                        <% if (color[i] && color[i].img) { %>
+                            <img id="enlaceEditar" src="/img/<%= color[i].img %>" alt="Imagen Adicional <%= i + 1 %>"
+                                onclick="cambiarImagen('/img/<%= color[i].img %>')"> 
                         <% } %>
-
+                    <% } %>
                 </div>
             </section>
 

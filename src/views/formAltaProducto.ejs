@@ -26,7 +26,10 @@
                 <label for="name">Nombre del Producto:</label>
                 <input type="text" id="name" name="title">
             </div>
-
+            <div class="campo">
+                <label for="name"> Color del Producto:</label>
+                <input type="text" id="colors" name="colors">
+            </div>
             <div class="campo">
                 <label for="category" class="form-label">Categoría:</label>
                 <select name="category" id="category"  class="options">
@@ -34,8 +37,7 @@
                     <option value="visited">Productos Principales</option>
                     <option value="in-sale">En Oferta</option>
                 </select>
-            </div>
-    
+            </div> 
             <div class="campo">
                 <label for="price">Precio:</label>
                 <input type="text" id="price" name="price">
@@ -45,27 +47,20 @@
                 <label for="description">Descripción:</label>
                 <textarea id="description" name="descripcion" rows="4"></textarea>
             </div>
-
             <div class="campo">
                 <label for="descount">Descuento:</label>
                 <input type="text" id="descount" name="descuont">
             </div>
-    
             <div class="campo">
                 <label for="image">Imagen:</label>
                 <input type="file" id="image" name="img" accept="image/*" class="input-img">
             </div>
-    
             <div class="botones">
                 <input class="btn-cancelar" type="submit" value="Cancelar">
                 <input class="btn-guardar" type="submit" value="Guardar">
             </div>
-            
         </form>
-    
     </div>
-    
-
     <%- include('./partials/footer.ejs')%>  
 </body>
 </html>
