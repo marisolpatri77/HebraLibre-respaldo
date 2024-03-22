@@ -84,20 +84,15 @@ const controllerProductos = {
                 encoding: 'utf-8'
             }
         )
-
         res.redirect('/productos/catalogo');
-
     },
-
-    
 
     delete: (req, res) =>{
         let idProduct= req.params.id
         let indexDelete= data.findIndex(product=> product.id === idProduct);
         data.splice(indexDelete, 1);
-
         fs.writeFileSync(productPath, JSON.stringify(data, null, 2));
-
+console.log(idProduct);
         return res.redirect('/productos/catalogo');
     }
 }
