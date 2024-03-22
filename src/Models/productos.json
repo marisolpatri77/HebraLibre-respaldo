@@ -1,82 +1,82 @@
 [
-  {
-    "id": "1",
-    "img": "group-1710773668737.webp",
-    "price": "$ 100",
-    "category": "visited",
-    "colors": "pink",
-    "descuont": "10%",
-    "title": "titulo 1",
-    "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\r\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\r\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\r\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
-  },
-  {
-    "id": "2",
-    "img": "img_sec2.webp",
-    "price": "$ 100",
-    "category": "visited",
-    "colors": "green",
-    "descuont": "10%",
-    "title": "titulo 2",
-    "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
-  },
-  {
-    "id": "3",
-    "img": "img_sec3.webp",
-    "price": "$ 100",
-    "category": "visited",
-    "colors": "green",
-    "descuont": "10%",
-    "title": "titulo 3",
-    "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
-  },
-  {
-    "id": "4",
-    "img": "HebraLibre-BordadoFlor.jpeg",
-    "price": "$ 100",
-    "category": "visited",
-    "colors": "pink",
-    "descuont": "10%",
-    "title": "titulo 4",
-    "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
-  },
-  {
-    "id": "5",
-    "img": "HebraLibre-BordadoEnPaleta.jpeg",
-    "price": "$ 100",
-    "category": "in-sale",
-    "colors": "pink",
-    "descuont": "10%",
-    "title": "titulo 5",
-    "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
-  },
-  {
-    "id": "6",
-    "img": "HebraLibre-pachamama.jpeg",
-    "price": "$ 100",
-    "category": "in-sale",
-    "colors": "green",
-    "descuont": "10%",
-    "title": "titulo 6",
-    "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
-  },
-  {
-    "id": "7",
-    "img": "HebraLibre-TALLER.jpeg",
-    "price": "$ 100",
-    "category": "in-sale",
-    "colors": "green",
-    "descuont": "10%",
-    "title": "titulo 7",
-    "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato.\nCada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal.\nEste pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar.\nPerfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
-  },
-  {
-    "id": "71",
-    "img": "group-1710772316184.png",
-    "price": "10000",
-    "category": "in-sale",
-    "colors": "green",
-    "descuont": "12",
-    "title": "titulo 8",
-    "descripcion": "Adorna tu espacio con encanto felino con nuestro exquisito bordado a mano de un gato. Cada detalle del suave pelaje y los curiosos ojos ha sido cuidadosamente tejido con amor y destreza artesanal. Este pequeño y elegante gato bordado añadirá una pizca de personalidad y calidez a cualquier rincón de tu hogar. Perfecto como regalo único o para deleitar a los amantes de los gatos, esta obra de arte hecha a mano es más que un adorno, es una expresión de amor por la artesanía y la belleza felina."
-  }
+    {
+        "id": "1",
+        "img": "group-1711145236088.webp",
+        "price": "$ 100",
+        "category": "visited",
+        "colors": "pink",
+        "descuont": "10%",
+        "title": "Amelia",
+        "descripcion": "💜 Nos fuimos a conocer a una pulguita preciosa, que lleva un nombre precioso y tiene la mamá más bella. Le llevamos un regalito para su cuarto. Un gatito de la suerte, para que la cuide, para que se sonrían y para que nos sienta cerquita siempre. 💜"
+    },
+    {
+        "id": "2",
+        "img": "group-1711145310376.webp",
+        "price": "$ 100",
+        "category": "visited",
+        "colors": "green",
+        "descuont": "10%",
+        "title": "Mascotas",
+        "descripcion": "Quedaron tan lindos! Pero no los voy a mostrar completos hasta que no los entregue 🤭 Continuará..."
+    },
+    {
+        "id": "3",
+        "img": "group-1711145413683.webp",
+        "price": "$ 100",
+        "category": "visited",
+        "colors": "green",
+        "descuont": "10%",
+        "title": "Begur, Costa Brava",
+        "descripcion": "Pinta el recuerdo de colores. Pintalo con los colores del recuerdo."
+    },
+    {
+        "id": "4",
+        "img": "group-1711145493721.webp",
+        "price": "$ 100",
+        "category": "visited",
+        "colors": "pink",
+        "descuont": "10%",
+        "title": "Seres mágicos",
+        "descripcion": "Las personas mágicas existen, aparecen de la nada, sin que te des cuenta. Son aquellas que saben ganarse tu confianza rápido y de forma inesperada. De pronto un día llegan a tu vida, empiezan a hablar de todo, de alegrías, daños, experiencias, penas y heridas. Johannes Ruiz Puitre\""
+    },
+    {
+        "id": "5",
+        "img": "HebraLibre-BordadoEnPaleta.jpeg",
+        "price": "$ 100",
+        "category": "in-sale",
+        "colors": "pink",
+        "descuont": "10%",
+        "title": "Navidad 2023",
+        "descripcion": "Argentinicemos un poco la decó de Navidad. ♥️"
+    },
+    {
+        "id": "6",
+        "img": "HebraLibre-pachamama.jpeg",
+        "price": "$ 100",
+        "category": "in-sale",
+        "colors": "green",
+        "descuont": "10%",
+        "title": "Pachamama",
+        "descripcion": "Hoy honramos a la Madre Tierra. Abrimos un hueco en el suelo y le ofrendamos de comer, de beber, de fumar. Así, agradecemos su generosidad. Agosto es uno de los meses más importantes aquí en Jujuy. De alegría y fiesta. Pero este año, esta celebración está atravesada por una triste realidad, de violencia y atropello contra el pueblo que pelea por cuidar su tierra. La triste historia cíclica de Sudamérica y el saqueo de sus recursos.🌱La pacha resiste y sus hijxs también."
+    },
+    {
+        "id": "7",
+        "img": "HebraLibre-TALLER.jpeg",
+        "price": "$ 100",
+        "category": "in-sale",
+        "colors": "green",
+        "descuont": "10%",
+        "title": "Taller de Bordado y astrologia",
+        "descripcion": "No paramos de escuchar lo difícil que viene este fin de año, lo rápido que pasó, lo vertiginoso que fue. Se percibe esa sensación de que nos perdimos en el camino. Esta propuesta nace para ayudar a reconectarnos con nuestras fortalezas. Adry @adri.lambare acercará toda la sabiduría de Júpiter, el gran astro de la expansión, el crecimiento y la prosperidad. Transmitirá qué sentido tiene en la vida de cada unx. Guada @hebralibre ayudará luego a crear con hilos y bastidor un bordado sobre un diseño personalizado que ayude a tener ese mensaje siempre presente. Todo un rato al aire libre, mates y bizcochos mediantes si se desean. Lxs esperamos! Info por mp o al 3884175520"
+    },
+    {
+        "id": "71",
+        "img": "group-1710772316184.png",
+        "price": "10000",
+        "category": "in-sale",
+        "colors": "green",
+        "descuont": "12",
+        "title": "Rositas",
+        "descripcion": "Decime si esas rositas no son un amor! Esta mañana las paseamos por el mar 🏖"
+    }
 ]
