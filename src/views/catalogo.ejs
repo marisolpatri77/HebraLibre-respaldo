@@ -23,7 +23,7 @@
             <h3>Productos principales</h3>
             <div class="products">
 
-            <% visited.forEach(dataProducto =>{  %>
+            <!-- <% visited.forEach(dataProducto =>{  %>
                 <article>
                     <a href="/productos/detalle/<%= dataProducto.id %> ">
                         <img src="../img/<%= dataProducto.img %>" alt="producto_1" class="product_img"/>
@@ -35,7 +35,21 @@
                         <h4 class="description"><%= dataProducto.title %></h4>
                     </div>
                 </article>             
-            <% } ); %>
+            <% } ); %> -->
+
+            <% for(let i=0; i < 4; i++){  %>
+                <article>
+                    <a href="/productos/detalle/<%= visited[i].id %> ">
+                        <img src="../img/<%= visited[i].img %>" alt="producto_1" class="product_img"/>
+                    </a>
+                    <div class="main-article">
+                        <a href="#"> <i class="fas fa-truck"></i> </a>
+                        <p class="price"><%= visited[i].price %> </p>
+                        <p class="discount"><%= visited[i].discount %> </p>
+                        <h4 class="description"><%= visited[i].title %></h4>
+                    </div>
+                </article>             
+            <% } ; %>
 
         </section>   
         <section class="offers">
@@ -54,8 +68,20 @@
                             <h4 class="description"><%= elemento.title %></h4>
                         </div>
                     </article>              
-                <% } ); %>
-           
+                <% } ); %> 
+                <!-- <% for (let i = 0; i < 4 ; i++) { %>
+                    <article>
+                        <a href="/productos/detalle/<%= inSale[i].id %> ">
+                            <img src="/img/<%= inSale[i].img %>" alt="producto_oferta_1" class="product_img"/>
+                        </a>
+                        <div class="main-article">
+                            <a href="#"> <i class="fas fa-truck"></i> </a>
+                            <p class="price"><%= inSale[i].price %> </p>
+                            <p class="discount"><%= inSale[i].discount %></p>
+                            <h4 class="description"><%= inSale[i].title %></h4>
+                        </div>
+                    </article>
+                <% } %> -->         
             </div>  
         </section>
     </main>
