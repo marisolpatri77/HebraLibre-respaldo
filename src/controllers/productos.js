@@ -9,6 +9,15 @@ const controllerProductos = {
     carrito: (req, res) =>{
         res.render('carrito',{data});
     },
+    generateId:()=>{
+       
+        let lastUser = data[data.length - 1];
+        if(lastUser){
+            let nextId = parseInt(lastUser.id, 10) + 1;
+        return nextId; 
+        }
+        return 1;
+    },
     catalogo: (req, res) =>{
         let visited = data.filter(indice=>indice.category === "visited");     
          let inSale = data.filter(indice=>indice.category === "in-sale");
@@ -19,7 +28,7 @@ const controllerProductos = {
 
     let idProducto= req.params.id;
     let idBuscado= data.find(indice=>indice.id === idProducto);
-    let color= data.filter(indice=>indice.colors === idBuscado.colors);
+    let color= data.filter(indice=>indice.colors === idBuscado.colors && indice.id !== idBuscado.id);
    
         res.render('producto',{idBuscado,color});
     },
@@ -31,16 +40,13 @@ const controllerProductos = {
        
             res.render('formEdicionProducto',{idBuscado});
         },
-
     create: (req, res) =>{
 
         res.render('formAltaProducto')
     }, 
-
     store: (req, res)=>{  
 
-        let nuevoId = data.at(-1).id+1;
-
+        let nuevoId = controllerProductos.generateId().toString();
         let nuevoProducto = {
             id: nuevoId,
             img: req.file.filename,
@@ -49,8 +55,7 @@ const controllerProductos = {
             colors: req.body.colors,
             descuont: req.body.descuont,
             title: req.body.title,
-            descripcion: req.body.descripcion
-            
+            descripcion: req.body.descripcion           
         }
 
         data.push(nuevoProducto);
@@ -60,7 +65,6 @@ const controllerProductos = {
             {
                 encoding: 'utf-8'
             }
-
         )
        res.redirect('/productos/catalogo');
     },

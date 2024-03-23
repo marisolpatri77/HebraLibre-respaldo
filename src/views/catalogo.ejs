@@ -23,36 +23,44 @@
             <h3>Productos principales</h3>
             <div class="products">
 
-            <% visited.forEach(dataProducto =>{  %>
-                <article>
-                    <a href="/productos/detalle/<%= dataProducto.id %> ">
-                        <img src="../img/<%= dataProducto.img %>" alt="producto_1" class="product_img"/>
-                    </a>
-                    <div class="main-article">
-                        <a href="#"> <i class="fas fa-truck"></i> </a>
-                        <p class="price"><%= dataProducto.price %> </p>
-                        <p class="discount"><%= dataProducto.discount %> </p>
-                        <h4 class="description"><%= dataProducto.title %></h4>
-                    </div>
-                </article>             
-            <% } ); %>
-
+                <% if (visited && visited.length > 0) { %>
+                    <% for (let i = 0; i < visited.length && i < 4; i++) { %>
+                        <article>
+                            <a href="/productos/detalle/<%= visited[i].id %>">
+                                <img src="../img/<%= visited[i].img %>" alt="producto_1" class="product_img"/>
+                            </a>
+                            <div class="main-article">
+                                <a href="#"> <i class="fas fa-truck"></i> </a>
+                                <p class="price"><%= visited[i].price %> </p>
+                                <p class="discount"><%= visited[i].descuont %> </p> <!-- Corregir descuento a descuont -->
+                                <h4 class="description"><%= visited[i].title %></h4>
+                            </div>
+                        </article>
+                    <% } %>
+                <% } else { %>
+                    <p>No hay elementos para mostrar.</p>
+                <% } %>
         </section>   
         <section class="offers">
             <h3>Ofertas</h3>
             <div class="products">
 
+<<<<<<< HEAD
                 <!-- <%  inSale.forEach((elemento, index)=>{  %>              
+=======
+                 <% for (let i = 0; i < inSale.length && i < 4 ; i++) { %>
+>>>>>>> rama_andres
                     <article>
-                        <a href="/productos/detalle/<%= elemento.id %> ">
-                            <img src="/img/<%=elemento.img %>" alt="producto_oferta_1" class="product_img"/>
+                        <a href="/productos/detalle/<%= inSale[i].id %> ">
+                            <img src="/img/<%= inSale[i].img %>" alt="producto_oferta_1" class="product_img"/>
                         </a>
                         <div class="main-article">
                             <a href="#"> <i class="fas fa-truck"></i> </a>
-                            <p class="price"><%= elemento.price %> </p>
-                            <p class="discount"><%= elemento.discount %></p>
-                            <h4 class="description"><%= elemento.title %></h4>
+                            <p class="price"><%= inSale[i].price %> </p>
+                            <p class="discount"><%= inSale[i].discount %></p>
+                            <h4 class="description"><%= inSale[i].title %></h4>
                         </div>
+<<<<<<< HEAD
                     </article>              
                 <% } ); %> -->
 
@@ -71,6 +79,10 @@
                 <% } %>
 
            
+=======
+                    </article>
+                <% } %>       
+>>>>>>> rama_andres
             </div>  
         </section>
     </main>
