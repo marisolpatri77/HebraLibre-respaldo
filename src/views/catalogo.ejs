@@ -32,7 +32,7 @@
                             <div class="main-article">
                                 <a href="#"> <i class="fas fa-truck"></i> </a>
                                 <p class="price"><%= visited[i].price %> </p>
-                                <p class="discount"><%= visited[i].descuont %> </p> <!-- Corregir descuento a descuont -->
+                                <p class="discount"><%= visited[i].descuont %> </p> 
                                 <h4 class="description"><%= visited[i].title %></h4>
                             </div>
                         </article>
@@ -44,7 +44,7 @@
         <section class="offers">
             <h3>Ofertas</h3>
             <div class="products">
-
+                <% if (inSale && inSale.length > 0) { %>
                  <% for (let i = 0; i < inSale.length && i < 4 ; i++) { %>
                     <article>
                         <a href="/productos/detalle/<%= inSale[i].id %> ">
@@ -57,7 +57,10 @@
                             <h4 class="description"><%= inSale[i].title %></h4>
                         </div>
                     </article>
-                <% } %>       
+                <% } %> 
+                <% } else { %>
+                    <p>No hay elementos para mostrar.</p>
+                <% } %>      
             </div>  
         </section>
     </main>
