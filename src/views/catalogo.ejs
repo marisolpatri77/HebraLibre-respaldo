@@ -45,11 +45,7 @@
             <h3>Ofertas</h3>
             <div class="products">
 
-<<<<<<< HEAD
-                <!-- <%  inSale.forEach((elemento, index)=>{  %>              
-=======
                  <% for (let i = 0; i < inSale.length && i < 4 ; i++) { %>
->>>>>>> rama_andres
                     <article>
                         <a href="/productos/detalle/<%= inSale[i].id %> ">
                             <img src="/img/<%= inSale[i].img %>" alt="producto_oferta_1" class="product_img"/>
@@ -57,32 +53,11 @@
                         <div class="main-article">
                             <a href="#"> <i class="fas fa-truck"></i> </a>
                             <p class="price"><%= inSale[i].price %> </p>
-                            <p class="discount"><%= inSale[i].discount %></p>
+                            <p class="discount"><%= inSale[i].descuont %></p>
                             <h4 class="description"><%= inSale[i].title %></h4>
                         </div>
-<<<<<<< HEAD
-                    </article>              
-                <% } ); %> -->
-
-                <% for (let i = 0; i < 4 ; i++) { %>
-                    <article>
-                        <a href="/productos/detalle/<%= inSale[i].id %> ">
-                            <img src="/img/<%= inSale[i].img %>" alt="producto_oferta_1" class="product_img"/>
-                        </a>
-                        <div class="main-article">
-                            <a href="#"> <i class="fas fa-truck"></i> </a>
-                            <p class="price"><%= inSale[i].price %> </p>
-                            <p class="discount"><%= inSale[i].discount %></p>
-                            <h4 class="description"><%= inSale[i].title %></h4>
-                        </div>
-                    </article>
-                <% } %>
-
-           
-=======
                     </article>
                 <% } %>       
->>>>>>> rama_andres
             </div>  
         </section>
     </main>
