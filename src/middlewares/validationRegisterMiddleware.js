@@ -1,6 +1,7 @@
 const path = require('path');
 const {body} = require('express-validator');
 
+let validaciones = (req,res,next)=>{
 const validaciones = [
     body('firstName').notEmpty().withMessage('Debes completar el campo').bail().isLength({ min: 3}).withMessage('El nombre debe ser mas largo'),
     body('lastName').notEmpty().withMessage('Debes completar el campo'),
@@ -21,5 +22,5 @@ if (file) {
     }
 }
 return true;
-
+}
 module.exports= validaciones;
