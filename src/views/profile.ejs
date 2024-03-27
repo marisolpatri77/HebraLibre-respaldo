@@ -17,8 +17,9 @@
     <%- include('./partials/header.ejs')%>
     <main>
         <div class="profile-contenedor">
-            <h2>Hola Usuario!</h2>
-            <p>usuario@gmail.com</p>
+            <img src="/img/<% user.img %>" alt="<% user.username %>">
+            <h2><% user.username %></h2>
+            <p><% user.email %></p>
         </div>
     </main>
 </body>

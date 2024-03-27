@@ -14,7 +14,7 @@
 </head>
 <body>
     <%- include('./partials/header.ejs')%>
-    <form action="/usuarios/register" method="POST" class="form-register">
+    <form action="/usuarios/register" method="POST" class="form-register" enctype="multipart/form-data">
         <h4>Registrate en Hebra Libre</h4>
         <div>
             <label for="name">NOMBRE</label>
@@ -41,8 +41,8 @@
             <input class="controls" type="password" name="password" id="password">
         </div>
         <div>
-            <label for="image">FOTO DE PERFIL</label>
-            <input type="file" id="image" name="image" accept="image/*" class="form-img">
+            <label for="avatar">FOTO DE PERFIL (.jpg, .png, .gif)</label>
+            <input type="file" id="avatar" name="avatar" accept="image/*" class="form-img">
         </div>
         <div>
             <input class="botom" type="submit" value="Crear Cuenta">

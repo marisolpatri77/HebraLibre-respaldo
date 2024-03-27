@@ -80,8 +80,14 @@ const controllerUsuarios = {
     },
 
     create: (req, res) =>{
-        console.log(req.body);
+        console.log('File en controller: ', req.file);
 
+                
+        const newUser = {
+            id: crypto.randomUUID(),
+            ...req.body,
+            img: req.file.filename
+        };
         res.redirect('/')
     },
 
