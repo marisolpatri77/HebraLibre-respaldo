@@ -24,40 +24,81 @@
         <form action="/productos/create" method="POST" enctype="multipart/form-data" class="formulario">
             <div class="campo">
                 <label for="name">Nombre del Producto:</label>
-                <input type="text" id="name" name="title">
+                <input type="text" id="name" name="title" value="<%= locals.oldData ? oldData.title : null %>">
             </div>
+            <% if (locals.errors && errors.title) { %>
+                <div class="text-danger">
+                    <%= errors.title.msg %>
+                </div>
+            <% } %>
+
             <div class="campo">
                 <label for="name"> Color del Producto:</label>
-                <input type="text" id="colors" name="colors">
+                <input type="text" id="colors" name="colors" value="<%= locals.oldData ? oldData.colors : null %>">
             </div>
+            <% if (locals.errors && errors.colors) { %>
+                <div class="text-danger">
+                    <%= errors.colors.msg %>
+                </div>
+            <% } %>
+
             <div class="campo">
                 <label for="category" class="form-label">Categoría:</label>
                 <select name="category" id="category"  class="options">
                     <option value="">Elegí una opción</option>
-                    <option value="visited">Productos Principales</option>
-                    <option value="in-sale">En Oferta</option>
+                    <option value="visited" <%= locals.oldData && oldData.category === 'visited' ? 'selected' : '' ; %>>Productos Principales</option>
+                    <option value="in-sale" <%= locals.oldData && oldData.category === 'in-sale' ? 'selected' : '' ; %>>En Oferta</option>
                 </select>
             </div> 
+            <% if (locals.errors && errors.category) { %>
+                <div class="text-danger">
+                    <%= errors.category.msg %>
+                </div>
+            <% } %>
+ 
             <div class="campo">
                 <label for="price">Precio:</label>
-                <input type="text" id="price" name="price">
+                <input type="text" id="price" name="price" value="<%= locals.oldData ? oldData.price : null %>">
             </div>
-    
+            <% if (locals.errors && errors.price) { %>
+                <div class="text-danger">
+                    <%= errors.price.msg %>
+                </div>
+            <% } %>
+
             <div class="campo">
                 <label for="description">Descripción:</label>
-                <textarea id="description" name="descripcion" rows="4"></textarea>
+                <textarea id="descripcion" name="descripcion" rows="4"> <%= locals.oldData ? oldData.descripcion : null %></textarea>
             </div>
+            <% if (locals.errors && errors.descripcion) { %>
+                <div class="text-danger">
+                    <%= errors.descripcion.msg %>
+                </div>
+            <% } %>
+
             <div class="campo">
                 <label for="descount">Descuento:</label>
-                <input type="text" id="descount" name="descuont">
+                <input type="text" id="descount" name="descuont" value="<%= locals.oldData ? oldData.descuont : null %>">
             </div>
+            <% if (locals.errors && errors.descuont) { %>
+                <div class="text-danger">
+                    <%= errors.descuont.msg %>
+                </div>
+            <% } %>
+
             <div class="campo">
                 <label for="image">Imagen:</label>
                 <input type="file" id="image" name="img" accept="image/*" class="input-img">
             </div>
+            <% if (locals.errors && errors.img) { %>
+                <div class="text-danger">
+                    <%= errors.img.msg %>
+                </div>
+            <% } %>
+
             <div class="botones">
-                <input class="btn-cancelar" type="submit" value="Cancelar">
-                <input class="btn-guardar" type="submit" value="Guardar">
+                <a href="/productos/catalogo"><button type="button" class="btn-cancelar">Cancelar</button></a>
+                <button class="btn-guardar" type="submit">Guardar</button>
             </div>
         </form>
     </div>

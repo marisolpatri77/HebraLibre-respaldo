@@ -79,6 +79,10 @@ body {
     border-radius: 3px;
 }
 
+.btn-enviar:hover{
+    background-color: #cc80ff;
+}
+
 
 /* Media Queries*/
 
