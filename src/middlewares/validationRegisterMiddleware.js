@@ -10,17 +10,24 @@ const validaciones = [
     body('image').notEmpty().withMessage('Debes completar el campo')
 ];
 
-let file = req.file;
-let acceptedExtensions = ['.jpg', '.png', '.gif'];
+try{
 
-if (file) {
+    let file = req.file;
+   
+if (!file) {
     throw new Error('Tienes que subir una imagen');
 } else {
-    let fileExtension = path.extname(file.image);
+    let fileExtension = path.extname(file.originalname);
+    let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
     if (!acceptedExtensions.includes(fileExtension)) {
         throw new Error (`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')} `);
     }
 }
-return true;
+} catch (error){
+
+return res.status(400).json({ error: error.message });
+}
+next();
 }
 module.exports= validaciones;
