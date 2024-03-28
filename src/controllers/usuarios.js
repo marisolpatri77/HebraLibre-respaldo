@@ -1,7 +1,10 @@
 const bcryptjs = require('bcryptjs');
 const {validaciones, validationResult} = require('express-validator'); //preguntar si esto es correcto
 //const { all } = require('../routes/usuarios');
-const user = require('../Models/user.js')
+const user = require('../Models/user.js');
+
+
+
 const controllerUsuarios = {
     register: (req, res) =>{
         res.render('register');
@@ -49,7 +52,7 @@ const controllerUsuarios = {
            if(isOkThePassword ){
             delete userToLogin.password;
             req.session.userLogged = userToLogin;
-              return res.redirect('/usuarios/profile'); //aca va la vista del usuario que no tenemos
+              return res.redirect('/usuarios/profile'); 
            }
            return res.render('login', {
             errors: {

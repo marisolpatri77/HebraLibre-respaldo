@@ -3,7 +3,7 @@ const { all } = require('../routes/usuarios');
 
 
 const user = {
-    fileName: "./Models/users.json",
+    fileName: "./src/Models/users.json",
    
    getData: function(){
     return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
@@ -28,10 +28,6 @@ const user = {
    },
    findByField: function (field, text) {
     let allUsers = this.findAll();
-    let newUser = {
-        id: this.generateId(),
-        ...userData
-    }
     let userFound = allUsers.find(oneUser => oneUser [field] === text);
     return userFound;
    },
