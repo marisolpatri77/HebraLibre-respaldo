@@ -13,7 +13,7 @@ const upload = require('../middlewares/user-avatar.js');
 
 
 router.get('/register', guestMiddleware, controllerUsuarios.register);
-router.post('/register', upload.single('avatar'), validaciones, controllerUsuarios.create);
+router.post('/register', upload.single('avatar'), validaciones, controllerUsuarios.processRegister);
 
 router.get('/login', guestMiddleware, controllerUsuarios.login);
 router.post('/log', validaciones, controllerUsuarios.log); //proceso del login

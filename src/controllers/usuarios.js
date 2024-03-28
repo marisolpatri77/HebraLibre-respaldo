@@ -2,7 +2,7 @@ const {hashSync, compareSync} = require('bcryptjs');
 const {validaciones, validationResult} = require('express-validator'); //preguntar si esto es correcto
 //const { all } = require('../routes/usuarios');
 const user = require('../Models/user.js');
-
+const bcryptjs = require('bcryptjs');
 
 
 const controllerUsuarios = {
@@ -40,7 +40,7 @@ const controllerUsuarios = {
 
          let userCreated = user.create(userToCreate);
 
-        return res.redirect('/login');
+        return res.redirect('login');
     },
     login: (req, res) =>{
         res.render('login');
