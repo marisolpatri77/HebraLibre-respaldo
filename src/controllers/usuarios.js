@@ -7,12 +7,12 @@ const user = require('../Models/user.js');
 
 const controllerUsuarios = {
     register: (req, res) =>{
-        res.render('register');
+        return res.render('register');
     },
     processRegister: (req,res) => {
         const resultValidation = validationResult (req);
 
-        if (resultValidation.error.length > 0) {
+        if (resultValidation.errors.length > 0) {
             return res.render('register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body

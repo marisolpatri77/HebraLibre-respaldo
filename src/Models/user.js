@@ -1,5 +1,6 @@
 const fs =require('fs');
 const { all } = require('../routes/usuarios');
+const { log } = require('console');
 
 
 const user = {
@@ -20,23 +21,26 @@ const user = {
    findAll: function(){
     return this.getData();
    },
-
+//Buscar a un usuario por su ID
    findByPk: function(id){
     let allUsers= this.findAll();
     let userFound = allUsers.find(oneUser => oneUser.id === id);
     return userFound;
    },
+//Buscar un usuario por cualquier campo
    findByField: function (field, text) {
     let allUsers = this.findAll();
-    let userFound = allUsers.find(oneUser => oneUser [field] === text);
+    let userFound = allUsers.find(oneUser => oneUser[field] === text);
     return userFound;
    },
 
     create: function (userData) {
-let allUsers = this.findAll();
-let newUser = {
-    id: this.generateId(),
-    ...userData
+        let allUsers = this.findAll();
+        allUsers.push(userData);
+        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' ' ))
+        let newUser = {
+            id: this.generateId(),
+            ...userData
 }
 
 allUsers.push(newUser);
@@ -52,4 +56,5 @@ return true;
     }
 }
 
+// console.log(user.findByField('email', 'agustincastellon06@gmail.com'));
 module.exports = user;

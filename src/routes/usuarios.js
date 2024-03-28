@@ -1,5 +1,6 @@
 const express = require('express');
 let router = express.Router();
+
 //const uploadFile = require ('../middleware/multerMiddleware);
 const validaciones = require('../middlewares/validationRegisterMiddleware'); //preguntar si esta bien
 const guestMiddleware = require('../middlewares/guestMiddleware');
