@@ -9,22 +9,13 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const upload = require('../middlewares/user-avatar.js');
 
 
-//validaciones
-//const validaciones =[
-//    body('firstName').notEmpty().withMessage('Debes completar el campo').bail().isLength({ min: 3}).withMessage('El nombre debe ser mas largo'),
-//    body('lastName').notEmpty().withMessage('Debes completar el campo'),
-//    body('email').notEmpty().withMessage('Debes completar con un email').bail().isEmail().withMessage('Debes completar con un email valido'),
-//    body('password').notEmpty().withMessage('Debes completar el campo').bail().isLength({ min: 8}).withMessage('La contraseña debe ser mas larga'),
-//    body('image').notEmpty().withMessage('Debes completar el campo')
-//];
-
 
 
 router.get('/register', guestMiddleware, controllerUsuarios.register);
 router.post('/register', upload.single('avatar'), validaciones, controllerUsuarios.create);
 
 router.get('/login', guestMiddleware, controllerUsuarios.login);
-router.post('/login', validaciones, controllerUsuarios.log); //proceso del login
+router.post('/log', validaciones, controllerUsuarios.log); //proceso del login
 
 router.get('/profile', authMiddleware, controllerUsuarios.profile);
 
