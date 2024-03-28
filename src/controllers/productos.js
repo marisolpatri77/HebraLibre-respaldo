@@ -29,6 +29,7 @@ const controllerProductos = {
     let idProducto= req.params.id;
     let idBuscado= data.find(indice=>indice.id === idProducto);
     let color= data.filter(indice=>indice.colors === idBuscado.colors && indice.id !== idBuscado.id);
+    console.log(color)
    
         res.render('producto',{idBuscado,color});
     },
