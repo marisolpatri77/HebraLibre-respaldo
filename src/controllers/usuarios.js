@@ -1,4 +1,4 @@
-const bcryptjs = require('bcryptjs');
+const {hashSync, compareSync} = require('bcryptjs');
 const {validaciones, validationResult} = require('express-validator'); //preguntar si esto es correcto
 //const { all } = require('../routes/usuarios');
 const user = require('../Models/user.js');
@@ -83,12 +83,13 @@ const controllerUsuarios = {
     },
 
     create: (req, res) =>{
-        console.log('File en controller: ', req.file);
-
-                
+               
+        const passHash = hashSync(req.body.password, 10)
+                       
         const newUser = {
             id: crypto.randomUUID(),
             ...req.body,
+            password: passHash,
             img: req.file.filename
         };
         res.redirect('/')

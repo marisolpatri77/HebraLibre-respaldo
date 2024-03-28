@@ -23,20 +23,25 @@ app.use(session({
     saveUninitialized: true,
 }));
 app.use(cookieParser());
+
+//Para trabajar con el body
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+//Configuracion de vistas
 app.set('view engine', 'ejs')
-
 app.set('views', (__dirname, 'src/views'));
+ 
 
+app.use('/productos', rutasProductos);
+app.use('/usuarios', rutasUsuarios);
+app.use('/', rutasMain);
 
 
 const PORT = process.env.PORT || 3000
 app.listen( PORT, () => console.log(`Server up on port: http://localhost:${PORT}`) )
 
-app.use('/productos', rutasProductos);
-app.use('/usuarios', rutasUsuarios);
-app.use('/', rutasMain);
+
 
 
 
