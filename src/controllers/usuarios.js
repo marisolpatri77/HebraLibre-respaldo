@@ -1,18 +1,18 @@
-const bcryptjs = require('bcryptjs');
+const {hashSync, compareSync} = require('bcryptjs');
 const {validaciones, validationResult} = require('express-validator'); //preguntar si esto es correcto
 //const { all } = require('../routes/usuarios');
 const user = require('../Models/user.js');
-
+const bcryptjs = require('bcryptjs');
 
 
 const controllerUsuarios = {
     register: (req, res) =>{
-        res.render('register');
+        return res.render('register');
     },
     processRegister: (req,res) => {
         const resultValidation = validationResult (req);
 
-        if (resultValidation.error.length > 0) {
+        if (resultValidation.errors.length > 0) {
             return res.render('register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
@@ -40,7 +40,7 @@ const controllerUsuarios = {
 
          let userCreated = user.create(userToCreate);
 
-        return res.redirect('/login');
+        return res.redirect('login');
     },
     login: (req, res) =>{
         res.render('login');
@@ -83,12 +83,13 @@ const controllerUsuarios = {
     },
 
     create: (req, res) =>{
-        console.log('File en controller: ', req.file);
-
-                
+               
+        const passHash = hashSync(req.body.password, 10)
+                       
         const newUser = {
             id: crypto.randomUUID(),
             ...req.body,
+            password: passHash,
             img: req.file.filename
         };
         res.redirect('/')
