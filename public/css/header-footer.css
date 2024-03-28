@@ -11,17 +11,11 @@ header{
     
     border-bottom: solid 4px #d0b6b7;
   }
-  
-  .redes{
-    position: absolute;
-    top: 15px;
-    left: 10px;
-  }
-  
-  header i{
+   
+  header .redes i{
     color: #859bb2;
     font-size: 20px;
-    margin-right: 7px;
+    margin-right: 25px;
     border: #d0b6b7 solid .5px;
     border-radius:30%;
     padding: 4px;
@@ -33,16 +27,36 @@ header{
     justify-content: center;
   }
   
+  .enlaces-contenedor{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .redes{
+    margin-right: 113px;
+    margin-left: 15px;
+  }
+
   .enlaces{
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
   }
 
   .enlaces a{
     text-decoration: none;
     color: #859bb2;
-    padding: 4px;
-    
+  }
+
+  .enlaces i{
+    color: #859bb2;
+  }
+
+  .enlaces i:hover{
+    color: white;
   }
   
   .logo{
@@ -126,7 +140,7 @@ header{
 }
   @media (min-width: 768px){
     header div .enlaces a{
-      margin-right: 25px;
+      padding: 0px 17px;
     }
 
     header div .enlaces a:hover {

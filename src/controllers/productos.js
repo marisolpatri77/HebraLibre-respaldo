@@ -3,6 +3,8 @@ const data = require('../Models/productos.json');
 const path = require('path');
 const productPath = path.join(__dirname, '../Models/productos.json');
 
+const { validationResult } = require('express-validator')
+
 
 const controllerProductos = {
    
@@ -47,49 +49,83 @@ const controllerProductos = {
     }, 
     store: (req, res)=>{  
 
-        let nuevoId = controllerProductos.generateId().toString();
-        let nuevoProducto = {
-            id: nuevoId,
-            img: req.file.filename,
-            price: req.body.price,
-            category: req.body.category,
-            colors: req.body.colors,
-            descuont: req.body.descuont,
-            title: req.body.title,
-            descripcion: req.body.descripcion           
-        }
+         //Validacion en producto prueba
+        
+         let errors = validationResult(req);
 
-        data.push(nuevoProducto);
-        fs.writeFileSync(
-            path.join(__dirname, '../Models/productos.json'),
-            JSON.stringify(data, null, 4),
-            {
-                encoding: 'utf-8'
+         if (errors.isEmpty()) {
+            let nuevoId = controllerProductos.generateId().toString();
+            let nuevoProducto = {
+                id: nuevoId,
+                img: req.file.filename,
+                price: req.body.price,
+                category: req.body.category,
+                colors: req.body.colors,
+                descuont: req.body.descuont,
+                title: req.body.title,
+                descripcion: req.body.descripcion           
             }
-        )
-       res.redirect('/productos/catalogo');
+
+            data.push(nuevoProducto);
+            fs.writeFileSync(
+                path.join(__dirname, '../Models/productos.json'),
+                JSON.stringify(data, null, 4),
+                {
+                    encoding: 'utf-8'
+                }
+            )
+             res.redirect('/productos/catalogo');
+
+        } else {
+            
+            /*console.log('Errores de validación:', errors.array());
+            console.log('Datos antiguos:', req.body);*/
+
+            res.render('formAltaProducto', {
+                errors : errors.mapped(),
+                oldData: req.body,
+                idBuscado : req.body
+            });
+
+        } 
     },
 
     update: (req, res) => {
-        let id = req.params.id;
-        let {price, category, title, descripcion} = req.body;
-        data.forEach(prod =>{
-            if (prod.id == id) {
-                prod.img = req.file.filename;
-                prod.price = price;
-                prod.category = category;
-                prod.title = title;
-                prod.descripcion = descripcion;
-            }
-        });
-        fs.writeFileSync(
-            path.join(__dirname, '../Models/productos.json'),
-            JSON.stringify(data, null, 4),
-            {
-                encoding: 'utf-8'
-            }
-        )
-        res.redirect('/productos/catalogo');
+        let errors = validationResult(req);
+        let idProducto = req.params.id;
+        let idBuscado = data.find(indice => indice.id === idProducto);
+
+        if (errors.isEmpty()) {
+            let id = req.params.id;
+            let {price, category, title, descripcion} = req.body;
+            data.forEach(prod =>{
+                if (prod.id == id) {
+                    prod.img = req.file.filename;
+                    prod.price = price;
+                    prod.category = category;
+                    prod.title = title;
+                    prod.descripcion = descripcion;
+                }
+            });
+            fs.writeFileSync(
+                path.join(__dirname, '../Models/productos.json'),
+                JSON.stringify(data, null, 4),
+                {
+                    encoding: 'utf-8'
+                }
+            )
+            res.redirect('/productos/catalogo');
+            
+        } else{
+
+            res.render('formEdicionProducto', {
+                errors: errors.mapped(),
+                oldData: req.body,
+                idBuscado: idBuscado 
+            });
+
+        }
+       
     },
 
     delete: (req, res) =>{

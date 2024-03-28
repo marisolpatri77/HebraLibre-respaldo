@@ -354,6 +354,7 @@ body {
 .botones button:hover,
 .botones a:hover {
     background-color: #45a049;
+    color: white;
 }
 
 /* Ajustes para los botones en dispositivos pequeños */
