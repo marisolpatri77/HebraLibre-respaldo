@@ -1,23 +1,46 @@
-const {hashSync, compareSync} = require('bcryptjs');
-const { validationResult } = require('express-validator'); //preguntar si esto es correcto
-//const { all } = require('../routes/usuarios');
-const user = require('../Models/user.js');
 const bcryptjs = require('bcryptjs');
-const data = require('../Models/users.json');
-
+const { validationResult} = require('express-validator'); //preguntar si esto es correcto
+const user = require('../Models/user.js');
 
 const controllerUsuarios = {
     register: (req, res) =>{
-        return res.render('register');
+        res.render('register');
     },
-    generateId:()=>{
-       
-        let lastUser = data[data.length - 1];
-        if(lastUser){
-            let nextId = parseInt(lastUser.id, 10) + 1;
-        return nextId; 
+    processRegister: (req,res) => {
+        const resultValidation = validationResult (req);
+        console.log('en el controlador')
+console.log( resultValidation)
+
+if (resultValidation && typeof resultValidation.error !== 'undefined') {
+        if (resultValidation.error.length > 0) {
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            }); 
+        }} 
+        let userInDB = user.findByField('email', req.body.email);
+        if (userInDB) {
+            return res.render('register', {
+                errors:[ {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                }],
+
+                oldData: req.body
+        });
+
+    }
+    
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password,10),
+            avatar: req.file.image
         }
-        return 1;
+
+         let userCreated = user.create(userToCreate);
+
+        return res.redirect('/login');
     },
 
     processRegister: (req,res) => {
@@ -65,43 +88,30 @@ const controllerUsuarios = {
     },
     
     log: (req, res) =>{
-       
-        const resultValidation = validationResult(req);
-
-        if (resultValidation.errors.length > 0){
-            res.render('login', {
-                errors : resultValidation.mapped(),
-            });
-        } else{
-            let userToLogin = user.findByField('email' , req.body.email);
-            if (userToLogin){
-                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
-                if(isOkThePassword ){
-                    delete userToLogin.password;
-                    req.session.userLogged = userToLogin;
-                    return res.redirect('/usuarios/profile'); 
-                }else{
-                    return res.render('login', {
-                        errors: {
-                            email: {
-                                msg: 'Las credenciales son inválidas'
-                            },
-                        }
-                    });
-                }
-            }else{
-                return res.render('login', {
-                    errors: {
-                        email: {
-                            msg: 'No existe este email en la base de datos'
-                        },
-                        
-                    },
-                    oldData: req.body 
-                });
-            }
-            
-        }  
+        let userToLogin = user.findByField('email' , req.body.email);
+        if (userToLogin){
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+           if(isOkThePassword ){
+            delete userToLogin.password;
+            req.session.userLogged = userToLogin;
+              return res.render('profile',{user:userToLogin}); 
+           }
+           return res.render('login', {
+            errors: {
+            email: {
+                msg: 'Las credenciales son invalidas'
+            },
+        }
+    });
+        }
+        return res.render('login', {
+            errors: {
+            email: {
+                msg: 'No existe este email en la base de datos'
+            },
+        }
+    });
+        
     },
     profile: (req,res) =>{
       return res.render ('profile', {
@@ -115,16 +125,15 @@ const controllerUsuarios = {
     },
 
     create: (req, res) =>{
-               
-        const passHash = hashSync(req.body.password, 10)
-                       
+        console.log('File en controller: ', req.file);
+
+                
         const newUser = {
             id: crypto.randomUUID(),
             ...req.body,
-            password: passHash,
             img: req.file.filename
         };
-        res.redirect('/')
+        res.redirect('/login')
     },
 
     error: (req, res) => {

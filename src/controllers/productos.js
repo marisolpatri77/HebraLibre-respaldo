@@ -3,8 +3,6 @@ const data = require('../Models/productos.json');
 const path = require('path');
 const productPath = path.join(__dirname, '../Models/productos.json');
 
-const { validationResult } = require('express-validator')
-
 
 const controllerProductos = {
    
@@ -30,9 +28,7 @@ const controllerProductos = {
 
     let idProducto= req.params.id;
     let idBuscado= data.find(indice=>indice.id === idProducto);
-    let color= data.filter(indice=>indice.colors === idBuscado.colors && indice.id !== idBuscado.id);
-    console.log(color)
-   
+    let color= data.filter(indice=>indice.colors === idBuscado.colors && indice.id !== idBuscado.id);  
         res.render('producto',{idBuscado,color});
     },
 
@@ -49,83 +45,49 @@ const controllerProductos = {
     }, 
     store: (req, res)=>{  
 
-         //Validacion en producto prueba
-        
-         let errors = validationResult(req);
+        let nuevoId = controllerProductos.generateId().toString();
+        let nuevoProducto = {
+            id: nuevoId,
+            img: req.file.filename,
+            price: req.body.price,
+            category: req.body.category,
+            colors: req.body.colors,
+            descuont: req.body.descuont,
+            title: req.body.title,
+            descripcion: req.body.descripcion           
+        }
 
-         if (errors.isEmpty()) {
-            let nuevoId = controllerProductos.generateId().toString();
-            let nuevoProducto = {
-                id: nuevoId,
-                img: req.file.filename,
-                price: req.body.price,
-                category: req.body.category,
-                colors: req.body.colors,
-                descuont: req.body.descuont,
-                title: req.body.title,
-                descripcion: req.body.descripcion           
+        data.push(nuevoProducto);
+        fs.writeFileSync(
+            path.join(__dirname, '../Models/productos.json'),
+            JSON.stringify(data, null, 4),
+            {
+                encoding: 'utf-8'
             }
-
-            data.push(nuevoProducto);
-            fs.writeFileSync(
-                path.join(__dirname, '../Models/productos.json'),
-                JSON.stringify(data, null, 4),
-                {
-                    encoding: 'utf-8'
-                }
-            )
-             res.redirect('/productos/catalogo');
-
-        } else {
-            
-            /*console.log('Errores de validación:', errors.array());
-            console.log('Datos antiguos:', req.body);*/
-
-            res.render('formAltaProducto', {
-                errors : errors.mapped(),
-                oldData: req.body,
-                idBuscado : req.body
-            });
-
-        } 
+        )
+       res.redirect('/productos/catalogo');
     },
 
     update: (req, res) => {
-        let errors = validationResult(req);
-        let idProducto = req.params.id;
-        let idBuscado = data.find(indice => indice.id === idProducto);
-
-        if (errors.isEmpty()) {
-            let id = req.params.id;
-            let {price, category, title, descripcion} = req.body;
-            data.forEach(prod =>{
-                if (prod.id == id) {
-                    prod.img = req.file.filename;
-                    prod.price = price;
-                    prod.category = category;
-                    prod.title = title;
-                    prod.descripcion = descripcion;
-                }
-            });
-            fs.writeFileSync(
-                path.join(__dirname, '../Models/productos.json'),
-                JSON.stringify(data, null, 4),
-                {
-                    encoding: 'utf-8'
-                }
-            )
-            res.redirect('/productos/catalogo');
-            
-        } else{
-
-            res.render('formEdicionProducto', {
-                errors: errors.mapped(),
-                oldData: req.body,
-                idBuscado: idBuscado 
-            });
-
-        }
-       
+        let id = req.params.id;
+        let {price, category, title, descripcion} = req.body;
+        data.forEach(prod =>{
+            if (prod.id == id) {
+                prod.img = req.file.filename;
+                prod.price = price;
+                prod.category = category;
+                prod.title = title;
+                prod.descripcion = descripcion;
+            }
+        });
+        fs.writeFileSync(
+            path.join(__dirname, '../Models/productos.json'),
+            JSON.stringify(data, null, 4),
+            {
+                encoding: 'utf-8'
+            }
+        )
+        res.redirect('/productos/catalogo');
     },
 
     delete: (req, res) =>{

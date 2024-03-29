@@ -88,5 +88,13 @@
   "password": "1234567",
   "category": "Normal",
   "image": ""
+ },
+ {
+  "id": "101",
+  "firstName": "mathias",
+  "lastName": "silva",
+  "category": "admin",
+  "email": "andresgustavosilva35@gmail.com",
+  "password": "$2a$10$cz5e2Tvc2CT0sw/gy9eI5uvBpzklaHiYP50BX5ymtnMzYDnpuJiYC"
  }
 ]

@@ -16,7 +16,11 @@ router.get('/register', guestMiddleware, controllerUsuarios.register);
 router.post('/register', upload.single('avatar'), validateUser, controllerUsuarios.processRegister);
 
 router.get('/login', guestMiddleware, controllerUsuarios.login);
+<<<<<<< Updated upstream
 router.post('/log', validateLogin, controllerUsuarios.log); //proceso del login
+=======
+router.post('/log', controllerUsuarios.log); //proceso del login
+>>>>>>> Stashed changes
 
 router.get('/profile', authMiddleware, controllerUsuarios.profile);
 

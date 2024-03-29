@@ -14,6 +14,12 @@
 </head>
 <body>
     <%- include('./partials/header.ejs')%>
+
+    <% if (errors && errors.length > 0) { %>
+        <% errors.forEach(error => { %>
+            <p><%= error.email.msg %></p>
+        <% }); %>
+    <% } %>
     <form action="/usuarios/register" method="POST" class="form-register" enctype="multipart/form-data">
         <h4>Registrate en Hebra Libre</h4>
         <div>
