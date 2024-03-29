@@ -12,7 +12,7 @@ const { validateUser } = require('../middlewares/validationRegisterMiddleware');
 const { validateLogin } = require('../middlewares/validationLoginMiddleware');
 
 
-router.get('/register', guestMiddleware, controllerUsuarios.register);
+router.get('/register', controllerUsuarios.register);
 router.post('/register', upload.single('avatar'), validateUser, controllerUsuarios.processRegister);
 
 router.get('/login', guestMiddleware, controllerUsuarios.login);

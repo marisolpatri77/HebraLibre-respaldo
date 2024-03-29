@@ -1,5 +1,5 @@
 const bcryptjs = require('bcryptjs');
-const { validationResult} = require('express-validator'); //preguntar si esto es correcto
+const {validationResult} = require('express-validator'); //preguntar si esto es correcto
 const user = require('../Models/user.js');
 
 const controllerUsuarios = {
@@ -7,17 +7,15 @@ const controllerUsuarios = {
         res.render('register');
     },
     processRegister: (req,res) => {
-        const resultValidation = validationResult (req);
-        console.log('en el controlador')
-console.log( resultValidation)
 
-if (resultValidation && typeof resultValidation.error !== 'undefined') {
-        if (resultValidation.error.length > 0) {
-            return res.render('register', {
+        const resultValidation = validationResult (req);
+        if (resultValidation && typeof resultValidation.error !== 'undefined') {
+             if (resultValidation.error.length > 0) {
+                  return res.render('register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             }); 
-        }} 
+          }} 
         let userInDB = user.findByField('email', req.body.email);
         if (userInDB) {
             return res.render('register', {
@@ -30,8 +28,7 @@ if (resultValidation && typeof resultValidation.error !== 'undefined') {
                 oldData: req.body
         });
 
-    }
-    
+    }  
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password,10),
@@ -43,8 +40,9 @@ if (resultValidation && typeof resultValidation.error !== 'undefined') {
         return res.redirect('/login');
     },
 
-    processRegister: (req,res) => {
+    processRegister1: (req,res) => {
         const resultValidation = validationResult(req);
+       
 
         if (resultValidation.errors.length > 0){
 
@@ -78,7 +76,7 @@ if (resultValidation && typeof resultValidation.error !== 'undefined') {
         
             let userCreated = user.create(userToCreate);
                 
-            return res.redirect('login');
+            return res.render('login');
         }
         
     },
@@ -86,7 +84,6 @@ if (resultValidation && typeof resultValidation.error !== 'undefined') {
     login: (req, res) =>{
         res.render('login');
     },
-    
     log: (req, res) =>{
         let userToLogin = user.findByField('email' , req.body.email);
         if (userToLogin){
