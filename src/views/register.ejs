@@ -18,34 +18,70 @@
         <h4>Registrate en Hebra Libre</h4>
         <div>
             <label for="name">NOMBRE</label>
-            <input class="controls" type="text" name="firstName" id="name" placeholder="ej: Juan">
+            <input class="controls" type="text" name="firstName" id="name" placeholder="ej: Juan" value="<%= locals.oldData ? oldData.firstName : null %>">
         </div>
+        <% if (locals.errors && errors.firstName) { %>
+            <div class="text-danger">
+                <%= errors.firstName.msg %>
+            </div>
+        <% } %>
+
         <div>
             <label for="lastname">APELLIDO</label>
-            <input class="controls" type="text" name="lastName" id="lastname" placeholder="ej: Pérez">
+            <input class="controls" type="text" name="lastName" id="lastname" placeholder="ej: Pérez" value="<%= locals.oldData ? oldData.lastName : null %>">
         </div>
+        <% if (locals.errors && errors.lastName) { %>
+            <div class="text-danger">
+                <%= errors.lastName.msg %>
+            </div>
+        <% } %>
+
         <div>
             <label for="category">CATEGORÍA</label>
             <select name="category" id="category" class="controls">
                 <option value="">Elegí una opción</option>
-                <option value="admin">Administrador</option>
-                <option value="user">Usuario Normal</option>
+                <option value="admin" <%= locals.oldData && oldData.category === 'admin' ? 'selected' : '' ; %>>Administrador</option>
+                <option value="user" <%= locals.oldData && oldData.category === 'user' ? 'selected' : '' ; %>>Usuario Normal</option>
             </select>
         </div>
+        <% if (locals.errors && errors.category) { %>
+            <div class="text-danger">
+                <%= errors.category.msg %>
+            </div>
+        <% } %>
+
         <div>
             <label for="email">EMAIL</label>
-            <input class="controls" type="email" name="email" id="email" placeholder="ej: juanperez@email.com">
+            <input class="controls" type="text" name="email" id="email" placeholder="ej: juanperez@email.com" value="<%= locals.oldData ? oldData.email : null %>">
         </div>
+        <% if (locals.errors && errors.email) { %>
+            <div class="text-danger">
+                <%= errors.email.msg %>
+            </div>
+        <% } %>
+
         <div>
             <label for="password">CONTRASEÑA</label>
             <input class="controls" type="password" name="password" id="password">
         </div>
+        <% if (locals.errors && errors.password) { %>
+            <div class="text-danger">
+                <%= errors.password.msg %>
+            </div>
+        <% } %>
+
         <div>
             <label for="avatar">FOTO DE PERFIL (.jpg, .png, .gif)</label>
             <input type="file" id="avatar" name="avatar" accept="image/*" class="form-img">
         </div>
+        <% if (locals.errors && errors.avatar) { %>
+            <div class="text-danger">
+                <%= errors.avatar.msg %>
+            </div>
+        <% } %>
+
         <div>
-            <input class="botom" type="submit" value="Crear Cuenta">
+            <button class="botom" type="submit">CREAR CUENTA</button>
         </div>
         
         <p>¿Tienes una cuenta? <a href="/usuarios/login">Iniciar sesión</a></p>

@@ -87,13 +87,19 @@ body {
     padding: 10px;
     color: white;
     margin: 16px 0;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .button_ingresar:hover{
     background-color: #6eacf7;
 }
 
+.text-danger{
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
 
 /* Media Queries*/
