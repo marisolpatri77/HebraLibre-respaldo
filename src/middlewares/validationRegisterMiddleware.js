@@ -2,7 +2,7 @@ const path = require('path');
 const {body,validationResult}=require('express-validator');
 const bcryptjs = require('bcryptjs');
 
-<<<<<<< Updated upstream
+
 const validateUser = [
     body('firstName').notEmpty().withMessage('Debes completar el campo.').bail().isLength({ min: 3 }).withMessage('El nombre debe ser más largo'),
     body('lastName').notEmpty().withMessage('Debes completar el campo.'),
@@ -30,7 +30,7 @@ const validateUser = [
 module.exports = {
     validateUser
 };
-=======
+
 let validaciones = (req,res,next)=>{
     console.log(' lo que llega al middleware',req.body);
 
@@ -58,5 +58,4 @@ let validaciones = (req,res,next)=>{
     })
     .catch(next); 
 }
->>>>>>> Stashed changes
 
