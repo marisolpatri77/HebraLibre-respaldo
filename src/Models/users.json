@@ -91,6 +91,15 @@
  },
  {
   "id": "11",
+  "firstName": "mer",
+  "lastName": "soto",
+  "category": "admin",
+  "email": "pepegrillo@gmail.com",
+  "password": "$2a$10$lLbFU1G5PE3ltfZh5PXBN.a/8J5BKc8fwsgbFZ4R9rpQYx7BL.N2W",
+  "avatar": "default-avatar.jpg"
+ },
+ {
+  "id": "12",
   "firstName": "mathias",
   "lastName": "silva",
   "category": "admin",

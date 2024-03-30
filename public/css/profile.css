@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* Estilos CSS para el historial de compras */
+.container {
+    display: flex;
+}
+
+/* Estilos CSS para la tarjeta de perfil */
+.left-side {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 300px;
+}
+
+.profile-contenedor {
+    text-align: center;
+}
+
+.profileImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-contenedor h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.profile-contenedor p {
+    margin: 5px 0;
+    color: #666;
+}
+
+
+.right-side {
+    flex: 2;
+    padding: 20px;
+}
+
+.purchase-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-item .timestamp {
+    color: #666;
+}
+
+.purchase-item .content {
+    margin-left: 20px;
+}
+
+.purchase-item .details {
+    margin-left: 20px;
+    color: #888;
+}
+
+body{
+    height:100%;
+  }
+  body{
+    text-align:center;
+  }
+  body:before{
+    content:'';
+    height:100%;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  button{
+    background:#d0b6b7;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  button:hover{
+    background:#fff;
+    color:#d0b6b7;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #d0b6b7;
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+

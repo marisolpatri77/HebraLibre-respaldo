@@ -43,7 +43,7 @@ const controllerUsuarios = {
                 });
             }
 
-            let avatar = req.file ? req.file.path : '/default-avatar.jpg'; //probar si carga la imagen que viene en el req.body o si asigna la imagen por defecto
+            let avatar = req.file ? req.file.filename : 'default-avatar.jpg'; //probar si carga la imagen que viene en el req.body o si asigna la imagen por defecto
             let nuevoId = controllerUsuarios.generateId().toString();
 
             let userToCreate = {
@@ -73,14 +73,20 @@ const controllerUsuarios = {
                 errors : resultValidation.mapped(),
             });
         } else{
+
             let userToLogin = user.findByField('email' , req.body.email);
+
             if (userToLogin){
+
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+
                 if(isOkThePassword ){
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
                     return res.redirect('/usuarios/profile'); 
+
                 }else{
+
                     return res.render('login', {
                         errors: {
                             email: {
@@ -90,6 +96,7 @@ const controllerUsuarios = {
                     });
                 }
             }else{
+                
                 return res.render('login', {
                     errors: {
                         email: {
