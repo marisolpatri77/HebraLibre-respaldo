@@ -16,13 +16,15 @@ const path = require('path');
 
 app.use(express.static(path.join(__dirname, '../public') ));
 app.use(methodOverride('_method'));
-app.use(userLoggedMiddleware);
+
+
 app.use(session({
     secret: 'nombre del sitio',
     resave: false,
     saveUninitialized: true,
 }));
 app.use(cookieParser());
+app.use(userLoggedMiddleware );
 
 //Para trabajar con el body
 app.use(express.json());

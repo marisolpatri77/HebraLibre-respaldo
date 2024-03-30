@@ -97,5 +97,14 @@
   "email": "pepegrillo@gmail.com",
   "password": "$2a$10$lLbFU1G5PE3ltfZh5PXBN.a/8J5BKc8fwsgbFZ4R9rpQYx7BL.N2W",
   "avatar": "default-avatar.jpg"
+ },
+ {
+  "id": "12",
+  "firstName": "mathias",
+  "lastName": "silva",
+  "category": "admin",
+  "email": "andresgustavosilva35@gmail.com",
+  "password": "$2a$10$Wc/oo9zG1ID9/a12cwMXCOZ23MJOQjEf1OLMRk3G8ehl1NMS0s7uO",
+  "avatar": "img-1711779394631.jpg"
  }
 ]
