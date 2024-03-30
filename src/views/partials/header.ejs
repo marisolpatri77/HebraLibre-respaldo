@@ -16,11 +16,28 @@
                     <a href="https://wa.me/+5493884175520" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             <ul class="enlaces">
+                <% if(locals.userLogged ){ %>  
                 <li><a href=  "/"   >Inicio</a></li>
                 <li><a href='/productos/catalogo' >Productos</a></li>
                 <li><a href='/contact'  >Contacto</a></li>
+                <li><a href='/usuarios/register'  >Crear Cuenta</a></li> 
+                <!-- <li><a href='/usuarios/login'  >Ingresar</a></li> -->
+                <li><a href='/usuarios/profile'> 
+                    <img src="/img/<%= locals.userLogged.avatar %>" width="30" style="border-radius: 100%;">          
+                </a></li> 
+                <li><a href='/usuarios/logOut' >Salir</a></li>
+                <% }else { %>
+
+                <li><a href=  "/"   >Inicio</a></li>
+                <li><a href='/productos/catalogo' >Productos</a></li>
+                <li><a href='/contact'  >Contacto</a></li>
+                <li><a href='/usuarios/register'  >Crear Cuenta</a></li>
+                <li><a href='/usuarios/login'  >Ingresar</a></li>
+                
+                <% } %>
+              
             </ul>
-            <ul class="enlaces">
+            <!-- <ul class="enlaces"> -->
                          
                     <!-------FALTA AGREGAR VALIDACION DE USUARIO LOGUEADO-------->
                 <!--    
@@ -28,10 +45,10 @@
                 <li><a href='#' >Mi Cuenta</a></li>
                 <li><a href='#' >Salir</a></li>
                 --> 
-                <li><a href='/usuarios/register'  >Crear Cuenta</a></li>
+                <!-- <li><a href='/usuarios/register'  >Crear Cuenta</a></li>
                 <li><a href='/usuarios/login'  >Ingresar</a></li>
                 
-            </ul>
+            </ul> -->
              
             </div>
         </div>
