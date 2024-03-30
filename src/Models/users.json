@@ -90,11 +90,12 @@
   "image": ""
  },
  {
-  "id": "101",
-  "firstName": "mathias",
-  "lastName": "silva",
+  "id": "11",
+  "firstName": "mer",
+  "lastName": "soto",
   "category": "admin",
-  "email": "andresgustavosilva35@gmail.com",
-  "password": "$2a$10$CZYuz6hv7PH2ADQD7stSGeDg9kADVmpzC1m1de2LSW.fCASPzKzay"
+  "email": "pepegrillo@gmail.com",
+  "password": "$2a$10$lLbFU1G5PE3ltfZh5PXBN.a/8J5BKc8fwsgbFZ4R9rpQYx7BL.N2W",
+  "avatar": "default-avatar.jpg"
  }
 ]

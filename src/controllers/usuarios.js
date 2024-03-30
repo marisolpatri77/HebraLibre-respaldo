@@ -64,7 +64,7 @@ const controllerUsuarios = {
                 });
             }
 
-            let avatar = req.file ? req.file.path : '/img/default-avatar.jpg'; //probar si carga la imagen que viene en el req.body o si asigna la imagen por defecto
+            let avatar = req.file ? req.file.filename : 'default-avatar.jpg'; //probar si carga la imagen que viene en el req.body o si asigna la imagen por defecto
             let nuevoId = controllerUsuarios.generateId().toString();
 
             let userToCreate = {
@@ -85,30 +85,50 @@ const controllerUsuarios = {
         res.render('login');
     },
     log: (req, res) =>{
-        let userToLogin = user.findByField('email' , req.body.email);
-        if (userToLogin){
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
-           if(isOkThePassword ){
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
-              return res.render('profile',{user:userToLogin}); 
-           }
-           return res.render('login', {
-            errors: {
-            email: {
-                msg: 'Las credenciales son invalidas'
-            },
-        }
-    });
-        }
-        return res.render('login', {
-            errors: {
-            email: {
-                msg: 'No existe este email en la base de datos'
-            },
-        }
-    });
-        
+       
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0){
+            res.render('login', {
+                errors : resultValidation.mapped(),
+            });
+        } else{
+
+            let userToLogin = user.findByField('email' , req.body.email);
+
+            if (userToLogin){
+
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+
+                if(isOkThePassword ){
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+                    return res.redirect('/usuarios/profile'); 
+
+                }else{
+
+                    return res.render('login', {
+                        errors: {
+                            email: {
+                                msg: 'Las credenciales son inválidas'
+                            },
+                        }
+                    });
+                }
+            }else{
+                
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'No existe este email en la base de datos'
+                        },
+                        
+                    },
+                    oldData: req.body 
+                });
+            }
+            
+        }  
     },
     profile: (req,res) =>{
       return res.render ('profile', {
