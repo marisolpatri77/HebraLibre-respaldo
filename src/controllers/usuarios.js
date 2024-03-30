@@ -1,48 +1,27 @@
-const bcryptjs = require('bcryptjs');
-const {validationResult} = require('express-validator'); //preguntar si esto es correcto
+const {hashSync, compareSync} = require('bcryptjs');
+const { validationResult } = require('express-validator'); //preguntar si esto es correcto
+//const { all } = require('../routes/usuarios');
 const user = require('../Models/user.js');
+const bcryptjs = require('bcryptjs');
+const data = require('../Models/users.json');
+
 
 const controllerUsuarios = {
     register: (req, res) =>{
-        res.render('register');
+        return res.render('register');
     },
-    processRegister: (req,res) => {
-
-        const resultValidation = validationResult (req);
-        if (resultValidation && typeof resultValidation.error !== 'undefined') {
-             if (resultValidation.error.length > 0) {
-                  return res.render('register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            }); 
-          }} 
-        let userInDB = user.findByField('email', req.body.email);
-        if (userInDB) {
-            return res.render('register', {
-                errors:[ {
-                    email: {
-                        msg: 'Este email ya está registrado'
-                    }
-                }],
-
-                oldData: req.body
-        });
-
-    }  
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10),
-            avatar: req.file.image
-        }
-
-         let userCreated = user.create(userToCreate);
-
-        return res.redirect('/login');
-    },
-
-    processRegister1: (req,res) => {
-        const resultValidation = validationResult(req);
+    generateId:()=>{
        
+        let lastUser = data[data.length - 1];
+        if(lastUser){
+            let nextId = parseInt(lastUser.id, 10) + 1;
+        return nextId; 
+        }
+        return 1;
+    },
+
+    processRegister: (req,res) => {
+        const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0){
 
@@ -76,7 +55,7 @@ const controllerUsuarios = {
         
             let userCreated = user.create(userToCreate);
                 
-            return res.render('login');
+            return res.redirect('login');
         }
         
     },
@@ -84,6 +63,7 @@ const controllerUsuarios = {
     login: (req, res) =>{
         res.render('login');
     },
+    
     log: (req, res) =>{
        
         const resultValidation = validationResult(req);
@@ -142,15 +122,16 @@ const controllerUsuarios = {
     },
 
     create: (req, res) =>{
-        console.log('File en controller: ', req.file);
-
-                
+               
+        const passHash = hashSync(req.body.password, 10)
+                       
         const newUser = {
             id: crypto.randomUUID(),
             ...req.body,
+            password: passHash,
             img: req.file.filename
         };
-        res.redirect('/login')
+        res.redirect('/')
     },
 
     error: (req, res) => {
