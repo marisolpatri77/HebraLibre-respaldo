@@ -8,6 +8,7 @@ const data = require('../Models/users.json');
 
 const controllerUsuarios = {
     register: (req, res) =>{
+
         return res.render('register');
     },
     generateId:()=>{
@@ -61,10 +62,12 @@ const controllerUsuarios = {
     },
 
     login: (req, res) =>{
+        console.log(req.cookies);
         res.render('login');
     },
     
     log: (req, res) =>{
+   
        
         const resultValidation = validationResult(req);
 
@@ -83,7 +86,16 @@ const controllerUsuarios = {
                 if(isOkThePassword ){
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
-                    return res.redirect('/usuarios/profile'); 
+                
+                if(req.body.recordar){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2});
+                }
+
+
+
+                    return res.redirect('/usuarios/profile');
+
+                   
 
                 }else{
 
@@ -111,12 +123,14 @@ const controllerUsuarios = {
         }  
     },
     profile: (req,res) =>{
+
       return res.render ('profile', {
         user: req.session.userLogged
       });
     },
 
     logout: (req,res) =>{
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
     },

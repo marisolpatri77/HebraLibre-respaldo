@@ -5,7 +5,7 @@ let rutasUsuarios = require('./routes/usuarios');
 let rutasMain = require('./routes/main');
 let methodOverride = require('method-override');
 let session = require('express-session');
-let cookieParser = require('cookie-parser');
+let cookies = require('cookie-parser');
 let userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 const app = express();
@@ -23,7 +23,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
 }));
-app.use(cookieParser());
+app.use(cookies());
 app.use(userLoggedMiddleware );
 
 //Para trabajar con el body
