@@ -106,14 +106,5 @@
   "email": "andresgustavosilva35@gmail.com",
   "password": "$2a$10$Wc/oo9zG1ID9/a12cwMXCOZ23MJOQjEf1OLMRk3G8ehl1NMS0s7uO",
   "avatar": "img-1711779394631.jpg"
- },
- {
-  "id": "13",
-  "firstName": "Catalina",
-  "lastName": "Laporta Perucca",
-  "category": "admin",
-  "email": "catalinalaporta@gmail.com",
-  "password": "$2a$10$.yAcIx.se7ckzuhydneO4.Jcy3EeMR8V9Kg.BAmYYYabtEnTxR3tW",
-  "avatar": "default-avatar.jpg"
  }
 ]
