@@ -156,6 +156,12 @@ const controllerUsuarios = {
         if (errors.isEmpty()) {
             let usuarios = req.body;
         }
+    },
+
+    prueba:(req, res) => {
+           db.User.findAll({include:['Rol']})
+           .then(usuarios => res.send(usuarios))
+           .catch(error => res.send(error))
     }
 }
     
