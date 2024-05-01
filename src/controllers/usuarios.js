@@ -4,7 +4,10 @@ const { validationResult } = require('express-validator'); //preguntar si esto e
 const user = require('../Models/user.js');
 const bcryptjs = require('bcryptjs');
 const data = require('../Models/users.json');
-
+const db = require('../database/models');
+const {
+    Op
+} = require("sequelize");
 
 const controllerUsuarios = {
     register: (req, res) =>{
@@ -153,6 +156,12 @@ const controllerUsuarios = {
         if (errors.isEmpty()) {
             let usuarios = req.body;
         }
+    },
+
+    prueba:(req, res) => {
+           db.User.findAll({include:['Rol']})
+           .then(usuarios => res.send(usuarios))
+           .catch(error => res.send(error))
     }
 }
     

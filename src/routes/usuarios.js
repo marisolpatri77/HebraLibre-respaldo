@@ -25,5 +25,6 @@ router.get('/profile', authMiddleware, controllerUsuarios.profile);
 
 router.get('/logout', controllerUsuarios.logout);
 
+router.get('/prueba', controllerUsuarios.prueba);
 
 module.exports = router
