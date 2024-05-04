@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Editar usuario</title>
+    <title> Eliminar usuario</title>
     <link rel="stylesheet"  href="/css/register.css">
     <link href="/css/header-footer.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
             <p><%= error.email.msg %></p>
         <% }); %>
     <% } %>
-    <form action="/usuarios/editUser/<%= user.id %>" method="POST" class="form-register" enctype="multipart/form-data">
+    <form action="/usuarios/delete/<%= user.id %>" method="POST" class="form-register" enctype="multipart/form-data">
         <h4>Editar usuario</h4>
         <div>
             <label for="name">NOMBRE</label>
@@ -91,12 +91,11 @@
         <% } %>
 
         <div>
-            <button class="botom" type="submit">EDITAR USUARIO</button>
+            <button class="botom" type="submit">ELIMINAR USUARIO</button>
             
         </div>  
-        <p>¿Tienes una cuenta? <a href="/usuarios/login">Iniciar sesión</a></p>     
-    </form>
-    
+        <p>¿Tienes una cuenta? <a href="/usuarios/login">Iniciar sesión</a></p> 
+    </form>    
     <%- include('./partials/footer.ejs')%>   
 </body>
 

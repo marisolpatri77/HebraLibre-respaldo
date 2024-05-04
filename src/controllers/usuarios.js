@@ -126,6 +126,11 @@ const controllerUsuarios = {
     login: (req, res) =>{     
         res.render('login');
     },
+    logout: (req,res) =>{
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    },
     edit: (req, res) =>{     
 
        db.User.findByPk(req.params.id)
@@ -161,7 +166,20 @@ const controllerUsuarios = {
                 console.log(error);
                 res.send('Error al cargar roles');
             });       
-    }, 
+    },
+    deleteUser: (req, res) =>{     
+        db.User.findByPk(req.params.id)
+        .then((user)=>{    
+            db.Rol.findAll()
+                .then((roles)=>{
+                     res.render('deleteUser',{user:user,rol:roles})
+            })
+            .catch(error => {
+                console.log(error);
+                res.send('Error en metodo deleteUser');
+            });
+       })  
+    },
     delete: (req, res) =>{   
         console.log('el id del user' ,  req.params.id)  
         db.User.findByPk( req.params.id)
@@ -177,16 +195,12 @@ const controllerUsuarios = {
         }); 
         return res.redirect('/usuarios/logout');
     },
+    
     profile: (req,res) =>{
 
       return res.render ('profile', {
         user: req.session.userLogged
       });
-    },
-    logout: (req,res) =>{
-        res.clearCookie('userEmail');
-        req.session.destroy();
-        return res.redirect('/');
     },
     create: (req, res) =>{
                

@@ -26,7 +26,8 @@
             <p><%= user.email %></p>
             
         </div>
-        <button id="editarPerfil" onclick="window.location.href = '/usuarios/edit/<%= user.id %>'">Editar usuario</button>
+        <button id="editarPerfil" onclick="window.location.href = '/usuarios/edit/<%= user.id %>'">Editar </button>
+        <button id="eliminarUsuario" onclick="window.location.href = '/usuarios/deleteUser/<%= user.id %>'">Eliminar </button>
     </main>
     
     <main class="right-side">
