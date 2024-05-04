@@ -6,12 +6,12 @@ const bcryptjs = require('bcryptjs');
 const validateUser = [
     body('firstName').notEmpty().withMessage('Debes completar el campo.').bail().isLength({ min: 3 }).withMessage('El nombre debe ser más largo'),
     body('lastName').notEmpty().withMessage('Debes completar el campo.'),
-    body('category').notEmpty().withMessage('Debes elegir una categoría.'),
+    // body('category').notEmpty().withMessage('Debes elegir una categoría.'),
     body('email').notEmpty().withMessage('Debes completar con un email.').bail().isEmail().withMessage('Debes completar con un email válido'),
     body('password').notEmpty().withMessage('Debes completar el campo.').bail().isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres.'),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = [ '.jpg', '.png', '.gif'];
+        let acceptedExtensions = [ '.jpg', '.png', '.gif', '.webp'];
 
         if(!file) {
             return true;
@@ -40,10 +40,10 @@ let validaciones = (req,res,next)=>{
             old: req.body
         });
     }
-    validations =[
+    let validations =[
         body('firstName').notEmpty().withMessage('Debe ingresar nombre'),
         body('lastName').notEmpty().withMessage('debe ingresar apellido'),
-        // body('img').notEmpty().withMessage('debe seleccionar imagen'),
+        //  body('category').notEmpty().withMessage('debe seleccionar categoria'),
         body('email').isEmail().withMessage('debe ingresar email valido'),
         body('password').trim().notEmpty().isLength({ min: 3})
     ];
