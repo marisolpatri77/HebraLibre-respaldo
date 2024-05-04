@@ -42,7 +42,7 @@ module.exports = (sequelize, Datatypes) =>{
             foreignKey: "orders_id"
         })
         OrderDetail.belongsTo(models.Product, {
-            as: "Product",
+            as: "Products",
             foreingKey: "products_id"
         })
     }

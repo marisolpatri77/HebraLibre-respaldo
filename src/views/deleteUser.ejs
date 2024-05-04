@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Crear Cuenta </title>
+    <title> Eliminar usuario</title>
     <link rel="stylesheet"  href="/css/register.css">
     <link href="/css/header-footer.css" rel="stylesheet">
 
@@ -20,11 +20,11 @@
             <p><%= error.email.msg %></p>
         <% }); %>
     <% } %>
-    <form action="/usuarios/register" method="POST" class="form-register" enctype="multipart/form-data">
-        <h4>Registrate en Hebra Libre</h4>
+    <form action="/usuarios/delete/<%= user.id %>" method="POST" class="form-register" enctype="multipart/form-data">
+        <h4>Editar usuario</h4>
         <div>
             <label for="name">NOMBRE</label>
-            <input class="controls" type="text" name="firstName" id="name" placeholder="ej: Juan" value="<%= locals.oldData ? oldData.firstName : null %>">
+            <input class="controls" type="text" name="firstName" id="name" placeholder="ej: Juan" value="<%= user.first_name %>">
         </div>
         <% if (locals.errors && errors.firstName) { %>
             <div class="text-danger">
@@ -34,7 +34,7 @@
 
         <div>
             <label for="lastname">APELLIDO</label>
-            <input class="controls" type="text" name="lastName" id="lastname" placeholder="ej: Pérez" value="<%= locals.oldData ? oldData.lastName : null %>">
+            <input class="controls" type="text" name="lastName" id="lastname" placeholder="ej: Pérez" value="<%= user.last_name %>">
         </div>
         <% if (locals.errors && errors.lastName) { %>
             <div class="text-danger">
@@ -62,7 +62,7 @@
 
         <div>
             <label for="email">EMAIL</label>
-            <input class="controls" type="text" name="email" id="email" placeholder="ej: juanperez@email.com" value="<%= locals.oldData ? oldData.email : null %>">
+            <input class="controls" type="text" name="email" id="email" placeholder="ej: juanperez@email.com" value="<%= user.email %>">
         </div>
         <% if (locals.errors && errors.email) { %>
             <div class="text-danger">
@@ -82,7 +82,7 @@
 
         <div>
             <label for="avatar">FOTO DE PERFIL (.jpg, .png, .gif)</label>
-            <input type="file" id="avatar" name="avatar" accept="image/*" class="form-img">
+            <input type="file" id="avatar" name="avatar" accept="image/*" class="form-img">         
         </div>
         <% if (locals.errors && errors.avatar) { %>
             <div class="text-danger">
@@ -91,11 +91,12 @@
         <% } %>
 
         <div>
-            <button class="botom" type="submit">CREAR CUENTA</button>
-        </div>
-        
-        <p>¿Tienes una cuenta? <a href="/usuarios/login">Iniciar sesión</a></p>
-    </form>
+            <button class="botom" type="submit">ELIMINAR USUARIO</button>
+            
+        </div>  
+        <p>¿Tienes una cuenta? <a href="/usuarios/login">Iniciar sesión</a></p> 
+    </form>    
     <%- include('./partials/footer.ejs')%>   
 </body>
+
 </html>
