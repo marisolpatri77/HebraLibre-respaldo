@@ -23,44 +23,41 @@
             <h3>Productos principales</h3>
             <div class="products">
 
-                <% if (visited && visited.length > 0) { %>
-                    <% for (let i = 0; i < visited.length && i < 4; i++) { %>
+                <% for (let i = 0; i < productos.length; i++) { %>
+                    <% if (productos[i].categories_id == 1) { %> <!--Este if traería la categoria "productos principales", pero se ha cambiado las categorias y ya no funciona
+                                                                     Lo dejo por si se decide volver a agregar una columna con productos principales y otros en descuentos-->
                         <article>
-                            <a href="/productos/detalle/<%= visited[i].id %>">
-                                <img src="../img/<%= visited[i].img %>" alt="producto_1" class="product_img"/>
+                            <a href="/productos/detalle/<%= productos[i].id %>">
+                                <img src="../img/<%= productos[i].img %>" alt="producto_1" class="product_img"/>
                             </a>
                             <div class="main-article">
                                 <a href="#"> <i class="fas fa-truck"></i> </a>
-                                <p class="price"><%= visited[i].price %> </p>
-                                <p class="discount"><%= visited[i].descuont %> </p> 
-                                <h4 class="description"><%= visited[i].title %></h4>
+                                <p class="price"><%= productos[i].price %> </p>
+                                <p class="discount">%<%= productos[i].discount %> </p> 
+                                <h4 class="description"><%= productos[i].title %></h4>
                             </div>
                         </article>
-                    <% } %>
-                <% } else { %>
-                    <p>No hay elementos para mostrar.</p>
+                        <% } %>
                 <% } %>
         </section>   
         <section class="offers">
             <h3>Ofertas</h3>
             <div class="products">
-                <% if (inSale && inSale.length > 0) { %>
-                 <% for (let i = 0; i < inSale.length && i < 4 ; i++) { %>
-                    <article>
-                        <a href="/productos/detalle/<%= inSale[i].id %> ">
-                            <img src="/img/<%= inSale[i].img %>" alt="producto_oferta_1" class="product_img"/>
-                        </a>
-                        <div class="main-article">
-                            <a href="#"> <i class="fas fa-truck"></i> </a>
-                            <p class="price"><%= inSale[i].price %> </p>
-                            <p class="discount"><%= inSale[i].descuont %></p>
-                            <h4 class="description"><%= inSale[i].title %></h4>
-                        </div>
-                    </article>
+                <% for (let i = 0; i < productos.length; i++) { %>
+                    <% /* %><% if (productos[i].categories_id == 2) { %> <% <--- Este if se utilizaba para traer productos en oferta. Pero ya no funciona*/ %>
+                        <article>
+                            <a href="/productos/detalle/<%= productos[i].id %> ">
+                                <img src="/img/<%= productos[i].img %>" alt="producto_oferta_1" class="product_img"/>
+                            </a>
+                            <div class="main-article">
+                                <a href="#"> <i class="fas fa-truck"></i> </a>
+                                <p class="price"><%= productos[i].price %> </p>
+                                <p class="discount">%<%= productos[i].discount %></p>
+                                <h4 class="description"><%= productos[i].title %></h4>
+                            </div>
+                        </article>
+                    <% /* %><% } %><% */ %>
                 <% } %> 
-                <% } else { %>
-                    <p>No hay elementos para mostrar.</p>
-                <% } %>      
             </div>  
         </section>
     </main>

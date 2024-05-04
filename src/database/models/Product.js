@@ -19,11 +19,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
           },
           price: {
-            type: DataTypes.STRING,
+            type: DataTypes.DECIMAL(2,0),
             allowNull: false
           },
           categories_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false
           },
           colors: {
@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
           },
           discount: {
-            type: DataTypes.STRING,
+            type: DataTypes.DOUBLE,
             allowNull: false
           }
     }
@@ -46,6 +46,10 @@ module.exports = (sequelize, DataTypes) => {
     Product.belongsTo(models.Category, {
         as: "Category",
         foreignKey:"categories_id"
+    })
+    Product.hasMany(models.OrderDetail, {
+      as: "OrderDetail",
+      foreignKey: "products_id"
     })
    }
      return Product;
