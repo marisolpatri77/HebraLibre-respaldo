@@ -12,7 +12,7 @@ const validateProduct = [
         .notEmpty().withMessage('Debes completar este campo.').bail()
         .isNumeric().withMessage('El descuento debe ser un número.').bail()
         .isInt().withMessage('El número debe ser entero'),
-    body('descripcion').notEmpty().withMessage('Debes completar este campo.'),
+    body('descripcion').notEmpty().withMessage('Debes completar este campo.'),//agregar 20 caracteres
     body('img').custom((value, {req}) => {
         let file = req.file;
         let acceptedExtensions = [ '.jpg', '.png'];
