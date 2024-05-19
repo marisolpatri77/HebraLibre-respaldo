@@ -17,11 +17,14 @@ router.post('/register',upload.single('avatar'), validateUser, controllerUsuario
 
 
 router.get('/login', guestMiddleware, controllerUsuarios.login);
-router.post('/log', validateLogin, controllerUsuarios.log)
+ router.post('/log', validateLogin, controllerUsuarios.log)
+
+
 
 router.get('/profile', authMiddleware, controllerUsuarios.profile);
 router.get('/edit/:id', controllerUsuarios.edit);
 router.post('/editUser/:id',upload.single('avatar'), validateUser, controllerUsuarios.editUser);
+
 router.get('/deleteUser/:id', controllerUsuarios.deleteUser);
 router.post('/delete/:id',upload.single('avatar'), validateUser,controllerUsuarios.delete);
 

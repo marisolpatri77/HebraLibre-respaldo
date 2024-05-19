@@ -1,3 +1,8 @@
-//el archivo de front vincular con ejs de la vista que tenga el formulario de login 
 
-//clases ver formulario
+const form = document.querySelector('.form-login');
+
+console.log('Botón ');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();              
+        console.log('Botón INGRESAR clickeado');
+    })

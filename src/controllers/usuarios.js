@@ -39,7 +39,7 @@ const controllerUsuarios = {
             }
         })
           .then((response)=>{
-            console.log('el user devuelto por bd', response)
+           
             if (response.length > 0) { 
                 let user = response[0]
                 let okPassw= bcryptjs.compareSync(req.body.password, user.password)
