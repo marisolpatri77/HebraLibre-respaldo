@@ -27,15 +27,19 @@
       <a href="#"><i class="fa fa-envelope"></i>hebralibre@gmail.com</a>
       <a href="#"><i class="fa fa-map-marked"></i>Jujuy, Argentina</a>
     </div>
-
-    <form action="#" method="POST" autocomplete="off">
+    <!-- action="#" method="POST" -->
+    <form  autocomplete="off">
+      <span class="errores-contact" id="error-name"></span>
       <input type="text" name="name" placeholder="Nombre" class="campo">
+      <span class="errores-contact" id="error-email"></span>
       <input type="email" name="mail" placeholder="Email" class="campo">
+      <span class="errores-contact" id="error-mensaje"></span>
       <textarea name="mensaje" placeholder="Ingresa tu mensaje..."></textarea>
-      <button  class="btn-enviar">Enviar</button>
+      <button type="submit" class="btn-enviar">Enviar</button>
       <!--input type="submit" name="enviar" value="Enviar" class="btn-enviar"-->
     </form>
 
+    <script src="js/validacionContanct.js"></script>
   </div> 
   <%- include('./partials/footer.ejs')%>   
 </body>

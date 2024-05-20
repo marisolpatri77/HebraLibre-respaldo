@@ -6,6 +6,10 @@
 
 /*----------Header-----------*/
 
+.errores-contact{
+    color: red;
+  }
+
 header{
     background-color: #f5c597;
     
@@ -15,7 +19,6 @@ header{
   header .redes i{
     color: #859bb2;
     font-size: 20px;
-    margin-right: 25px;
     border: #d0b6b7 solid .5px;
     border-radius:30%;
     padding: 4px;
@@ -46,9 +49,17 @@ header{
     list-style-type: none;
   }
 
+  header div .enlaces a:hover {
+    background-color: #859bb2;
+    border-radius: 5px;
+    color: white;
+  }
+
   .enlaces a{
     text-decoration: none;
     color: #859bb2;
+    margin-right: 34px;
+    padding: 8px;
   }
 
   .enlaces i{
@@ -59,6 +70,13 @@ header{
     color: white;
   }
   
+  .redes a i:hover{
+    background-color: #859bb2;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+
   .logo{
     width: 190px;
     height: 190px;
@@ -102,7 +120,19 @@ header{
       justify-content: center;
       align-content: center;
     }
-  
+
+    .redes{
+      margin-right: 0px;
+      margin-left: 0px;
+      margin-bottom: 5px;
+      gap: 15px;
+    }
+
+    .enlaces-contenedor{
+      display: block;
+      justify-content: center;
+    }
+
     header div .enlaces{
       flex-direction: column;
       align-items: center;
@@ -111,19 +141,28 @@ header{
    
     header div .enlaces a:link, a:visited, a:active{
       text-decoration: none;
-      /* Se pone oculto hasta que se vincule con el logo*/
-      display: none;
+    }
+    header div .enlaces li a:hover{
+      background-color: unset;
+      border-radius: 0;
+      color: white; 
+    }
+
+    header .show {
+      display: none; /* Mostrar enlaces cuando se activa la clase 'show' */
     }
 
     header div .redes{
-      position: inherit;
       display: flex;
+      justify-content: center;
       padding-bottom: 1px;
       width: 100%;
-      justify-content: end;
     }
 
-
+    .fa-bars{
+      text-decoration: none;
+      color: #859bb2;
+    }
 
     header div .burger-menu{
       display: flex;
@@ -136,12 +175,14 @@ header{
     font-size: 22px;
   }
 
-
 }
-  @media (min-width: 768px){
+  @media (max-width: 1339px){
     header div .enlaces a{
-      padding: 0px 17px;
+      padding: 8px ;
+      margin-right: 0px;
     }
+
+  
 
     header div .enlaces a:hover {
       background-color: #859bb2;
@@ -157,3 +198,9 @@ header{
     }
 
   }
+
+  @media (min-width: 1340px){
+  .redes a{
+      margin-left: 25px;
+  }
+}
