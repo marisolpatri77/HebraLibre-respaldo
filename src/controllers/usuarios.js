@@ -17,29 +17,18 @@ const controllerUsuarios = {
             console.log('register:catch '+ e);
         });    
     },
-    processRegister1:(req, res)=>{
-        
-        db.User.create({
-              first_name: req.body.firstName,
-              last_name: req.body.lastName,
-              email: req.body.email, 
-              password:bcryptjs.hashSync(req.body.password,10),
-              roles_id: req.body.category,
-              image: req.file.filename
-          }).then((a) =>{
-             return res.redirect('/login');
-          }).catch((e) =>{
-              console.log('error en catch '+ e);
-          });
-      },
-      log:(req,res)=>{           
+    log:(req,res)=>{           
         db.User.findAll({
             where: {
                 email:req.body.email
             }
         })
           .then((response)=>{
+<<<<<<< HEAD
            
+=======
+            
+>>>>>>> rama_andres
             if (response.length > 0) { 
                 let user = response[0]
                 let okPassw= bcryptjs.compareSync(req.body.password, user.password)
@@ -53,9 +42,24 @@ const controllerUsuarios = {
                           
                  return res.redirect('/usuarios/profile');       
                    
+                }else{              
+                    return res.render('login', {
+                        errors: {
+                           password: {
+                                msg: 'El password es incorrecto'
+                            },
+                            oldData: req.body
+                        }                         
+                 });
                 }
             }else{
-                return res.render('login')
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'No se encuentra email en base de datos.'
+                        }
+                    }                    
+             });
             }
             }).catch(err => {
                 console.log(err)
@@ -69,7 +73,7 @@ const controllerUsuarios = {
         }
         return 1;
     },
-   processRegister: (req,res) => {
+    processRegister: (req,res) => {
        
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0){
@@ -180,8 +184,7 @@ const controllerUsuarios = {
             });
        })  
     },
-    delete: (req, res) =>{   
-        console.log('el id del user' ,  req.params.id)  
+    delete: (req, res) =>{           
         db.User.findByPk( req.params.id)
         .then((user)=>{
           user.destroy({
