@@ -24,11 +24,7 @@ const controllerUsuarios = {
             }
         })
           .then((response)=>{
-<<<<<<< HEAD
-           
-=======
             
->>>>>>> rama_andres
             if (response.length > 0) { 
                 let user = response[0]
                 let okPassw= bcryptjs.compareSync(req.body.password, user.password)
