@@ -21,10 +21,12 @@
 
         <h4>Alta de Producto</h4>
     
-        <form action="/productos/create" method="POST" enctype="multipart/form-data" class="formulario">
+        <form action="/productos/create" method="POST" enctype="multipart/form-data" id="formulario" class="formulario">
             <div class="campo">
-                <label for="name">Nombre del Producto:</label>
-                <input type="text" id="name" name="title" value="<%= locals.oldData ? oldData.title : null %>">
+                <label for="title">Nombre del Producto:</label>
+                <input type="text" id="title" name="title" value="<%= locals.oldData ? oldData.title : null %>">
+                <div id="titleError" class="error"></div>
+                
             </div>
             <% if (locals.errors && errors.title) { %>
                 <div class="text-danger">
@@ -33,7 +35,7 @@
             <% } %>
 
             <div class="campo">
-                <label for="name"> Color del Producto:</label>
+                <label for="color">Color del Producto:</label>
                 <input type="text" id="colors" name="colors" value="<%= locals.oldData ? oldData.colors : null %>">
             </div>
             <% if (locals.errors && errors.colors) { %>
@@ -61,6 +63,7 @@
             <div class="campo">
                 <label for="price">Precio:</label>
                 <input type="text" id="price" name="price" value="<%= locals.oldData ? oldData.price : null %>">
+                <div id="priceError" class="error"></div>
             </div>
             <% if (locals.errors && errors.price) { %>
                 <div class="text-danger">
@@ -71,6 +74,7 @@
             <div class="campo">
                 <label for="description">Descripción:</label>
                 <textarea id="descripcion" name="descripcion" rows="4"> <%= locals.oldData ? oldData.descripcion : null %></textarea>
+                <div id="descripcionError" class="error"></div>
             </div>
             <% if (locals.errors && errors.descripcion) { %>
                 <div class="text-danger">
@@ -103,7 +107,9 @@
                 <button class="btn-guardar" type="submit">Guardar</button>
             </div>
         </form>
+        
     </div>
-    <%- include('./partials/footer.ejs')%>  
+    <%- include('./partials/footer.ejs')%> 
+    <script src="/js/validationCreateProduct.js"></script> 
 </body>
 </html>
