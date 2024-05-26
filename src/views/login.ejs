@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Iniciar Sesión</title>
         <link rel="stylesheet"  href ="/css/login.css ">
-        <link href="/css/header-footer.css" rel="stylesheet">
+        <link href="/css/header-footer.css" rel="stylesheet"> 
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +19,9 @@
             <form action="/usuarios/log" method="POST" class ="form-login" id="login">
             <h5>Bienvenido a Hebra Libre</h5>
 
-            <div class="form-group">
+            <div class="form-group text-danger">
             <input class="input-text" type="text" name="email" placeholder="Email" id="username" data-testid="emailInput" value="<%= locals.oldData ? oldData.email : null %>">
+            <p id="emailError" class="text-danger"> 
             </div>
             <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
@@ -28,8 +29,9 @@
                 </div>
             <% } %>
         
-            <div class="form-group">
+            <div class="form-group text-danger">
                 <input class="input-text" name="password" type="password" placeholder="Contraseña" autocomplete="false" id="password">
+                <p id="passwordError" class="text-danger"></p>
             </div>
             <% if (locals.errors && errors.password) { %>
                 <div class="text-danger">
@@ -50,5 +52,7 @@
             </form>
         </div>
         <%- include('./partials/footer.ejs')%>   
+        <script src="/js/validacionFormularioLogin.js"></script>
   </body>
+ 
 </html>

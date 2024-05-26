@@ -13,6 +13,4 @@ const validateLogin = [
 ];
 
 
-module.exports = {
-    validateLogin
-};
+module.exports = {validateLogin};
