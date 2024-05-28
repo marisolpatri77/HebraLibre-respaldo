@@ -7,13 +7,7 @@ const validateUser = [
     body('firstName').notEmpty().withMessage('Debes completar el campo.').bail().isLength({ min: 2 }).withMessage('El nombre debe ser más largo'),
     body('lastName').notEmpty().withMessage('Debes completar el campo.').isLength({ min: 2 }).withMessage('El apellido debe ser más largo'),
     // body('category').notEmpty().withMessage('Debes elegir una categoría.'),
-    body('email').notEmpty().withMessage('Debes completar con un email.').bail().isEmail().withMessage('Debes completar con un email válido').custom(async (email) => {
-        const existingUser = await User.findOne({ email: email });
-        if (existingUser) {
-          throw new Error('El email ya está registrado');
-        }
-        return true;
-      }),
+    body('email').notEmpty().withMessage('Debes completar con un email.').bail().isEmail().withMessage('Debes completar con un email válido'),
     body('password').notEmpty().withMessage('Debes completar el campo.').bail().isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres.').matches(/[A-Z]/).withMessage('La contraseña debe contener al menos una letra mayúscula.').matches(/[a-z]/).withMessage('La contraseña debe contener al menos una letra minúscula.').matches(/\d/).withMessage('La contraseña debe contener al menos un número.').matches(/[@$!%*?&#]/).withMessage('La contraseña debe contener al menos un carácter especial.'),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
@@ -37,7 +31,7 @@ module.exports = {
     validateUser
 };
 
-let validaciones = (req,res,next)=>{
+/* let validaciones = (req,res,next)=>{
     console.log(' lo que llega al middleware',req.body);
 
     if (!req.file) {
@@ -64,4 +58,4 @@ let validaciones = (req,res,next)=>{
     })
     .catch(next); 
 }
-
+ */

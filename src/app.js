@@ -1,7 +1,9 @@
 const express = require('express');
 
 let rutasProductos = require('./routes/productos');
+let rutasApiProductos = require('./routes/APIs/productosAPI');
 let rutasUsuarios = require('./routes/usuarios');
+let rutasApiUsuarios = require('./routes/APIs/usuariosAPI');
 let rutasMain = require('./routes/main');
 let methodOverride = require('method-override');
 let session = require('express-session');
@@ -37,6 +39,8 @@ app.set('views', (__dirname, 'src/views'));
 
 app.use('/productos', rutasProductos);
 app.use('/usuarios', rutasUsuarios);
+/* app.use('/api/productos', rutasApiProductos);
+app.use('/api/usuarios', rutasApiUsuarios); */
 app.use('/', rutasMain);
 
 
