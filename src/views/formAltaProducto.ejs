@@ -38,6 +38,7 @@
                 <label for="color">Color del Producto:</label>
                 <input type="text" id="colors" name="colors" value="<%= locals.oldData ? oldData.colors : null %>">
             </div>
+            <div id="colorsError" class="error"></div>
             <% if (locals.errors && errors.colors) { %>
                 <div class="text-danger">
                     <%= errors.colors.msg %>
@@ -54,6 +55,7 @@
                     <% } %>
                 </select>
             </div> 
+            <div id="categoryError" class="error"></div>
             <% if (locals.errors && errors.category) { %>
                 <div class="text-danger">
                     <%= errors.category.msg %>
@@ -96,6 +98,7 @@
                 <label for="image">Imagen:</label>
                 <input type="file" id="image" name="img" accept="image/*" class="input-img">
             </div>
+            <div id="imgError" class="error"></div>
             <% if (locals.errors && errors.img) { %>
                 <div class="text-danger">
                     <%= errors.img.msg %>
