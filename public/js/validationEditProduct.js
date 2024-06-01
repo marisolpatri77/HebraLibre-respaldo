@@ -1,14 +1,17 @@
 window.addEventListener('load', function () {
     let form = document.querySelector('.formulario');
     form.title.focus();
-    form.addEventListener('submit', (e) => {
+
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
+
         const required = {
             title: true,
             colors: true,
             category: true,
             price: true,
             descripcion: true,
+            discount: true,
             img: true
         };
 
@@ -66,6 +69,15 @@ window.addEventListener('load', function () {
                 err.classList.add('text-danger');
                 err.innerText = 'La descripción debe tener al menos 10 caracteres';
                 form.descripcion.classList.add('is-invalid');
+                err.classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (isNaN(form.discount.value) || form.discount.value < 0) {
+                const err = document.getElementById('discountError');
+                err.classList.add('text-danger');
+                err.innerText = 'El descuento debe ser un número válido y mayor o igual a 0';
+                form.discount.classList.add('is-invalid');
                 err.classList.remove('hidden');
                 isValid = false;
             }
