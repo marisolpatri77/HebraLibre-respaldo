@@ -42,6 +42,7 @@ app.use('/usuarios', rutasUsuarios);
 /* app.use('/api/productos', rutasApiProductos);
 app.use('/api/usuarios', rutasApiUsuarios); */
 app.use('/', rutasMain);
+app.use('/api/user', rutasApiUsuarios);
 
 
 const PORT = process.env.PORT || 3000
