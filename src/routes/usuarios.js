@@ -32,4 +32,6 @@ router.post('/delete/:id',upload.single('avatar'), validateUser,controllerUsuari
 router.get('/logout', controllerUsuarios.logout);
 router.get('/prueba', controllerUsuarios.prueba);
 
+ //api User
+
 module.exports = router
