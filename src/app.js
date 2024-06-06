@@ -39,10 +39,9 @@ app.set('views', (__dirname, 'src/views'));
 
 app.use('/productos', rutasProductos);
 app.use('/usuarios', rutasUsuarios);
-/* app.use('/api/productos', rutasApiProductos);
-app.use('/api/usuarios', rutasApiUsuarios); */
 app.use('/', rutasMain);
 app.use('/api/user', rutasApiUsuarios);
+app.use('/api/product', rutasApiProductos);
 
 
 const PORT = process.env.PORT || 3000
