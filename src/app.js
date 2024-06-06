@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 let rutasProductos = require('./routes/productos');
 let routesApiProduct = require('./routes/APIs/productsAPI');
@@ -18,7 +19,7 @@ const path = require('path');
 
 app.use(express.static(path.join(__dirname, '../public') ));
 app.use(methodOverride('_method'));
-
+app.use(cors());
 
 app.use(session({
     secret: 'nombre del sitio',
