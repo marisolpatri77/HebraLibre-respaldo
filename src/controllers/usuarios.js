@@ -18,9 +18,7 @@ const controllerUsuarios = {
         });    
     },
     log:(req,res)=>{     
-        
-        console.log('info metodo log de controller ---->')
-        console.log('info EMAIL ---->',req.body)    
+
         db.User.findOne({
             where: {
                 email:req.body.email
@@ -74,7 +72,6 @@ const controllerUsuarios = {
         return 1;
     },
     processRegister: (req,res) => {
-        console.log('Procceso registro info del mail ' + req.body.email);
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0){
             db.Rol.findAll() 
