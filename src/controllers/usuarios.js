@@ -195,8 +195,8 @@ const controllerUsuarios = {
         return res.redirect('/usuarios/logout');
     },
     
-    profile: (req,res) =>{
-
+    profile: (req,res) =>{     
+console.log('estas en profile ',req.session);
       return res.render ('profile', {
         user: req.session.userLogged
       });

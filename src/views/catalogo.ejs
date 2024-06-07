@@ -15,11 +15,14 @@
     
     <main>
         <section class="catalogo" > 
+            <% if(locals.userLogged == 2 ){ %>
             <div class="botones">
                 <div class="agregar">
                     <a href="/productos/create" class="agregar-producto">Agregar</a>
                 </div>
             </div>
+            <% } %>
+  
             <h3>Productos principales</h3>
             <div class="products">
 

@@ -1,6 +1,5 @@
 const db = require('../../database/models');
 
-
 const controllerAPIProduct = {        
     detail:async(req, res) =>{
         try {
@@ -13,7 +12,7 @@ const controllerAPIProduct = {
                     title: product.title,
                     price: product.price,
                     color: product.color,
-                    url: product.img,   
+                    url:`${req.protocol}://${req.get('host')}${req.baseUrl}/${product.img}`,   
                     relacion:[{id_category: product.categories_id}],               
                     status: 200,               
                 })
