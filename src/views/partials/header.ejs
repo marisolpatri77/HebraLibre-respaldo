@@ -11,30 +11,37 @@
                     <a href="https://www.facebook.com/soyhebralibre" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://wa.me/+5493884175520" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
-                <div class="burger-menu" >
+                <div class="burger-menu">
                     <a href="#" id="burger-tab"><i class="fas fa-bars"></i></a>
                 </div>
                 <ul class="enlaces show" id="enlaces-tab">
-                    <% if(locals.userLogged ){ %>
+                    <% if(locals.userLogged ==2){ %>
                         <li><a href="/">Inicio</a></li>
                         <li><a href='/productos/catalogo'>Productos</a></li>
-                        <li><a href='/productos/carrito'>Carrito de Compras</a></li>
-                        <li><a href='/contact'>Contacto</a></li>
                         <li><a href='/usuarios/profile'>
                                 <img src="/img/<%= locals.userLogged.image %>" width="30" style="border-radius: 100%;">
                             </a></li>
-                        <li><a href='/usuarios/logOut'>Salir</a></li>
-                        <% }else { %>
+                        <li><a href='/usuarios/logOut'>Salir</a></li>                     
+                        <% }else if(locals.userLogged==3 ){ %>
                             <li><a href="/">Inicio</a></li>
                             <li><a href='/productos/catalogo'>Productos</a></li>
                             <li><a href='/contact'>Contacto</a></li>
-                            <li><a href='/usuarios/register'>Crear Cuenta</a></li>
-                            <li><a href='/usuarios/login'>Ingresar</a></li>
-                            <% } %>
-
-                        </ul>
-                    </div>
-                </div>
+                            <li><a href='/productos/carrito'>Carrito de Compras</a></li>
+                            <li><a href='/usuarios/profile'>
+                                    <img src="/img/<%= locals.userLogged.image %>" width="30"
+                                        style="border-radius: 100%;">
+                                </a></li>
+                            <li><a href='/usuarios/logOut'>Salir</a></li>
+                         <% }else { %>
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href='/productos/catalogo'>Productos</a></li>
+                                <li><a href='/contact'>Contacto</a></li>
+                                <li><a href='/usuarios/register'>Crear Cuenta</a></li>
+                                <li><a href='/usuarios/login'>Ingresar</a></li>
+                                <% } %>
+                </ul>
             </div>
-            
+        </div>
+    </div>
+
 </header>

@@ -1,6 +1,5 @@
 const db = require('../../database/models');
 
-
 const controllerAPIProduct = {        
     detail:async(req, res) =>{
         try {
