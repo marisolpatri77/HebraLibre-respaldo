@@ -15,12 +15,12 @@
     
     <main>
         <section class="catalogo" > 
-            <div class="botones">
+            <!--<div class="botones">
                 <div class="agregar">
                     <a href="/productos/create" class="agregar-producto">Agregar</a>
                 </div>
-            </div>
-            <h3>Productos principales</h3>
+            </div>-->
+            <h3>Ofertas</h3>
             <div class="products">
 
                 <% for (let i = 0; i < productos.length; i++) { %>
@@ -31,7 +31,7 @@
                                 <img src="../img/<%= productos[i].img %>" alt="producto_1" class="product_img"/>
                             </a>
                             <div class="main-article">
-                                <a href="#"> <i class="fas fa-truck"></i> </a>
+                                <!--<a href="#"> <i class="fas fa-truck"></i> </a>-->
                                 <p class="price"><%= productos[i].price %> </p>
                                 <p class="discount">%<%= productos[i].discount %> </p> 
                                 <h4 class="description"><%= productos[i].title %></h4>
@@ -41,7 +41,7 @@
                 <% } %>
         </section>   
         <section class="offers">
-            <h3>Ofertas</h3>
+            <h3>Productos</h3>
             <div class="products">
                 <% for (let i = 0; i < productos.length; i++) { %>
                     <% /* %><% if (productos[i].categories_id == 2) { %> <% <--- Este if se utilizaba para traer productos en oferta. Pero ya no funciona*/ %>
@@ -50,7 +50,7 @@
                                 <img src="/img/<%= productos[i].img %>" alt="producto_oferta_1" class="product_img"/>
                             </a>
                             <div class="main-article">
-                                <a href="#"> <i class="fas fa-truck"></i> </a>
+                                <!--<a href="#"> <i class="fas fa-truck"></i> </a>-->
                                 <p class="price"><%= productos[i].price %> </p>
                                 <p class="discount">%<%= productos[i].discount %></p>
                                 <h4 class="description"><%= productos[i].title %></h4>
