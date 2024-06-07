@@ -17,8 +17,7 @@ router.post('/register',upload.single('avatar'), validateUser, controllerUsuario
 
 
 router.get('/login',guestMiddleware, controllerUsuarios.login);
-console.log('info de ruta login ');
- router.post('/log', validateLogin, controllerUsuarios.log)
+router.post('/log', validateLogin, controllerUsuarios.log)
 
 
 
