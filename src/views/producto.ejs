@@ -31,15 +31,21 @@
                         <p class="descrpcion_producto">
                             <%= producto.description %>
                         </p>
-                        <div class="botones">
-                            <a href="/productos/carrito" class="comprar-producto">Agregar al carrito</a>
-                            <div class="editar-eliminar">
-                                <a href="/productos/edit/<%= producto.id %>" class="editar-producto">Editar</a>
-                                <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="post">
-                                    <button onclick="eliminarProducto()">Eliminar</button>
-                                </form>
+                        <% if(locals.userLogged){ %>
+                            <div class="botones">
+                                <% if(locals.userLogged == 1 || locals.userLogged == 3  ){ %>
+                                <a href="/productos/carrito" class="comprar-producto">Agregar al carrito</a>
+                                <% } %>
+                                <% if(locals.userLogged == 2 ){ %>
+                                <div class="editar-eliminar">
+                                    <a href="/productos/edit/<%= producto.id %>" class="editar-producto">Editar</a>
+                                    <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="post">
+                                        <button onclick="eliminarProducto()">Eliminar</button>
+                                    </form>
+                                </div>
+                                <% } %>
                             </div>
-                        </div>
+                        <% } %>
                     </div>
                 </div>
                 <% /* %>

@@ -17,16 +17,19 @@ const controllerUsuarios = {
             console.log('register:catch '+ e);
         });    
     },
-    log:(req,res)=>{           
-        db.User.findAll({
+    log:(req,res)=>{     
+        
+        console.log('info metodo log de controller ---->')
+        console.log('info EMAIL ---->',req.body)    
+        db.User.findOne({
             where: {
                 email:req.body.email
             }
         })
-          .then((response)=>{
+          .then((user)=>{
             
-            if (response.length > 0) { 
-                let user = response[0]
+            if (user) { 
+                
                 let okPassw= bcryptjs.compareSync(req.body.password, user.password)
                 
                 if(okPassw){
@@ -42,7 +45,7 @@ const controllerUsuarios = {
                     return res.render('login', {
                         errors: {
                            password: {
-                                msg: 'El password es incorrecto'
+                                msg: 'El password y/o usuario incorrecto'
                             },
                             oldData: req.body
                         }                         
@@ -51,14 +54,15 @@ const controllerUsuarios = {
             }else{
                 return res.render('login', {
                     errors: {
-                        email: {
-                            msg: 'No se encuentra email en base de datos.'
-                        }
-                    }                    
+                        password: {
+                             msg: 'El password y/o usuario incorrecto'
+                         },
+                         oldData: req.body
+                     }                   
              });
             }
             }).catch(err => {
-                console.log(err)
+                res.status(500).send(err)
               })
     },
     generateId:()=>{  
@@ -70,7 +74,7 @@ const controllerUsuarios = {
         return 1;
     },
     processRegister: (req,res) => {
-       
+        console.log('Procceso registro info del mail ' + req.body.email);
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0){
             db.Rol.findAll() 
@@ -123,7 +127,7 @@ const controllerUsuarios = {
               });       
         }    
     },
-    login: (req, res) =>{     
+    login: (req, res) =>{         
         res.render('login');
     },
     logout: (req,res) =>{
@@ -195,8 +199,8 @@ const controllerUsuarios = {
         return res.redirect('/usuarios/logout');
     },
     
-    profile: (req,res) =>{
-
+    profile: (req,res) =>{     
+       console.log('info del controller    metodo profile ',req.session);
       return res.render ('profile', {
         user: req.session.userLogged
       });

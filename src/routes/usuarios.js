@@ -16,7 +16,8 @@ router.get('/register', controllerUsuarios.register);
 router.post('/register',upload.single('avatar'), validateUser, controllerUsuarios.processRegister)
 
 
-router.get('/login', guestMiddleware, controllerUsuarios.login);
+router.get('/login',guestMiddleware, controllerUsuarios.login);
+console.log('info de ruta login ');
  router.post('/log', validateLogin, controllerUsuarios.log)
 
 

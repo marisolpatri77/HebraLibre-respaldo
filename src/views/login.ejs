@@ -19,8 +19,8 @@
             <form action="/usuarios/log" method="POST" class ="form-login" id="login">
             <h5>Bienvenido a Hebra Libre</h5>
 
-            <div class="form-group text-danger">
-            <input class="input-text" type="text" name="email" placeholder="Email" id="username" data-testid="emailInput" value="<%= locals.oldData ? oldData.email : null %>">
+            <div class="form-group text-danger">             
+            <input class="input-text" type="text" name="email" placeholder="Email" id="username" data-testid="emailInput" value = "<%= locals.oldData && oldData.email ? oldData.email : '' %>">
             <p id="emailError" class="text-danger"> 
             </div>
             <% if (locals.errors && errors.email) { %>
