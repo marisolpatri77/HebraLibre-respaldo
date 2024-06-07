@@ -10,7 +10,7 @@ function userLoggedMiddleware (req, res, next) {
     }
     if(req.session.userLogged ){    
         res.locals.userLogged = true;
-        res.locals.userLogged = req.session.userLogged   
+        res.locals.userLogged = req.session.userLogged.roles_id;   
     console.log('info del user res.locals.userLogged  ---->',  res.locals.userLogged) ;               
     }
     next();  
