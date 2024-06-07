@@ -14,39 +14,39 @@ INSERT INTO categories (name, description) VALUES
 
 -- Llenado de la tabla users
 INSERT INTO users (first_name, last_name, email, password, roles_id) VALUES
-('Juan', 'Perez', 'juan@example.com', '12345678', 1),
-('María', 'González', 'maria@example.com', 'pass1234', 3),
-('Carlos', 'Martínez', 'carlos@example.com', 'pass5678', 3),
-('Laura', 'López', 'laura@example.com', '1234pass', 3),                                                                                                                                                                                                                                                                                                 
-('Pedro', 'Rodríguez', 'pedro@example.com', '4567pass', 3),
-('Ana', 'Sánchez', 'ana@example.com', 'passabcd', 3),
-('Sofía', 'Romero', 'sofia@example.com', 'passefgh', 3),
-('Diego', 'Gómez', 'diego@example.com', 'abcdpass', 3),
-('Lucía', 'Díaz', 'lucia@example.com', 'efghpass', 3),
-('Marta', 'Muñoz', 'marta@example.com', '87654321', 3);
+('Juan', 'Perez', 'juan@example.com', 'Ab12345678*', 1),
+('María', 'González', 'maria@example.com', 'Ab12345678*', 2),
+('Carlos', 'Martínez', 'carlos@example.com', 'Ab12345678*', 2),
+('Laura', 'López', 'laura@example.com', 'Ab12345678*', 3),                                                                                                                                                                                                                                                                                                 
+('Pedro', 'Rodríguez', 'pedro@example.com', 'Ab12345678*', 3),
+('Ana', 'Sánchez', 'ana@example.com', 'Ab12345678*', 3),
+('Sofía', 'Romero', 'sofia@example.com', 'Ab12345678*', 3),
+('Diego', 'Gómez', 'diego@example.com', 'Ab12345678*', 3),
+('Lucía', 'Díaz', 'lucia@example.com', 'Ab12345678*', 3),
+('Marta', 'Muñoz', 'marta@example.com', 'Ab12345678*', 3);
 
 -- Llenado de la tabla products
 INSERT INTO products (title, description, img, price, categories_id, colors, discount) VALUES
-('Mascotas', 'Bordado en bastidor de tus mascotas', 'imagen1.jpg', '10.50', 1, 'Rojo, Azul', '0.10'),
-('Fotos Bordadas', 'Tus fotos preferidas, con detalles bordados que realzan el espiritu de la imagen', 'imagen2.jpg', 20.75, 2, 'Verde', NULL),
-('Personas Mágicas', 'Fotos tuyas o de una persona que quieras homenajear', 'imagen3.jpg', 15.99, 3, 'Negro, Blanco', 0.05),
-('Nombres bordados', 'Un regalo ideal para el nacimiento de esa personita especial', 'imagen4.jpg', 30.00, 4, 'Amarillo', NULL),
-('Talleres de bordado y algo mas', 'No dejes de seguirnos en nuestras redes, para enterarte de nuestros talleres', 'imagen5.jpg', 25.49, 5, 'Gris', 0.15),
-('Mini Dijes Bordados', 'Collares, o adornos colgantes, con diseños propios y a pedido', 'imagen6.jpg', 18.75, 1, 'Azul', NULL),
-('1 de Agosto', 'Foto propia sobre el ritual del 1º de Agosto en honor a la Pachamama, intervenida con bordado sobre papel.', 'imagen7.jpg', 12.99, 2, 'Rojo, Verde', 0.08),
-('Rositas', 'Dije minibordado en bastidor, consultame por otros modelos en stock, o por la realización de motivos a pedido.', 'imagen8.jpg', 22.00, 3, 'Negro', NULL),
-('Producto 9', 'Descripción del producto 9', 'imagen9.jpg', 17.25, 4, 'Blanco', 0.12),
-('Producto 10', 'Descripción del producto 10', 'imagen10.jpg', 28.50, 5, 'Amarillo, Gris', 0.20),
-('Producto 11', 'Descripción del producto 11', 'imagen11.jpg', 14.99, 1, 'Verde', NULL),
-('Producto 12', 'Descripción del producto 12', 'imagen12.jpg', 32.75, 2, 'Rojo', 0.25),
-('Producto 13', 'Descripción del producto 13', 'imagen13.jpg', 19.99, 3, 'Negro, Blanco', NULL),
-('Producto 14', 'Descripción del producto 14', 'imagen14.jpg', 27.00, 4, 'Amarillo, Gris', 0.18),
-('Producto 15', 'Descripción del producto 15', 'imagen15.jpg', 21.50, 5, 'Azul, Rojo', NULL),
-('Producto 16', 'Descripción del producto 16', 'imagen16.jpg', 16.75, 1, 'Verde, Negro', 0.07),
-('Producto 17', 'Descripción del producto 17', 'imagen17.jpg', 11.99, 2, 'Rojo, Azul', NULL),
-('Producto 18', 'Descripción del producto 18', 'imagen18.jpg', 23.00, 3, 'Amarillo', 0.14),
-('Producto 19', 'Descripción del producto 19', 'imagen19.jpg', 18.25, 4, 'Gris', NULL),
-('Producto 20', 'Descripción del producto 20', 'imagen20.jpg', 29.50, 5, 'Blanco, Verde', 0.22);
+('Mascotas', 'Bordado en bastidor de tus mascotas', 'imagen1.jpg', '1050', 1, 'Rojo, Azul', '10'),
+('Fotos Bordadas', 'Tus fotos preferidas, con detalles bordados que realzan el espiritu de la imagen', 'imagen2.jpg', 2075, 2, 'Verde', NULL),
+('Personas Mágicas', 'Fotos tuyas o de una persona que quieras homenajear', 'imagen3.jpg', 1599, 3, 'Negro, Blanco', 5),
+('Nombres bordados', 'Un regalo ideal para el nacimiento de esa personita especial', 'imagen4.jpg', 3000, 4, 'Amarillo', NULL),
+('Talleres de bordado y algo mas', 'No dejes de seguirnos en nuestras redes, para enterarte de nuestros talleres', 'imagen5.jpg', 2549, 5, 'Gris', 15),
+('Mini Dijes Bordados', 'Collares, o adornos colgantes, con diseños propios y a pedido', 'imagen6.jpg', 1875, 1, 'Azul', NULL),
+('1 de Agosto', 'Foto propia sobre el ritual del 1º de Agosto en honor a la Pachamama, intervenida con bordado sobre papel.', 'imagen7.jpg', 1299, 2, 'Rojo, Verde', 8),
+('Rositas', 'Dije minibordado en bastidor, consultame por otros modelos en stock, o por la realización de motivos a pedido.', 'imagen8.jpg', 2200, 3, 'Negro', NULL),
+('Taller mis primeras puntadas', 'Una tarde de bordado y merienda, en un espacio de encuentro y relax', 'imagen9.jpg', 1725, 4, 'Blanco', 12),
+('Cielo', 'Dijes con nombres bordados, souvenir, o aplique para prendas o accesorios', 'imagen10.jpg', 2850, 5, 'Amarillo, Gris', 20),
+('Nuestros hilos', 'Elegir los materiales con los que trabajamos es parte esencial del bordado', 'imagen11.jpg', 1499, 1, 'Verde', NULL),
+('Dijes navideños', 'Adornos para tu arbol o arreglo navideño. Consultame por otros motivos.', 'imagen12.jpg', 3275, 2, 'Rojo', 25),
+('Flor de loto', 'Es la única flor que es flor y fruto a la vez, tal que es símbolo del renacimiento, del comenzar de nuevo. Qué hermoso ¿no?', 'imagen13.jpg', 1999, 3, 'Negro, Blanco', NULL),
+('Rincon creativo', 'Organizar el espacio para que la energía fluya en armonia', 'imagen14.jpg', 2700, 4, 'Amarillo, Gris', 18),
+('Como el rio fluye', 'Foto propia intervenida con bordado sobre papel', 'imagen15.jpg', 2150, 5, 'Azul, Rojo', NULL),
+('Ventanal', 'Foto propia intervenida con bordado sobre papel', 'imagen16.jpg', 1675, 1, 'Verde, Negro', 07),
+('Al sol', 'Momento de bordado al sol, disfrutando el momento', 'imagen17.jpg', 1199, 2, 'Rojo, Azul', NULL),
+('Momento Disco', 'Foto propia intervenida con bordado sobre papel', 'imagen18.jpg', 2300, 3, 'Amarillo', 14),
+('Amelia', 'Nombres bordados, lo podés aplicar sobre otros trabajos, o colgar el bastidor como cuadrito', 'imagen19.jpg', 1825, 4, 'Gris', NULL),
+('Nuevos dijes navideños', 'Adornos para tu arbol o arreglo navideño. Consultame por otros motivos.', 'imagen20.jpg', 29.50, 5, 'Blanco, Verde', 22);
 
 -- Llenado de la tabla orders
 INSERT INTO orders (users_id, order_date, payment_method, status, adress_order) VALUES
