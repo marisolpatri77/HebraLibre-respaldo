@@ -19,9 +19,10 @@ const controllerAPIProduct = {
                 countByCategory,
                 products: products.map(product => ({
                     id: product.id,
-                    name: product.name,
+                    name: product.title,
                     description: product.description,
-                    categories: product.categories,
+                    category: product.Category.name,
+                    image: `${req.protocol}://${req.get('host')}/img/${product.img}`,
                     detail: `${req.protocol}://${req.get('host')}${req.baseUrl}/${product.id}`
                 })),
                 status: 200

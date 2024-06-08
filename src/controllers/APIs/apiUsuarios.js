@@ -6,8 +6,13 @@ const controllerAPIUsuarios = {
     list:async(req, res) => {
         try {
             const users = await db.User.findAll({include:['Rol'],attributes:{exclude:['password']}})
+            const usersWithImageUrl = users.map(user => {
+                const userData = user.toJSON();
+                userData.imageUrl = user.image ? `${req.protocol}://${req.get('host')}/img/${user.image}` : null; // Ajusta la ruta y la extensión según sea necesario
+                return userData;
+            });
             const response = {
-                users,
+                users: usersWithImageUrl,
                 status: 200,
                 count: users.length
             }
