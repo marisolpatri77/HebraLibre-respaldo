@@ -19,25 +19,24 @@
                         <li><a href="/">Inicio</a></li>
                         <li><a href='/productos/catalogo'>Productos</a></li>
                         <li><a href='/usuarios/profile'>
-                                <img src="/img/<%= locals.userLogged.image %>" width="30" style="border-radius: 100%;">
+                            <i class="fas fa-user"></i>
                             </a></li>
-                        <li><a href='/usuarios/logOut'>Salir</a></li>
+                        <li><a href='/usuarios/logOut'><i class="fas fa-sign-out-alt"></i></a></li>
                         <% }else if(locals.userLogged == 3 ){ %>
-                            <li><a href="/">Inicio</a></li>
-                            <li><a href='/productos/catalogo'>Productos</a></li>
-                            <li><a href='/contact'>Contacto</a></li>
-                            <li><a href='/productos/carrito'>Carrito de Compras</a></li>
+                            <li><a href="/">INICIO</a></li>
+                            <li><a href='/productos/catalogo'>PRODUCTOS</a></li>
+                            <li><a href='/contact'>CONTACTO</a></li>
+                            <li><a href='/productos/carrito'><i class="fas fa-shopping-cart"></i></a></li>
                             <li><a href='/usuarios/profile'>
-                                    <img src="/img/<%= locals.userLogged.image %>" width="30"
-                                        style="border-radius: 100%;">
+                                <i class="fas fa-user"></i>
                                 </a></li>
-                            <li><a href='/usuarios/logOut'>Salir</a></li>
+                            <li><a href='/usuarios/logOut'><i class="fas fa-sign-out-alt"></i></a></li>
                             <% }else { %>
-                                <li><a href="/">Inicio</a></li>
-                                <li><a href='/productos/catalogo'>Productos</a></li>
-                                <li><a href='/contact'>Contacto</a></li>
-                                <li><a href='/usuarios/register'>Crear Cuenta</a></li>
-                                <li><a href='/usuarios/login'>Ingresar</a></li>
+                                <li><a href="/">INICIO</a></li>
+                                <li><a href='/productos/catalogo'>PRODUCTOS</a></li>
+                                <li><a href='/contact'>CONTACTO</a></li>
+                                <li><a href='/usuarios/register'>CREAR CUENTA</a></li>
+                                <li><a href='/usuarios/login'>INGRESAR</a></li>
                                 <% } %>
                 </ul>
             </div>

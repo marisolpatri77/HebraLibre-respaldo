@@ -29,7 +29,7 @@
 
         <label for="name">NOMBRE</label>
         <div>
-            <input class="controls" type="text" name="firstName" id="name" placeholder="ej: Juan" value="<%= locals.oldData ? oldData.firstName : null %>">
+            <input class="controls" type="text" name="firstName" id="name" placeholder="Ej: Juan" value="<%= locals.oldData ? oldData.firstName : null %>">
             <p id="err-name" class="hidden"></p>
         </div>
         <p id="err-name" class="hidden"></p>
@@ -43,7 +43,7 @@
        
         <div>
             <label for="lastname">APELLIDO</label>
-            <input class="controls" type="text" name="lastName" id="lastname" placeholder="ej: Pérez" value="<%= locals.oldData ? oldData.lastName : null %>">
+            <input class="controls" type="text" name="lastName" id="lastname" placeholder="Ej: Pérez" value="<%= locals.oldData ? oldData.lastName : null %>">
         </div>
         <p id="err-lastName" class="hidden"></p>
 
@@ -57,12 +57,14 @@
 
         <div>
             <label for="category">CATEGORÍA</label>
-            <select name="category" id="category" class="controls">
+            <select name="category" id="category" class="controls" disabled>
                 <% if (rol && rol.length > 0) { %>
                     <% for(let i = 0; i < rol.length; i++) { %>
+                        <% if(rol[i].id !== 2 && rol[i].id !== 1 ){ %>
                         <option value="<%= rol[i].id %>">
                             <%= rol[i].name %>
                         </option>
+                        <% } %>
                     <% } %>
                 <% } else { %>
                     <option value="">No hay roles disponibles</option>
@@ -77,7 +79,7 @@
 
         <div>
             <label for="email">EMAIL</label>
-            <input class="controls" type="text" name="email" id="email" placeholder="ej: juanperez@email.com" value="<%= locals.oldData ? oldData.email : null %>"> 
+            <input class="controls" type="text" name="email" id="email" placeholder="Ej: juanperez@email.com" value="<%= locals.oldData ? oldData.email : null %>"> 
         </div>
         <p id="err-email" class="hidden"></p>
 
@@ -91,7 +93,7 @@
 
         <div>
             <label for="password">CONTRASEÑA</label>
-            <input class="controls" type="password" name="password" id="password">
+            <input class="controls" type="password" name="password" id="password" placeholder="********">
         </div>
         <p id="err-password" class="hidden"></p>
 
