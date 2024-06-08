@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-
+let rutasApiCategories = require('./routes/APIs/categoriesAPI')
 let rutasProductos = require('./routes/productos');
 let routesApiProduct = require('./routes/APIs/productsAPI');
 let rutasUsuarios = require('./routes/usuarios');
@@ -36,7 +36,7 @@ app.set('view engine', 'ejs')
 
 app.set('views', (__dirname, 'src/views'));
  
-
+app.use('/api/categories', rutasApiCategories);
 app.use('/productos', rutasProductos);
 app.use('/usuarios', rutasUsuarios);
  app.use('/api/products', routesApiProduct);
