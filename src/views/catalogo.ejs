@@ -31,9 +31,11 @@
                         <img src="../img/<%= productos[i].img %>" alt="producto_1" class="product_img"/>
                     </a>
                     <div class="main-article">
-                        <p class="price">$<%= productos[i].price %></p>
-                        <p class="discount"><%= productos[i].discount %>%</p>
                         <h4 class="description"><%= productos[i].title %></h4>
+                        <p class="price">$<%= productos[i].price %></p>
+                        <% if (productos[i].discount > 0) { %>
+                        <p class="discount"><%= productos[i].discount %>% OFF</p>
+                        <% } %>
                     </div>
                 </article>
                 <% } %>
@@ -48,9 +50,11 @@
                         <img src="/img/<%= productos[i].img %>" alt="producto_oferta_1" class="product_img"/>
                     </a>
                     <div class="main-article">
-                        <p class="price">$<%= productos[i].price %></p>
-                        <p class="discount"><%= productos[i].discount %>%</p>
                         <h4 class="description"><%= productos[i].title %></h4>
+                        <p class="price">$<%= productos[i].price %></p>
+                        <% if (productos[i].discount > 0) { %>
+                            <p class="discount"><%= productos[i].discount %>% OFF</p>
+                            <% } %>
                     </div>
                 </article>
                 <% } %>
