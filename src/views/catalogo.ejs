@@ -1,69 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-            <title>Catalogo de productos</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">      
-            <link rel="stylesheet" href="/css/catalogoProducto.css">
-    
-            <link href="/css/header-footer.css" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogo de productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/catalogoProducto.css">
+    <link href="/css/header-footer.css" rel="stylesheet">
+</head>
 <body>
-    <%- include('./partials/header.ejs')%>
-    
+    <%- include('./partials/header.ejs') %>
+
     <main>
-        <section class="catalogo" > 
-            <% if(locals.userLogged == 2 ){ %>
+        <section class="catalogo">
+            <% if(locals.userLogged == 2) { %>
             <div class="botones">
                 <div class="agregar">
                     <a href="/productos/create" class="agregar-producto">Agregar</a>
                 </div>
             </div>
             <% } %>
-  
+
             <h3>Productos principales</h3>
             <div class="products">
-
                 <% for (let i = 0; i < productos.length; i++) { %>
-                    <% if (productos[i].categories_id == 1) { %> <!--Este if traería la categoria "productos principales", pero se ha cambiado las categorias y ya no funciona
-                                                                     Lo dejo por si se decide volver a agregar una columna con productos principales y otros en descuentos-->
-                        <article>
-                            <a href="/productos/detalle/<%= productos[i].id %>">
-                                <img src="../img/<%= productos[i].img %>" alt="producto_1" class="product_img"/>
-                            </a>
-                            <div class="main-article">
-                                <a href="#"> <i class="fas fa-truck"></i> </a>
-                                <p class="price">$<%= productos[i].price %> </p>
-                                <p class="discount"><%= productos[i].discount %>% </p> 
-                                <h4 class="description"><%= productos[i].title %></h4>
-                            </div>
-                        </article>
-                        <% } %>
+                <% if (productos[i].categories_id == 1) { %>
+                <article>
+                    <a href="/productos/detalle/<%= productos[i].id %>">
+                        <img src="../img/<%= productos[i].img %>" alt="producto_1" class="product_img"/>
+                    </a>
+                    <div class="main-article">
+                        <p class="price">$<%= productos[i].price %></p>
+                        <p class="discount"><%= productos[i].discount %>%</p>
+                        <h4 class="description"><%= productos[i].title %></h4>
+                    </div>
+                </article>
                 <% } %>
-        </section>   
+                <% } %>
+        </section>
         <section class="offers">
             <h3>Ofertas</h3>
             <div class="products">
                 <% for (let i = 0; i < productos.length; i++) { %>
-                    <% /* %><% if (productos[i].categories_id == 2) { %> <% <--- Este if se utilizaba para traer productos en oferta. Pero ya no funciona*/ %>
-                        <article>
-                            <a href="/productos/detalle/<%= productos[i].id %> ">
-                                <img src="/img/<%= productos[i].img %>" alt="producto_oferta_1" class="product_img"/>
-                            </a>
-                            <div class="main-article">
-                                <a href="#"> <i class="fas fa-truck"></i> </a>
-                                <p class="price">$<%= productos[i].price %> </p>
-                                <p class="discount"><%= productos[i].discount %>%</p>
-                                <h4 class="description"><%= productos[i].title %></h4>
-                            </div>
-                        </article>
-                    <% /* %><% } %><% */ %>
-                <% } %> 
-            </div>  
+                <article>
+                    <a href="/productos/detalle/<%= productos[i].id %>">
+                        <img src="/img/<%= productos[i].img %>" alt="producto_oferta_1" class="product_img"/>
+                    </a>
+                    <div class="main-article">
+                        <p class="price">$<%= productos[i].price %></p>
+                        <p class="discount"><%= productos[i].discount %>%</p>
+                        <h4 class="description"><%= productos[i].title %></h4>
+                    </div>
+                </article>
+                <% } %>
+            </div>
         </section>
     </main>
-    <%- include('./partials/footer.ejs')%>        
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>
