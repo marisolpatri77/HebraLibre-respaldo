@@ -1,35 +1,34 @@
 <header>
     <div class="media">
+        
+        <div class="redes">
+            <a href="https://www.instagram.com/hebralibre/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/soyhebralibre" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/+5493884175520" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
 
-        <div class="nav-bar">
+        <div class="contenedor-img">
             <a href="/"><img src="/img/logo-sin-fondo-prueba.png" alt="Logo" class="logo"></a>
         </div>
-        <div class="nav-bar">
+
+        <div> <!--class="nav-bar"-->
             <div class="enlaces-contenedor">
-                <div class="redes">
-                    <a href="https://www.instagram.com/hebralibre/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/soyhebralibre" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/+5493884175520" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                </div>
+               
                 <div class="burger-menu">
                     <a href="#" id="burger-tab"><i class="fas fa-bars"></i></a>
                 </div>
                 <ul class="enlaces show" id="enlaces-tab">
                     <% if(locals.userLogged==2){ %>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href='/productos/catalogo'>Productos</a></li>
-                        <li><a href='/usuarios/profile'>
-                            <i class="fas fa-user"></i>
-                            </a></li>
+                        <li><a href="/">INICIO</a></li>
+                        <li><a href='/productos/catalogo'>PRODUCTOS</a></li>
+                        <li><a href='/usuarios/profile'><i class="fas fa-user"></i></a></li>
                         <li><a href='/usuarios/logOut'><i class="fas fa-sign-out-alt"></i></a></li>
                         <% }else if(locals.userLogged == 3 ){ %>
                             <li><a href="/">INICIO</a></li>
                             <li><a href='/productos/catalogo'>PRODUCTOS</a></li>
                             <li><a href='/contact'>CONTACTO</a></li>
                             <li><a href='/productos/carrito'><i class="fas fa-shopping-cart"></i></a></li>
-                            <li><a href='/usuarios/profile'>
-                                <i class="fas fa-user"></i>
-                                </a></li>
+                            <li><a href='/usuarios/profile'><i class="fas fa-user"></i></a></li>
                             <li><a href='/usuarios/logOut'><i class="fas fa-sign-out-alt"></i></a></li>
                             <% }else { %>
                                 <li><a href="/">INICIO</a></li>
@@ -37,7 +36,7 @@
                                 <li><a href='/contact'>CONTACTO</a></li>
                                 <li><a href='/usuarios/register'>CREAR CUENTA</a></li>
                                 <li><a href='/usuarios/login'>INGRESAR</a></li>
-                                <% } %>
+                            <% } %>
                 </ul>
             </div>
         </div>

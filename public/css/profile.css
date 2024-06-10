@@ -9,6 +9,8 @@
 /* Estilos CSS para el historial de compras */
 .container {
     display: flex;
+    padding: 15px;
+    margin: 15px 20px 20px;
 }
 
 /* Estilos CSS para la tarjeta de perfil */
@@ -20,6 +22,8 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     max-width: 300px;
+    max-height: 400px;
+    margin-right: 10px;
 }
 
 .profile-contenedor {
@@ -30,24 +34,23 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
 }
 
 .profile-contenedor h2 {
-    margin: 0;
     font-size: 1.5rem;
     color: #333;
+    margin-bottom: 3px;
 }
 
 .profile-contenedor p {
-    margin: 5px 0;
+    margin-bottom: 50px;
     color: #666;
 }
 
 
 .right-side {
     flex: 2;
-    padding: 20px;
+    padding: 10px;
 }
 
 .purchase-item {
@@ -60,40 +63,34 @@
 
 .purchase-item .timestamp {
     color: #666;
+    display: flex;
+    justify-content: center;
 }
 
 .purchase-item .content {
     margin-left: 20px;
+    text-align: center;
 }
 
 .purchase-item .details {
     margin-left: 20px;
     color: #888;
+    text-align: center;
 }
 
-body{
-    height:100%;
-  }
-  body{
-    text-align:center;
-  }
-  body:before{
-    content:'';
-    height:100%;
-    display:inline-block;
-    vertical-align:middle;
-  }
   button{
     background:#d0b6b7;
     color:#fff;
     border:none;
     position:relative;
-    height:60px;
-    font-size:1.6em;
+    height:40px;
+    width: 180px;
+    font-size:20px;
     padding:0 2em;
     cursor:pointer;
     transition:800ms ease all;
     outline:none;
+    margin-bottom: 10px;
   }
   button:hover{
     background:#fff;
@@ -119,5 +116,67 @@ body{
     width:100%;
     transition:800ms ease all;
   }
-  
 
+  .btn-volverProfile{
+    width: 250px;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .right-side h1{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contenedor-btn{
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px; 
+    }
+
+    .left-side {
+        margin-bottom: 20px;
+    }
+
+    .profile-contenedor h2 {
+      font-size: 20px;
+  }
+  
+  .profile-contenedor p {
+      font-size: 14px;
+      margin-bottom: 30px;
+  }
+
+  button{
+   
+    height:30px;
+    width: 150px;
+    font-size:18px;
+   
+  }
+
+  .right-side h1{
+    font-size: 21px;
+  }
+
+
+.purchase-item .timestamp, .purchase-item .content , .purchase-item .details {
+    font-size: 11px;
+}
+
+.btn-volverProfile{
+  width: 180px;
+  font-size: 14px;
+}
+
+}

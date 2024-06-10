@@ -1,87 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="/css/carrito.css">
-    <link href="/css/header-footer.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    
-    <%- include('./partials/header.ejs')%>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="/css/carrito.css">
+  <link href="/css/header-footer.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
- <div class="container-principal"> 
-  <div class="container">
-    <section class="cart-section">
-      <!-- Contenido del carrito -->
-      <div class="product">
+<body>
+
+  <%- include('./partials/header.ejs')%>
+
+    <div class="container-principal">
+      <section class="cart-section">
         <div class="product-details">
-        <img class="product-img" src="/img/img_sec1.webp" alt="Producto 1">
-        <div class="product-info">
-          <h2>Producto 1</h2>
-          <p>Descripción breve del producto 1.</p>
-          <p>Precio unitario: $20.00</p>
-          <label for="quantity">Cantidad:</label>
-          <select id="quantity" name="quantity">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <!-- Agrega más opciones según tus necesidades -->
-          </select>
-          <button>Eliminar</button>
+          <img class="product-img" src="/img/img_sec1.webp" alt="Producto 1">
+          <div class="product-info">
+            <!--h2>Producto 1</h2-->
+            <div class="descrip-prod">
+              <h5>Nombres Bordados</h5>
+            </div>
+            <div class="contenedor-cant">
+              <label for="quantity">Cantidad:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div>
+              <p class="precio-product">$3000.00</p>
+            </div>
+          </div>
+          <button class="icon-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
         </div>
-        </div>
-          <div class="product-details">
-        <img class="product-img" src="/img/img_sec2.webp" alt="Producto 2">
-        <div class="product-info">
-          <h2>Producto 2</h2>
-          <p>Descripción breve del producto 2.</p>
-          <p>Precio unitario: $20.00</p>
-          <label for="quantity">Cantidad:</label>
-          <select id="quantity" name="quantity">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <!-- Agrega más opciones según tus necesidades -->
-          </select>
-          <button>Eliminar</button>
-        </div>
-        </div>
+      </section>
+
+      <div class="sidebar">
+        <section class="subtotal">
+          <h3>Resumen de Compra</h3>
+          <div class="contenedor-resumen">
+            <table>
+              <tr>
+                <th>Concepto</th>
+                <th>Costo</th>
+              </tr>
+              <tr>
+                <td>Subtotal</td>
+                <td>$3000.00</td>
+              </tr>
+              <tr>
+                <td>Costo de envío</td>
+                <td>$1500.00</td>
+              </tr>
+              <tr>
+                <td class="total">Total a pagar</td>
+                <td class="total">$4500.00</td>
+              </tr>
+            </table>
+          </div>
+          <div class="contenedor-btn-comprar">
+            <button class="checkout-btn">INICIAR COMPRA</button>
+          </div>
+        </section>
       </div>
-      <!-- Repite la sección anterior para cada producto en el carrito -->
-    </section>
 
-  </div>
-
-  <div class="sidebar">
-    <section class="subtotal">
-      <h2>Resumen del Pedido</h2>
-      <!-- Contenido del resumen del pedido -->
-      <p>Cantidad de ítems: 2</p>
-      <p>Subtotal: $40.00</p>
-      <p>Costo de envío: $5.00</p>
-      <p>Total a pagar: $45.00</p>
-      <div class="checkout-content">
-        <button class="checkout">Comprar Ahora</button>
-      </div>
-      
-    </section>
-
-    <section class="recommendation">
-    <h2>Quizá también te interese</h2>
-    <!-- Contenido de productos recomendados -->
-    <div class="recommendation-content">
-      <img class="recommendation-img" src="/img/img_sec3.webp"  alt="Producto 3">
     </div>
-    
-    <!-- ... -->
-    </section>
-  </div>
-</div>
-<%- include('./partials/footer.ejs')%>        
-  </body>
+    <%- include('./partials/footer.ejs')%>
+</body>
+
 </html>

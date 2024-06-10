@@ -26,20 +26,30 @@ header{
   }
   
   .nav-bar{
+    border: solid 1px black;
+    /*
     display: flex;
-    justify-content: center;
+    justify-content: center;*/
   }
   
   .enlaces-contenedor{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 10px;
     width: 100%;
   }
+  .contenedor-img{
+    display: flex;
+    justify-content: center;
+  }
 
   .redes{
-    margin-right: 113px;
-    margin-left: 15px;
+    /*margin-right: 113px;
+    margin-left: 15px;*/
+    display: flex;
+    justify-content: end;
+    padding-top: 8px;
+    padding-right: 60px;
   }
 
   .enlaces{
@@ -87,11 +97,13 @@ header{
     display: none;
   }
 
+  
+
 
   /*---------fuente de los links del menu----------*/
   a {
     font-family: sans-serif, 'Roboto';
-    font-size: 20px;
+    font-size: 15px;
   }
   
   
@@ -108,7 +120,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-color: #cac2c0;
+    /*background-color: #cac2c0;*/
     font-family: 'Roboto', sans-serif;
   }
 
@@ -122,10 +134,11 @@ header{
     }
 
     .redes{
-      margin-right: 0px;
+      /*margin-right: 0px;
       margin-left: 0px;
       margin-bottom: 5px;
-      gap: 15px;
+      gap: 15px;*/
+      padding-right: 10px;
     }
 
     .enlaces-contenedor{
@@ -138,6 +151,18 @@ header{
       align-items: center;
       justify-content: center;
     }
+
+    header div .enlaces a {
+      display: block;
+      margin: 8px 0; 
+      text-align: center;
+      width: 100%;
+      padding: 8px 0;
+      border-bottom: 1px solid #d0b6b7;
+      font-size: 15px;
+  }
+
+    
    
     header div .enlaces a:link, a:visited, a:active{
       text-decoration: none;
@@ -154,7 +179,7 @@ header{
 
     header div .redes{
       display: flex;
-      justify-content: center;
+      justify-content: end;
       padding-bottom: 1px;
       width: 100%;
     }
@@ -182,6 +207,9 @@ header{
       margin-right: 0px;
     }
 
+    header div .redes i{
+      margin-right: 10px;
+    }
   
 
     header div .enlaces a:hover {
@@ -200,7 +228,7 @@ header{
   }
 
   @media (min-width: 1340px){
-  .redes a{
-      margin-left: 25px;
+    .redes a{
+        margin-left: 25px;
+    }
   }
-}
