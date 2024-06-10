@@ -26,6 +26,7 @@ Agustin Castellón usuario GitHub:(https://github.com/AgustinCastellon), soy est
 
 Marisol Castillo usuario GitHub:(https://github.com/marisolpatri77), soy estudiante de la carrera Analista Programador Universitario en la facultad de Ingeniería de la Universidad de Jujuy, en el 2019 tuve mi primer contacto con la programación a través de un "meet and code" de solo mujeres, quedé fascinada con mi primer "Hola mundo", es por eso que en el 2021 decidí dejar la carrera que venía estudiando y estudiar la carrera que me gusta. En mi tiempo libre me gusta pasar lindos momentos con mis afectos y estudiar inglés.
 
+Enlace al Dashboard: https://github.com/AgustinCastellon/dashboard-hebralibre
 
 Enlace al tablero de trabajo de Trello: https://trello.com/b/BA7uCaUg/espacio-de-trabajo-hebra-libre
 
