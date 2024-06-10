@@ -10,7 +10,8 @@ const {Op} = require("sequelize");
 
 const controllerUsuarios = {
     register: (req, res) =>{
-        db.Rol.findAll()
+        db.Rol.findAll({
+        })
         .then((roles)=>{
               res.render('register',{rol:roles})
         }).catch((e) =>{
