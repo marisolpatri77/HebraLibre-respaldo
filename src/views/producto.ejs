@@ -8,7 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,400;1,500&family=Roboto:wght@100&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/css/catalogoProducto.css">
 
     <link href="/css/header-footer.css" rel="stylesheet">
@@ -18,51 +18,106 @@
     <%- include('./partials/header.ejs')%>
         <main>
             <section class="productos"> <!--src='/img/img_sec1.webp'"-->
-                <h3>Productos principales</h3>
+                <!--h3>Productos principales</h3-->
                 <div class="products_principal">
                     <div class="imgPrinc-carrito">
                         <img id="imagenPrincipal" src="/img/<%= producto.img %>" alt="imagenPrincipal">
-                        <a href='/productos/carrito' class="icono-truck"> <i class="fas fa-truck"></i> </a>
+                        <!--a href='/productos/carrito' class="icono-truck"> <i class="fas fa-truck"></i> </a-->
                     </div>
-                    <div class="contenido_producto">
+
+                    <div class="product-detail">
+                        <div class="product-info">
+                            <h2 class="product-name"> <%= producto.title %></h2>
+                            <p class="product-price"> $ <%= producto.price %></p>
+                            <p class="product-color">COLOR: <%= producto.colors %></p>
+                            <div class="quantity-container">
+                                <p class="product-quantity">CANTIDAD</p>
+                                <input type="number" class="quantity-input" min="1" value="1">
+                            </div>
+                        </div>
+
+                        <div class="shipping-info">
+                            <p class="shipping-title"><i class="fa-regular fa-credit-card"></i>Medios de Pago</p>
+                            <p>Efectivo, Tarjeta de Débito o Crédito, Transferencia Bancaria, Mercado Pago.</p>
+                            <p><p class="product-discount">10% de descuento pagando con Transferencia o depósito bancario</p></p>
+                            <p class="shipping-title"><i class="fa-solid fa-truck"></i>Medios de envío </p>
+                            <p> Andreani, Correo Argentino, Oca. </p>
+                            <p class="shipping-title"><i class="fa-solid fa-store"></i>Nuestro local </p>
+                            <p>Retiralo sin cargo: Galería La Colonial, Local 12, Lavalle 238 - San Salvador de Jujuy . (A convenir)</p>
+                        </div>
+
+                        <div class="buttons">
+                            <% if(locals.userLogged){ %>
+                                <div class="botones">
+                                    <% if(locals.userLogged==1 || locals.userLogged==3 ){ %>
+                                        <a href="/productos/carrito" class="comprar-producto">Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></a>
+                                    <% } %>
+                                    <% if(locals.userLogged==2 ){ %>
+                                        <div class="editar-eliminar">
+                                            <a href="/productos/edit/<%= producto.id %>"
+                                                class="editar-producto"> <i class="fa-regular fa-pen-to-square"></i> Editar</a>
+                                            <form action="/productos/delete/<%= producto.id %>?_method=DELETE"
+                                                method="post">
+                                                <button onclick="eliminarProducto()"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                                            </form>
+                                        </div>
+                                    <% } %>          
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!--div class="contenido_producto">
                         <h4 class="titulo">
                             <%= producto.title %>
                         </h4>
                         <p class="descrpcion_producto">
                             <%= producto.description %>
                         </p>
+
                         <% if(locals.userLogged){ %>
                             <div class="botones">
-                                <% if(locals.userLogged == 1 || locals.userLogged == 3  ){ %>
-                                <a href="/productos/carrito" class="comprar-producto">Agregar al carrito</a>
+                                <% if(locals.userLogged==1 || locals.userLogged==3 ){ %>
+                                    <a href="/productos/carrito" class="comprar-producto">Agregar al carrito</a>
                                 <% } %>
-                                <% if(locals.userLogged == 2 ){ %>
-                                <div class="editar-eliminar">
-                                    <a href="/productos/edit/<%= producto.id %>" class="editar-producto">Editar</a>
-                                    <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="post">
-                                        <button onclick="eliminarProducto()">Eliminar</button>
-                                    </form>
-                                </div>
-                                <% } %>
+                                <% if(locals.userLogged==2 ){ %>
+                                    <div class="editar-eliminar">
+                                        <a href="/productos/edit/<%= producto.id %>"
+                                            class="editar-producto">Editar</a>
+                                        <form action="/productos/delete/<%= producto.id %>?_method=DELETE"
+                                            method="post">
+                                            <button onclick="eliminarProducto()">Eliminar</button>
+                                        </form>
+                                    </div>
+                                <% } %>          
                             </div>
                         <% } %>
-                    </div>
+
+                    </div-->
                 </div>
+
                 <% /* %>
-                <div class="imagenes-adicionales">
-                     <script>
-                        function cambiarImagen(rutaImagen) {
-                            document.getElementById("imagenPrincipal").src = rutaImagen;
-                        }
-                    </script> 
-                    <% for (let i=0; i < 4; i++) { %>
-                        <% if (color[i] && color[i].img) { %>
-                            <img id="enlaceEditar" src="/img/<%= color[i].img %>" alt="Imagen Adicional <%= i + 1 %>"
-                                onclick="cambiarImagen('/img/<%= color[i].img %>')"> 
-                        <% } %>
-                    <% } %> 
-                </div>
-                <% */ %>
+                    <div class="imagenes-adicionales">
+                        <script>
+                            function cambiarImagen(rutaImagen) {
+                                document.getElementById("imagenPrincipal").src = rutaImagen;
+                            }
+                        </script>
+                        <% for (let i=0; i < 4; i++) { %>
+                            <% if (color[i] && color[i].img) { %>
+                                <img id="enlaceEditar" src="/img/<%= color[i].img %>"
+                                    alt="Imagen Adicional <%= i + 1 %>"
+                                    onclick="cambiarImagen('/img/<%= color[i].img %>')">
+                                <% } %>
+                                    <% } %>
+                    </div>
+                    <% */ %>
             </section>
 
         </main>
