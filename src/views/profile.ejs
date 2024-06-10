@@ -11,51 +11,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/css/profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100;1,400&display=swap"
+        rel="stylesheet">
     <link href="/css/header-footer.css" rel="stylesheet">
 </head>
+
 <body>
     <%- include('./partials/header.ejs')%>
-    <div class="container">
-    <main class="left-side">
-        <div class="profile-contenedor">
-            <img src="/img/<%= user.image || 'default-avatar.jpg' %>" alt="<%= user.first_name %>" class="profileImg">
 
-            <h2><%= user.first_name %></h2>
-            <p><%= user.email %></p>
-            
-        </div>
-        <button id="editarPerfil" onclick="window.location.href = '/usuarios/edit/<%= user.id %>'">Editar </button>
-        <button id="eliminarUsuario" onclick="window.location.href = '/usuarios/deleteUser/<%= user.id %>'">Eliminar </button>
-    </main>
-    
-    <main class="right-side">
-        <h1>Historial de Compras</h1>
-    <!-- Ejemplo de compras recientes -->
-    <div class="purchase-item">
-        <span class="timestamp">12 de marzo de 2024</span>
-        <div class="content">
-            <p>Compra realizada: "Bordado Flor"</p>
-        </div>
-        <div class="details">
-            <p>Precio: $100.00</p>
-            <p>Número de seguimiento: 123456789</p>
-        </div>
-    </div>
+        <div class="container">
+            <main class="left-side">
+                <div class="profile-contenedor">
+                    <img src="/img/<%= user.image || 'default-avatar.jpg' %>" alt="<%= user.first_name %>" class="profileImg">
+                    <h2>
+                        <%= user.first_name %>
+                    </h2>
+                    <p class="parrafoProfile">
+                        <%= user.email %>
+                    </p>
+                </div>
+                <div class="contenedor-btn">
+                    <button id="editarPerfil" onclick="window.location.href = '/usuarios/edit/<%= user.id %>'">Editar</button>
+                </div>  
+                <div class="contenedor-btn">
+                    <button id="eliminarUsuario" onclick="window.location.href = '/usuarios/deleteUser/<%= user.id %>'">Eliminar </button>
+                </div>
+            </main>
 
-    <div class="purchase-item">
-        <span class="timestamp">5 de marzo de 2024</span>
-        <div class="content">
-            <p>Compra realizada: "Bordado Pachamama"</p>
+            <main class="right-side">
+                <h1>Historial de Compras</h1>
+                <!-- Ejemplo de compras recientes -->
+                <div class="purchase-item">
+                    <span class="timestamp">12 de marzo de 2024</span>
+                    <div class="content">
+                        <p>Compra realizada: "Bordado Flor"</p>
+                    </div>
+                    <div class="details">
+                        <p>Precio: $100.00</p>
+                        <p>Número de seguimiento: 123456789</p>
+                    </div>
+                </div>
+
+                <div class="purchase-item">
+                    <span class="timestamp">5 de marzo de 2024</span>
+                    <div class="content">
+                        <p>Compra realizada: "Bordado Pachamama"</p>
+                    </div>
+                    <div class="details">
+                        <p>Precio: $100.00</p>
+                        <p>Número de seguimiento: 987654321</p>
+                    </div>
+                </div>
+                <div class="contenedor-btn">
+                    <button class="btn-volverProfile" onclick="window.location.href = '/'" >Volver al Inicio</button>
+                </div>
+                
+            </main>
         </div>
-        <div class="details">
-            <p>Precio: $100.00</p>
-            <p>Número de seguimiento: 987654321</p>
-        </div>
-    </div>
-    </main>
-    </div>
-    <button>Volver al inicio</button>
+
+        
+
+    <%- include('./partials/footer.ejs')%>
 </body>
+
 </html>
