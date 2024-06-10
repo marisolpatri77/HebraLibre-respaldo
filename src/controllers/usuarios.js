@@ -147,27 +147,29 @@ const controllerUsuarios = {
             });
        })   
     },
-    editUser: (req, res) =>{  
-        
-        db.User.findByPk(req.params.id) 
-            .then((user)=>{
+    editUser: (req, res) => {  
+        db.User.findByPk(req.params.id)
+            .then((user) => {
                 db.User.update({
                     first_name: req.body.firstName,
                     last_name: req.body.lastName,
                     email: req.body.email, 
-                    password:bcryptjs.hashSync(req.body.password,10),
-                    roles_id: req.body.category,
+                    password: bcryptjs.hashSync(req.body.password, 10),
                     image: req.file.filename
-                },{
-                  where:{
-                    id:req.params.id
-                   }  
-                })
-                return res.redirect('/usuarios/edit/'+ req.params.id);
-            }).catch(error => {
-                console.log(error);
-                res.send('Error al cargar roles');
-            });       
+                }, {
+                    where: {
+                        id: req.params.id
+                    }
+                }).then(() => {
+                    return db.User.findByPk(req.params.id);
+                }).then((updatedUser) => {
+                    return res.render('profile', { user: updatedUser });
+                });
+            })
+            .catch(err => {
+                console.error(err);
+                res.status(500).send('Error al actualizar el usuario');
+            });
     },
     deleteUser: (req, res) =>{     
         db.User.findByPk(req.params.id)

@@ -41,19 +41,7 @@
                 <%= errors.lastName.msg %>
             </div>
         <% } %>
-        <div>
-            <label for="category">CATEGORÍA</label>
-            <select name="category" id="category" class="controls">
-                <% if (rol && rol.length > 0) { %>
-                    <% for(let i = 0; i < rol.length; i++) { %>
-                        <option value="<%= rol[i].id %>">
-                            <%= rol[i].name %>
-                        </option>
-                    <% } %>
-                <% } else { %>
-                    <option value="">No hay roles disponibles</option>
-                <% } %>
-        </div>
+    
         <% if (locals.errors && errors.category) { %>
             <div class="text-danger">
                 <%= errors.category.msg %>
