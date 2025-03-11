@@ -16,7 +16,7 @@ Integrantes del grupo 4
 
 Caty Laporta usuario GitHub:(https://github.com/CatyLap), principiante en este mundo de la programación y el diseño web, entusiasta aprendiz. Actualmente trabajo en la administración de APPaCe. Desde hace unos cuantos meses, me inicié en este mundo atraida por Argentina Programa, y por la difusión que se le da a la demanda laboral de este sector. Amante de la naturaleza, trato de reducir al máximo posible mi huella de carbono. Espero poder utilizar estos conocimientos para hacer aplicaciones que sean útiles para la comunidad.
 
-Andres Siva usuario GitHub:(https://github.com/andresS16) Entusiasta y curioso de aprender nuevas metodologias y herramientas de trabajo que me brinden posibilidad de desarrollo personal y profesional para hacerme un lugar en este mundo del desarrollo web.Me gusta correr andar en bici y jugar al futbol.
+Andres Siva usuario GitHub:(https://github.com/andresS16) Entusiasta y curioso de aprender nuevas metodologias , herramientas de trabajo que me brinden posibilidad de desarrollo personal y profesional para hacerme un lugar en este mundo del desarrollo web.Me gusta correr andar en bici y jugar al futbol.
 
 Alejandra Abachino usuario GitHub:(https://github.com/cecyaba) soy estudiante de la universdidad y el profesorado, me llama mucho la atencion de la programacion. Me gusta aprender y enseñar. El mayor tiempo lo ocupa mis dos hijas que son el motor del dia a dia. me gusta que mi mente este ocupada para superar la enfermedad que tengo. Con muchas ganas de aprender tanto de los profes como de mis compañeros.
 
